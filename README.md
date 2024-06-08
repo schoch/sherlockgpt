@@ -1,3 +1,10 @@
+# SherlockGPT - An AI-driven murder mystery
+
+This game is inspired by WhoDunit by Henrik Kniberg 
+https://blog.crisp.se/2023/08/26/henrikkniberg/whodunit-ai-game-development-on-steroids
+
+It will be coded live on Twitch https://www.twitch.tv/herrschoch
+
 # Detective Game Backend
 
 This project is an example of a backend for a detective game using Flask and the OpenAI API.
