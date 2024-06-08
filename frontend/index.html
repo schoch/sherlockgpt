@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krimi-Szenario Generator</title>
+</head>
+<body>
+    <h1>Krimi-Szenario Generator</h1>
+    <form id="scenarioForm">
+        <label for="keywords">Stichworte:</label>
+        <input type="text" id="keywords" name="keywords" required>
+        <button type="submit">Szenario generieren</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const keywords = document.getElementById('keywords').value;
+            const response = await fetch('/new_case', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ keywords: keywords })
+            });
+            const data = await response.json();
+            document.getElementById('result').innerText = data.case;
+        });
+    </script>
+</body>
+</html>

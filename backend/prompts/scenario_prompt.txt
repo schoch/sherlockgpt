@@ -1,0 +1,1 @@
+Erstelle ein Krimi-Szenario basierend auf den folgenden Stichworten: {keywords}
