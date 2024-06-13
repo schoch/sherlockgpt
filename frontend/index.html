@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krimi-Szenario Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Krimi-Szenario Generator</h1>
-    <form id="scenarioForm">
-        <label for="keywords">Stichworte:</label>
-        <input type="text" id="keywords" name="keywords" required>
-        <button type="submit">Szenario generieren</button>
-    </form>
-    <div id="result"></div>
+    <div class="container">
+        <h1>Krimi-Szenario Generator</h1>
+        <form id="scenarioForm">
+            <label for="keywords">Stichworte:</label>
+            <input type="text" id="keywords" name="keywords" required>
+            <button type="submit">Szenario generieren</button>
+        </form>
+        <div id="result" class="scenario"></div>
+    </div>
 
     <script>
         document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
@@ -26,8 +29,32 @@
                 body: JSON.stringify({ keywords: keywords })
             });
             const data = await response.json();
-            document.getElementById('result').innerText = data.case;
+            displayScenario(data.case);
         });
+
+        function displayScenario(scenario) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>${scenario.title}</h2>
+                <p><strong>Kurzbeschreibung:</strong> ${scenario.short_description}</p>
+                <p><strong>Opfer:</strong> ${scenario.victim}</p>
+                <p><strong>Schauplatz:</strong> ${scenario.location_description}</p>
+                <h3>Verdächtige:</h3>
+                ${scenario.suspects.map(suspect => `
+                    <div class="suspect">
+                        <p><strong>Name:</strong> ${suspect.name}</p>
+                        <p><strong>Alter:</strong> ${suspect.age}</p>
+                        <p><strong>Beschreibung:</strong> ${suspect.description}</p>
+                        <p><strong>Persönlichkeit:</strong> ${suspect.personality}</p>
+                        <p><strong>Beziehung zum Opfer:</strong> ${suspect.relationship}</p>
+                    </div>
+                `).join('')}
+                <h3>Handlung:</h3>
+                <p>${scenario.plot}</p>
+                <h3>Auflösung:</h3>
+                <p>${scenario.resolution}</p>
+            `;
+        }
     </script>
 </body>
 </html>

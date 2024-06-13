@@ -35,4 +35,4 @@ def generate_case(keywords):
     tool_choice="required",
     model="gpt-4o",
     )   
-    return  response.choices[0].message.tool_calls[0].function.arguments
+    return  json.loads(response.choices[0].message.tool_calls[0].function.arguments)

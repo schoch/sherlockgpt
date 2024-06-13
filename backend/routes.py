@@ -12,3 +12,7 @@ def initialize_routes(app):
     @app.route('/')
     def serve_frontend():
         return send_from_directory(app.static_folder, 'index.html')
+    
+    @app.route('/styles.css')
+    def serve_css():
+        return send_from_directory(app.static_folder, 'static/styles.css')
