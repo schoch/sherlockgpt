@@ -1,0 +1,57 @@
+{
+  "name": "get_case",
+  "description": "Generate a fresh case",
+  "parameters": {
+    "title": "CrimeScenario",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "The title of the crime scenario"
+      },
+      "short_description": {
+        "type": "string",
+        "description": "A short description of the scenario"
+      },
+      "victim": {
+        "type": "string",
+        "description": "The name of the victim"
+      },
+      "location_description": {
+        "type": "string",
+        "description": "Description of the location where the scenario takes place"
+      },
+      "suspects": {
+        "type": "array",
+        "description": "List of suspect characters",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the suspect"
+            },
+            "age": {
+              "type": "integer",
+              "description": "Age of the suspect"
+            },
+            "description": {
+              "type": "string",
+              "description": "A short description of the suspect"
+            }
+          },
+          "required": ["name", "age", "description"]
+        }
+      },
+      "plot": {
+        "type": "string",
+        "description": "The plot of the scenario"
+      },
+      "resolution": {
+        "type": "string",
+        "description": "The resolution of the scenario"
+      }
+    },
+    "required": ["title", "short_description", "victim", "location_description", "suspects", "plot", "resolution"]
+  }
+}

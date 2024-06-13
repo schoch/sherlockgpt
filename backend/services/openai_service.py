@@ -1,5 +1,6 @@
 import openai
 import os
+import json
 
 # Lade den API-Schlüssel aus der .env Datei
 from dotenv import load_dotenv
@@ -12,14 +13,26 @@ def load_prompt(template_name, keywords):
         prompt = file.read()
     return prompt.replace('{keywords}', keywords)
 
+def load_schema(schema_name):
+    with open(f'backend/schemas/{schema_name}', 'r') as file:
+        return json.load(file)
+
 def generate_case(keywords):
     prompt = load_prompt('scenario_prompt.txt', keywords)
+    schema = load_schema('case.json')
 
     response = openai.chat.completions.create(
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": prompt}
         ],
-        model="gpt-4o",
+    tools=[
+        {
+            "type": "function",
+            "function": schema,
+        }
+    ],
+    tool_choice="required",
+    model="gpt-4o",
     )   
-    return  response.choices[0].message.content.strip()
+    return  response.choices[0].message.tool_calls[0].function.arguments
