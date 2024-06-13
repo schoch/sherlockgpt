@@ -1,1 +1,15 @@
-Erstelle ein Krimi-Szenario basierend auf den folgenden Stichworten: {keywords}
+Generiere das Szenario für einen Krimi, zum Beispiel einen Mord oder einen Diebstahl. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
+
+Schauplatz und Stil des Krimis: {keywords}
+
+Füge die folgenden sachlichen Informationen hinzu. Dies ist für den Spielleiter, daher müssen alle Informationen korrekt sein. Der Spielleiter entscheidet, welche Informationen er den Spielern preisgibt und wann.
+
+- Ein Name für dieses Szenario
+- Ein Schauplatz. Zum Beispiel ein altes englisches Herrenhaus, ein Zug, ein Schiff oder eine Hochzeitsgesellschaft.
+- Ein Verbrechen. Beschreibe, was das Verbrechen war.
+- Eine Gruppe von 5-6 Charakteren. Dazu gehören das Opfer des Verbrechens und alle Personen, die am Tatort waren und als Verdächtige in Frage kommen. Mindestens eine Person sollte an dem Verbrechen schuldig sein. Gib für jede Figur ihren Namen, ihr Aussehen, ihre Persönlichkeit und ihre Beziehungen zueinander an. Es sollte nicht offensichtlich sein, welche Person schuldig ist. Mehrere der Personen sollten verdächtig erscheinen und ein Motiv haben, das Verbrechen begangen zu haben. Es ist auch in Ordnung, wenn mehrere der Verdächtigen an dem Verbrechen mitgewirkt haben.
+- Die geheime Wahrheit über das Verbrechen. Es sollte sich dabei um korrekte und vollständige Informationen handeln, die dem Spieler verborgen bleiben sollen. Wer war der Verbrecher? Handelte er oder sie allein? Wenn nicht, wer war noch beteiligt und wie? Wenn es sich um einen Mord handelt, wie und wo wurde das Opfer ermordet? Was war das Motiv des Täters? Wo und wann geschah das Verbrechen? Wo wurde das Opfer gefunden? Wenn es sich um einen Mord handelte, was war die tatsächliche Todesursache und was die scheinbare Todesursache? Füge alle anderen Details hinzu, die den Fall interessant machen. Sei sehr genau und detailliert, einschließlich Zeit und Ort jedes Ereignisses und jeder Figur.
+- Schuldige Personen. Nenne die Namen der Personen, die als schuldig an diesem Verbrechen gelten.
+- Informationen zum Ort. Beschreibe die wichtigsten Orte, die für das Rätsel relevant sind. Wenn es sich zum Beispiel um ein Herrenhaus handelt, beschreibe den Grundriss des Herrenhauses und welche Räume es gibt, sowie etwas über die Umgebung des Herrenhauses.
+- Wendungen der Handlung. Beschreibe mögliche Wendungen der Handlung, die dadurch ausgelöst werden können, dass der Spieler die Verdächtigen befragt oder den Tatort durchsucht. Zum Beispiel "wenn Jim von der versteckten Halskette erfährt, wird er zusammenbrechen und zugeben, dass er in Jennie verliebt ist".
+- Tatortbeschreibung. Eine detaillierte sachliche Beschreibung des Tatorts. Wie sieht er für den Detektiv aus? Gibt es irgendwelche versteckten Hinweise, die gefunden werden können? Wo wurde die Leiche gefunden?

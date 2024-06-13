@@ -2,54 +2,62 @@
   "name": "get_case",
   "description": "Generate a fresh case",
   "parameters": {
-    "title": "CrimeScenario",
+    "title": "Case",
     "type": "object",
     "properties": {
       "title": {
         "type": "string",
-        "description": "The title of the crime scenario"
+        "description": "Der Titel des Szenarios"
       },
       "short_description": {
         "type": "string",
-        "description": "A short description of the scenario"
+        "description": "Eine kurze Beschreibung des Szenarios"
       },
       "victim": {
         "type": "string",
-        "description": "The name of the victim"
+        "description": "Der Name des Opfers"
       },
       "location_description": {
         "type": "string",
-        "description": "Description of the location where the scenario takes place"
+        "description": "Beschreibung des Schauplatzes"
       },
       "suspects": {
         "type": "array",
-        "description": "List of suspect characters",
+        "description": "Liste der Verdächtigen",
         "items": {
           "type": "object",
           "properties": {
             "name": {
               "type": "string",
-              "description": "Name of the suspect"
+              "description": "Der Name des Verdächtigen"
             },
             "age": {
               "type": "integer",
-              "description": "Age of the suspect"
+              "description": "Das Alter des Verdächtigen"
             },
             "description": {
               "type": "string",
-              "description": "A short description of the suspect"
+              "description": "Eine Beschreibung des Aussehens des Verdächtigen"
+            },
+            "personality": {
+              "type": "string",
+              "description": "Eine Beschreibung der Persönlichkeit des Verdächtigen"
+            },
+            "relationship": {
+              "type": "string",
+              "description": "Die Beziehung des Verdächtigen zum Opfer"
             }
           },
-          "required": ["name", "age", "description"]
+          "required": ["name", "age", "description", "personality", "relationship"]
         }
       },
       "plot": {
         "type": "string",
-        "description": "The plot of the scenario"
+        "description": "Die Handlung des Szenarios"
       },
       "resolution": {
         "type": "string",
-        "description": "The resolution of the scenario"
+        "description": "Die Auflösung des Verbrechens"
       }
     },
     "required": ["title", "short_description", "victim", "location_description", "suspects", "plot", "resolution"]
