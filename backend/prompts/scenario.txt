@@ -1,6 +1,6 @@
 Generiere das Szenario für einen Krimi, zum Beispiel einen Mord oder einen Diebstahl. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
 
-Schauplatz und Stil des Krimis: {keywords}
+Schauplatz und Stil des Krimis: {template}
 
 Füge die folgenden sachlichen Informationen hinzu. Dies ist für den Spielleiter, daher müssen alle Informationen korrekt sein. Der Spielleiter entscheidet, welche Informationen er den Spielern preisgibt und wann.
 

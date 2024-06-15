@@ -1,10 +1,10 @@
-Generiere das Szenario für einen Krimi, zum Beispiel einen Mord oder einen Diebstahl. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
+Hier ist das Szenario für einen Kriminalfall. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
 
 Folgendes Szenario gibt es als JSON:
 
-{scenario}
+{template}
 
-Erstelle nun Vernehmungsdetails zu jeder Figur. Diese werden vom Spielleiter verwendet, um das Verhör der einzelnen Personen zu leiten.
+Erstelle nun Vernehmungsdetails zu jeder im Szenario enthaltenen Figur. Diese werden vom Spielleiter verwendet, um das Verhör der einzelnen Personen zu leiten.
 Beschreibe für jede Figur detailiert Folgendes:
    - Wie war die Figur in das Verbrechen verwickelt (wenn überhaupt)?
    - Was weiß sie über das Verbrechen?
