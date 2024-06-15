@@ -18,7 +18,7 @@ def load_schema(schema_name):
         return json.load(file)
 
 def generate_case(keywords):
-    prompt = load_prompt('scenario_prompt.txt', keywords)
+    prompt = load_prompt('scenario.txt', keywords)
     schema = load_schema('case.json')
 
     response = openai.chat.completions.create(

@@ -2,64 +2,114 @@
   "name": "get_case",
   "description": "Generate a fresh case",
   "parameters": {
-    "title": "Case",
     "type": "object",
     "properties": {
-      "title": {
+      "scenario_name": {
         "type": "string",
-        "description": "Der Titel des Szenarios"
+        "description": "Name des Szenarios"
       },
-      "short_description": {
+      "setting": {
         "type": "string",
-        "description": "Eine kurze Beschreibung des Szenarios"
+        "description": "Schauplatz des Verbrechens"
       },
-      "victim": {
+      "crime": {
         "type": "string",
-        "description": "Der Name des Opfers"
+        "description": "Beschreibung des Verbrechens"
       },
-      "location_description": {
-        "type": "string",
-        "description": "Beschreibung des Schauplatzes"
-      },
-      "suspects": {
+      "characters": {
         "type": "array",
-        "description": "Liste der Verdächtigen",
+        "description": "Liste der Charaktere",
         "items": {
           "type": "object",
           "properties": {
             "name": {
               "type": "string",
-              "description": "Der Name des Verdächtigen"
+              "description": "Name des Charakters"
             },
-            "age": {
-              "type": "integer",
-              "description": "Das Alter des Verdächtigen"
-            },
-            "description": {
+            "appearance": {
               "type": "string",
-              "description": "Eine Beschreibung des Aussehens des Verdächtigen"
+              "description": "Aussehen des Charakters"
             },
             "personality": {
               "type": "string",
-              "description": "Eine Beschreibung der Persönlichkeit des Verdächtigen"
+              "description": "Persönlichkeit des Charakters"
             },
-            "relationship": {
-              "type": "string",
-              "description": "Die Beziehung des Verdächtigen zum Opfer"
+            "relationships": {
+              "type": "array",
+              "description": "Beziehungen zu anderen Charakteren",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "character_name": {
+                    "type": "string",
+                    "description": "Name des anderen Charakters"
+                  },
+                  "relationship": {
+                    "type": "string",
+                    "description": "Beschreibung der Beziehung"
+                  }
+                },
+                "required": ["character_name", "relationship"]
+              }
             }
           },
-          "required": ["name", "age", "description", "personality", "relationship"]
+          "required": ["name", "appearance", "personality", "relationships"]
         }
       },
-      "plot": {
-        "type": "string",
-        "description": "Die Handlung des Szenarios"
+      "secret_truth": {
+        "type": "object",
+        "description": "Die geheime Wahrheit über das Verbrechen",
+        "properties": {
+          "criminals": {
+            "type": "array",
+            "description": "Liste der schuldigen Personen",
+            "items": {
+              "type": "string",
+              "description": "Name einer schuldigen Person"
+            }
+          },
+          "details": {
+            "type": "string",
+            "description": "Detaillierte Beschreibung des Verbrechens"
+          }
+        },
+        "required": ["criminals", "details"]
       },
-      "resolution": {
+      "guilty_persons": {
+        "type": "array",
+        "description": "Liste der schuldigen Personen",
+        "items": {
+          "type": "string",
+          "description": "Name einer schuldigen Person"
+        }
+      },
+      "location_info": {
         "type": "string",
-        "description": "Die Auflösung des Verbrechens"
+        "description": "Beschreibung der wichtigsten Orte"
+      },
+      "plot_twists": {
+        "type": "array",
+        "description": "Mögliche Wendungen der Handlung",
+        "items": {
+          "type": "string",
+          "description": "Beschreibung einer Handlungstwist"
+        }
+      },
+      "crime_scene_description": {
+        "type": "string",
+        "description": "Detaillierte Beschreibung des Tatorts"
       }
     },
-    "required": ["title", "short_description", "victim", "location_description", "suspects", "plot", "resolution"]
+    "required": [
+      "scenario_name",
+      "setting",
+      "crime",
+      "characters",
+      "secret_truth",
+      "guilty_persons",
+      "location_info",
+      "plot_twists",
+      "crime_scene_description"
+    ]
   }
 }
