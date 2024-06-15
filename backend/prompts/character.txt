@@ -4,8 +4,8 @@ Folgendes Szenario gibt es als JSON:
 
 {template}
 
-Erstelle nun Vernehmungsdetails zu jeder im Szenario enthaltenen Figur. Diese werden vom Spielleiter verwendet, um das Verhör der einzelnen Personen zu leiten.
-Beschreibe für jede Figur detailiert Folgendes:
+Erstelle nun Vernehmungsdetails zu **allen** im Szenario enthaltenen Figuren. Diese werden vom Spielleiter verwendet, um das Verhör der einzelnen Personen zu leiten.
+Beschreibe für **jede** Figur detailiert Folgendes:
    - Wie war die Figur in das Verbrechen verwickelt (wenn überhaupt)?
    - Was weiß sie über das Verbrechen?
    - Wie fühlt sie sich angesichts des Verbrechens?
@@ -15,4 +15,4 @@ Beschreibe für jede Figur detailiert Folgendes:
    - Was sind ihre persönlichen Beweggründe?
    - Alle anderen Informationen, die für ihre Vernehmung relevant sein könnten.
 
-Überprüfe alle Details darauf, dass die logisch zusammenpassen.
+Überprüfe alle Details darauf, dass die logisch zusammenpassen. Achte darauf, dass auch wirklich alle Figuren in der Antwort enthalten sind. Vergleich dazu die Anzahl im Szenario mit der Anzahl deiner Antwort.

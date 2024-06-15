@@ -37,6 +37,7 @@ def generate_case(keywords):
     )
 
     scenario = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
+
     characters = generate_character_details(response.choices[0].message.tool_calls[0].function.arguments)
 
 
