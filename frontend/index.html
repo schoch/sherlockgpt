@@ -21,15 +21,25 @@
         document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
             event.preventDefault();
             const keywords = document.getElementById('keywords').value;
-            const response = await fetch('/new_case', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ keywords: keywords })
-            });
-            const data = await response.json();
-            displayScenario(data.case);
+            try {
+                const response = await fetch('/new_case', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ keywords: keywords })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+
+                const data = await response.json();
+                displayScenario(data.case);
+            } catch (error) {
+                console.error('Es gab ein Problem mit der Fetch-Operation:', error);
+                document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
+            }
         });
 
         function displayScenario(scenario) {

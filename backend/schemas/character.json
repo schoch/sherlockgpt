@@ -4,64 +4,61 @@
   "parameters": {
     "type": "object",
     "properties": {
-      "characters": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string",
-              "description": "Der Name des Charakters"
-            },
-            "involvement": {
-              "type": "string",
-              "description": "Verwicklung in das Verbrechen"
-            },
-            "knowledge": {
-              "type": "string",
-              "description": "Wissen über das Verbrechen"
-            },
-            "feelings": {
-              "type": "string",
-              "description": "Gefühle angesichts des Verbrechens"
-            },
-            "alibi": {
-              "type": "string",
-              "description": "Alibi zur Tatzeit"
-            },
-            "activities": {
-              "type": "string",
-              "description": "Aktivitäten vor dem Verbrechen"
-            },
-            "topics": {
-              "type": "string",
-              "description": "Worüber will der Charakter sprechen und was wird er lügen/verbergen"
-            },
-            "motives": {
-              "type": "string",
-              "description": "Persönliche Beweggründe"
-            },
-            "relevant_info": {
-              "type": "string",
-              "description": "Relevante Informationen"
-            }
+      "character": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Der Name des Charakters"
           },
-          "required": [
-            "name",
-            "involvement",
-            "knowledge",
-            "feelings",
-            "alibi",
-            "activities",
-            "topics",
-            "motives",
-            "relevant_info"
-          ]
-        }
+          "involvement": {
+            "type": "string",
+            "description": "Verwicklung in das Verbrechen"
+          },
+          "knowledge": {
+            "type": "string",
+            "description": "Wissen über das Verbrechen"
+          },
+          "feelings": {
+            "type": "string",
+            "description": "Gefühle angesichts des Verbrechens"
+          },
+          "alibi": {
+            "type": "string",
+            "description": "Alibi zur Tatzeit"
+          },
+          "activities": {
+            "type": "string",
+            "description": "Aktivitäten vor dem Verbrechen"
+          },
+          "topics": {
+            "type": "string",
+            "description": "Worüber will der Charakter sprechen und was wird er lügen/verbergen"
+          },
+          "motives": {
+            "type": "string",
+            "description": "Persönliche Beweggründe"
+          },
+          "relevant_info": {
+            "type": "string",
+            "description": "Relevante Informationen"
+          }
+        },
+        "required": [
+          "name",
+          "involvement",
+          "knowledge",
+          "feelings",
+          "alibi",
+          "activities",
+          "topics",
+          "motives",
+          "relevant_info"
+        ]
       }
     },
     "required": [
-      "characters"
+      "character"
     ]
   }
 }

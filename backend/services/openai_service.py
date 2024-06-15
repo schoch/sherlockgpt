@@ -42,34 +42,46 @@ def generate_case(keywords):
 
 
     # Füge die Charakterdetails zum Szenario hinzu
-    for character in characters['characters']:
+    for character in characters:
         for scenario_character in scenario['characters']:
             if character['name'] == scenario_character['name']:
                 scenario_character.update(character)
 
 
-    # Ausgabe des gemergten Ergebnisses
-    print(json.dumps(scenario, indent=2))
 
-
-    return json.loads(scenario)
+    save_scenario(scenario["scenario_name"]+".json",scenario)
+    return scenario
 
 def generate_character_details(scenario):
+    prompt_intro = load_prompt('character_intro.txt', scenario)
     prompt = load_prompt('character.txt', scenario)
     schema = load_schema('character.json')
+    characters = []
 
-    response = openai.chat.completions.create(
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": prompt}
+    chat_messages=[
+        {"role": "system", "content": "You are a helpful assistant."}
+        ]
+    
+    for scenario_character in json.loads(scenario)['characters']:
+        chat_messages.append({"role": "user", "content": prompt_intro.replace("{character}", scenario_character["name"])})
+        response = openai.chat.completions.create(
+        messages=chat_messages,
+        tools=[
+            {
+                "type": "function",
+                "function": schema,
+            }
         ],
-    tools=[
-        {
-            "type": "function",
-            "function": schema,
-        }
-    ],
-    tool_choice="required",
-    model="gpt-4o",
-    )   
-    return  json.loads(response.choices[0].message.tool_calls[0].function.arguments)
+        tool_choice="required",
+        model="gpt-4o",
+        ) 
+        chat_messages.append({"role": "system", "content": response.choices[0].message.tool_calls[0].function.arguments})
+        characters.append(json.loads(response.choices[0].message.tool_calls[0].function.arguments)["character"])
+
+
+    return  characters
+
+
+def save_scenario(filename, scenario):
+    with open('backend/scenarios/'+filename, 'w') as file:
+        json.dump(scenario, file, indent=4)
