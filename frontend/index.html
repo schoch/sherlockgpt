@@ -12,7 +12,7 @@
         <form id="scenarioForm">
             <label for="keywords">Stichworte:</label>
             <input type="text" id="keywords" name="keywords" required>
-            <button type="submit">Szenario generieren</button>
+            <button type="submit" id="generateButton">Szenario generieren</button>
         </form>
         <div id="result" class="scenario"></div>
     </div>
@@ -21,6 +21,11 @@
         document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
             event.preventDefault();
             const keywords = document.getElementById('keywords').value;
+            const button = document.getElementById('generateButton');
+            
+            // Button deaktivieren
+            button.disabled = true;
+
             try {
                 const response = await fetch('/new_case', {
                     method: 'POST',
@@ -39,6 +44,9 @@
             } catch (error) {
                 console.error('Es gab ein Problem mit der Fetch-Operation:', error);
                 document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
+            } finally {
+                // Button wieder aktivieren
+                button.disabled = false;
             }
         });
 
