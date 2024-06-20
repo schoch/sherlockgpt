@@ -8,6 +8,7 @@ load_dotenv()
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
+
 def load_prompt(template_name, keywords):
     with open(f'backend/prompts/{template_name}', 'r') as file:
         prompt = file.read()
@@ -38,6 +39,8 @@ def generate_case(keywords):
 
     scenario = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
 
+    game_scenario = scenario
+
     characters = generate_character_details(response.choices[0].message.tool_calls[0].function.arguments)
 
 
@@ -54,7 +57,6 @@ def generate_case(keywords):
 
 def generate_character_details(scenario):
     prompt_intro = load_prompt('character_intro.txt', scenario)
-    prompt = load_prompt('character.txt', scenario)
     schema = load_schema('character.json')
     characters = []
 
@@ -85,3 +87,17 @@ def generate_character_details(scenario):
 def save_scenario(filename, scenario):
     with open('backend/scenarios/'+filename, 'w') as file:
         json.dump(scenario, file, indent=4)
+
+def interrogate_chat(message, chat, scenario):
+    if(len(chat) == 0):
+        prompt = load_prompt('interrogate.txt', json.dumps(scenario))
+        prompt.replace("{characterName}", scenario['characters'][0]['name'])
+        chat.append({"role": "system", "content": prompt})
+
+    chat.append({"role": "user", "content": message})
+    response = openai.chat.completions.create(
+    messages=chat,
+    model="gpt-4o",
+    )
+
+    scenario = json.loads(response.choices[0].message.tool_calls[0].function.arguments)

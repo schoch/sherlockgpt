@@ -13,73 +13,91 @@
             <label for="keywords">Stichworte:</label>
             <input type="text" id="keywords" name="keywords" required>
             <button type="submit" id="generateButton">Szenario generieren</button>
+            <div id="additionalButtonContainer"></div> <!-- Platzhalter für den neuen Button -->
         </form>
         <div id="result" class="scenario"></div>
     </div>
 
     <script>
         document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
-            event.preventDefault();
-            const keywords = document.getElementById('keywords').value;
-            const button = document.getElementById('generateButton');
-            
-            // Button deaktivieren
-            button.disabled = true;
+    event.preventDefault();
+    const keywords = document.getElementById('keywords').value;
+    const button = document.getElementById('generateButton');
+    
+    // Button deaktivieren
+    button.disabled = true;
 
-            try {
-                const response = await fetch('/new_case', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ keywords: keywords })
-                });
-
-                if (!response.ok) {
-                    throw new Error('Netzwerkantwort war nicht ok');
-                }
-
-                const data = await response.json();
-                displayScenario(data.case);
-            } catch (error) {
-                console.error('Es gab ein Problem mit der Fetch-Operation:', error);
-                document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
-            } finally {
-                // Button wieder aktivieren
-                button.disabled = false;
-            }
+    try {
+        const response = await fetch('/new_case', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ keywords: keywords })
         });
 
-        function displayScenario(scenario) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `
-                <h2>${scenario.scenario_name}</h2>
-                <p><strong>Verbrechen:</strong> ${scenario.crime}</p>
-                <p><strong>Beschreibung des Tatorts:</strong> ${scenario.crime_scene_description}</p>
-                <p><strong>Schauplatz:</strong> ${scenario.location_info}</p>
-                <h3>Charaktere:</h3>
-                ${scenario.characters.map(character => `
-                    <div class="character">
-                        <p><strong>Name:</strong> ${character.name}</p>
-                        <p><strong>Aussehen:</strong> ${character.appearance}</p>
-                        <p><strong>Persönlichkeit:</strong> ${character.personality}</p>
-                        <h4>Beziehungen:</h4>
-                        ${character.relationships.map(relationship => `
-                            <p>${relationship.character_name}: ${relationship.relationship}</p>
-                        `).join('')}
-                    </div>
-                `).join('')}
-                <h3>Schuldige:</h3>
-                <p>${scenario.guilty_persons.join(', ')}</p>
-                <h3>Plot Twists:</h3>
-                <ul>
-                    ${scenario.plot_twists.map(twist => `<li>${twist}</li>`).join('')}
-                </ul>
-                <h3>Geheime Wahrheit:</h3>
-                <p><strong>Kriminelle:</strong> ${scenario.secret_truth.criminals.join(', ')}</p>
-                <p><strong>Details:</strong> ${scenario.secret_truth.details}</p>
-            `;
+        if (!response.ok) {
+            throw new Error('Netzwerkantwort war nicht ok');
         }
+
+        const data = await response.json();
+        displayScenario(data.case);
+    } catch (error) {
+        console.error('Es gab ein Problem mit der Fetch-Operation:', error);
+        document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
+    } finally {
+        // Button wieder aktivieren
+        button.disabled = false;
+    }
+});
+
+function displayScenario(scenario) {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+        <h2>${scenario.scenario_name}</h2>
+        <p><strong>Verbrechen:</strong> ${scenario.crime}</p>
+        <p><strong>Beschreibung des Tatorts:</strong> ${scenario.crime_scene_description}</p>
+        <p><strong>Schauplatz:</strong> ${scenario.location_info}</p>
+        <h3>Charaktere:</h3>
+        ${scenario.characters.map(character => `
+            <div class="character">
+                <p><strong>Name:</strong> ${character.name}</p>
+                <p><strong>Aussehen:</strong> ${character.appearance}</p>
+                <p><strong>Persönlichkeit:</strong> ${character.personality}</p>
+                <h4>Beziehungen:</h4>
+                ${character.relationships.map(relationship => `
+                    <p>${relationship.character_name}: ${relationship.relationship}</p>
+                `).join('')}
+            </div>
+        `).join('')}
+        <h3>Schuldige:</h3>
+        <p>${scenario.guilty_persons.join(', ')}</p>
+        <h3>Plot Twists:</h3>
+        <ul>
+            ${scenario.plot_twists.map(twist => `<li>${twist}</li>`).join('')}
+        </ul>
+        <h3>Geheime Wahrheit:</h3>
+        <p><strong>Kriminelle:</strong> ${scenario.secret_truth.criminals.join(', ')}</p>
+        <p><strong>Details:</strong> ${scenario.secret_truth.details}</p>
+    `;
+
+    // Neuen Button hinzufügen
+    addInterrogateButton();
+}
+
+function addInterrogateButton() {
+    const container = document.getElementById('additionalButtonContainer');
+    container.innerHTML = ''; // Vorherigen Inhalt löschen, falls vorhanden
+
+    const interrogateButton = document.createElement('button');
+    interrogateButton.textContent = 'Zur Vernehmung';
+    interrogateButton.id = 'interrogateButton';
+    interrogateButton.addEventListener('click', function() {
+        window.location.href = '/interrogate';
+    });
+
+    container.appendChild(interrogateButton);
+}
     </script>
 </body>
 </html>
