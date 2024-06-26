@@ -1,22 +1,125 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.scenario {
-    margin-top: 20px;
+h1, h2 {
+    text-align: center;
+    color: #333;
 }
 
-.scenario h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
+p {
+    color: #666;
+    text-align: center;
 }
 
-.suspect {
-    margin-bottom: 10px;
+.character-list, .scenario-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.character-item, .scenario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.character-item span, .scenario-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.interrogate-form, .start-button, .generate-button {
+    display: inline;
+}
+
+.interrogate-button, .start-button, .generate-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.interrogate-button:hover, .start-button:hover, .generate-button:hover {
+    background-color: #0056b3;
+}
+
+.chat-window {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #d1f7c4;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.character-message {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.chat-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #0056b3;
 }

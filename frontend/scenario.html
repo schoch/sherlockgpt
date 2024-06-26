@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>{{ scenario.name }}</h1>
-    <p>{{ scenario.intro }}</p>
-    
-    <h2>Characters</h2>
-    <ul>
-        {% for character in scenario.characters %}
-            <li>
-                {{ character.name }}
-                <form action="{{ url_for('serve_interrogate', id=character.id) }}" method="get" style="display:inline;">
-                    <button type="submit">Interrogate</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>{{ scenario.name }}</h1>
+        <p>{{ scenario.intro }}</p>
+        
+        <h2>Characters</h2>
+        <ul class="character-list">
+            {% for character in scenario.characters %}
+                <li class="character-item">
+                    <span>{{ character.name }}</span>
+                    <form action="{{ url_for('serve_interrogate', id=character.id) }}" method="get" class="interrogate-form">
+                        <button type="submit" class="interrogate-button">Interrogate</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
