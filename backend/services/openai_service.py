@@ -82,15 +82,14 @@ def generate_character_details(scenario):
 
     return  characters
 
-
 def save_scenario(filename, scenario):
     with open('backend/scenarios/'+filename, 'w') as file:
         json.dump(scenario, file, indent=4)
 
-def interrogate_chat(message, chat, scenario):
+def interrogate_chat(message, chat, scenario, character):
     if(len(chat) == 0):
         prompt = load_prompt('interrogate.txt', json.dumps(scenario))
-        prompt.replace("{characterName}", scenario['characters'][0]['name'])
+        prompt = prompt.replace("{characterName}", character['name'])
         chat.append({"role": "system", "content": prompt})
 
     chat.append({"role": "user", "content": message})
@@ -99,4 +98,7 @@ def interrogate_chat(message, chat, scenario):
     model="gpt-4o",
     )
 
-    scenario = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
+    answer = response.choices[0].message.content
+    chat.append({"role": "system", "content": answer})
+
+    return chat

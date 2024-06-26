@@ -1,6 +1,6 @@
 from flask import request, jsonify, send_from_directory, render_template, session
-from backend.services.openai_service import generate_scenario
-from backend.services.game_service import get_all_scenarios,save_scenario,get_scenario
+from backend.services.openai_service import generate_scenario, interrogate_chat
+from backend.services.game_service import get_all_scenarios,save_scenario,get_scenario,get_character
 from backend.services.tool_service import migrate
 from flask_session import Session
 
@@ -32,8 +32,23 @@ def initialize_routes(app):
         return jsonify({"message": "Scenario not found"}), 404
 
     @app.route('/interrogate/<int:id>', methods=['GET'])
-    def interrogate(id):
+    def serve_interrogate(id):
+        session["character_id"] = id
         return render_template('interrogate.html')
+    
+    @app.route('/interrogate', methods=['POST'])
+    def interrogate():
+        data = request.get_json()
+        message = data.get('message', '')
+        scenario = get_scenario(session["scenario_id"])
+        character = get_character(session["character_id"])
+        chat = session.get("character_chat_"+str(session["character_id"]),[])
+
+        chat = interrogate_chat(message, chat, scenario, character)
+        session["character_chat_"+str(session["character_id"])] = chat
+        answer = chat[len(chat)-1]["content"]
+
+        return jsonify({"answer" : answer})
         
     
     @app.route('/styles.css')

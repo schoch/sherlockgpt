@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ scenario.name }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <h1>{{ scenario.name }}</h1>
@@ -15,7 +15,7 @@
         {% for character in scenario.characters %}
             <li>
                 {{ character.name }}
-                <form action="{{ url_for('interrogate', id=character.id) }}" method="get" style="display:inline;">
+                <form action="{{ url_for('serve_interrogate', id=character.id) }}" method="get" style="display:inline;">
                     <button type="submit">Interrogate</button>
                 </form>
             </li>

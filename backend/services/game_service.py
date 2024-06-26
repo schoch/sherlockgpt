@@ -73,6 +73,26 @@ def get_scenario(id):
             } for character in characters
         ]
         return scenario_data
+    
+def get_character(id):
+    character = Character.query.filter_by(id=id).first()
+    if character:
+        character_data = {
+            'id' : character.id,
+                'name': character.name,
+                'appearance': character.appearance,
+                'personality': character.personality,
+                'relationships': json.loads(character.relationships),
+                'involvement': character.involvement,
+                'knowledge': character.knowledge,
+                'feelings': character.feelings,
+                'alibi': character.alibi,
+                'activities': character.activities,
+                'topics': character.topics,
+                'motives': character.motives,
+                'relevant_info': character.relevant_info
+        }
+        return character_data
 
     
 # Get a list with id:title pairs of all scenarios    

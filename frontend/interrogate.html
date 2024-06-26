@@ -27,12 +27,12 @@
             document.getElementById('userInput').value = '';
 
             try {
-                const response = await fetch('/interrogate_chat', {
+                const response = await fetch('/interrogate', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ question: userInput })
+                    body: JSON.stringify({ message: userInput })
                 });
 
                 if (!response.ok) {
