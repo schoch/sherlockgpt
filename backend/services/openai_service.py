@@ -8,7 +8,6 @@ load_dotenv()
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-
 def load_prompt(template_name, keywords):
     with open(f'backend/prompts/{template_name}', 'r') as file:
         prompt = file.read()

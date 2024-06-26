@@ -16,6 +16,10 @@
         "type": "string",
         "description": "Beschreibung des Verbrechens"
       },
+      "intro": {
+        "type": "string",
+        "description": "Zusammenfassung und Einführung in den Fall"
+      },
       "characters": {
         "type": "array",
         "description": "Liste der Charaktere",

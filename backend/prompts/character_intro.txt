@@ -13,8 +13,9 @@ Beschreibe für jede Figur detailiert Folgendes:
    - Was genau hat sie in den Stunden vor dem Verbrechen getan? Wo war sie, wann, und mit wem?
    - Worüber will sie sprechen, und worüber wird sie lügen oder versuchen, etwas zu verbergen?
    - Was sind ihre persönlichen Beweggründe?
+   - Was ist das Alibi der Figur?
    - Alle anderen Informationen, die für ihre Vernehmung relevant sein könnten.
 
 Überprüfe alle Details darauf, dass die logisch zusammenpassen. Achte darauf, dass auch wirklich alle Figuren in der Antwort enthalten sind. Vergleich dazu die Anzahl im Szenario mit der Anzahl deiner Antwort.
 
-Gib mir jetzt nur die Details für die Figur {character}
+Gib mir jetzt nur die Details für die Figur {character}. Überprüfe, dass du auch alle geforderten Informationen lieferst.
