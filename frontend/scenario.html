@@ -15,7 +15,7 @@
         {% for character in scenario.characters %}
             <li>
                 {{ character.name }}
-                <form action="{{ url_for('interrogate', character_id=character.id) }}" method="get" style="display:inline;">
+                <form action="{{ url_for('interrogate', id=character.id) }}" method="get" style="display:inline;">
                     <button type="submit">Interrogate</button>
                 </form>
             </li>

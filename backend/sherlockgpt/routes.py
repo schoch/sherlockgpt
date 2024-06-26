@@ -25,15 +25,15 @@ def initialize_routes(app):
     
     @app.route('/start_scenario/<int:id>')
     def start_scenario(id):
+        session["scenario_id"] = id
         scenario = get_scenario(id)
         if scenario:
             return render_template('scenario.html', scenario=scenario)
         return jsonify({"message": "Scenario not found"}), 404
 
-    @app.route('/interrogate/<character_id>', methods=['GET'])
-    def interrogate(character_id):
-        # Hier können Sie die Logik für die Verhörseite hinzufügen
-        return f"Interrogating character with ID {character_id}"
+    @app.route('/interrogate/<int:id>', methods=['GET'])
+    def interrogate(id):
+        return render_template('interrogate.html')
         
     
     @app.route('/styles.css')

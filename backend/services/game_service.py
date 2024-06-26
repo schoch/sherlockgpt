@@ -43,6 +43,7 @@ def get_scenario(id):
     scenario = Scenario.query.filter_by(id=id).first()
     if scenario:
         scenario_data = {
+            'id' : scenario.id,
             'name': scenario.name,
             'setting': scenario.setting,
             'crime': scenario.crime,
@@ -56,6 +57,7 @@ def get_scenario(id):
         characters = Character.query.filter_by(scenario_id=scenario.id).all()
         scenario_data['characters'] = [
             {
+                'id' : character.id,
                 'name': character.name,
                 'appearance': character.appearance,
                 'personality': character.personality,
