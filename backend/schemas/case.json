@@ -4,7 +4,7 @@
   "parameters": {
     "type": "object",
     "properties": {
-      "scenario_name": {
+      "name": {
         "type": "string",
         "description": "Name des Szenarios"
       },
@@ -105,9 +105,10 @@
       }
     },
     "required": [
-      "scenario_name",
+      "name",
       "setting",
       "crime",
+      "intro",
       "characters",
       "secret_truth",
       "guilty_persons",

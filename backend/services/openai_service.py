@@ -17,7 +17,7 @@ def load_schema(schema_name):
     with open(f'backend/schemas/{schema_name}', 'r') as file:
         return json.load(file)
 
-def generate_case(keywords):
+def generate_scenario(keywords):
     prompt = load_prompt('scenario.txt', keywords)
     schema = load_schema('case.json')
 
@@ -51,7 +51,7 @@ def generate_case(keywords):
 
 
 
-    save_scenario(scenario["scenario_name"]+".json",scenario)
+    save_scenario(scenario["name"]+".json",scenario)
     return scenario
 
 def generate_character_details(scenario):

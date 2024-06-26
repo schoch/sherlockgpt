@@ -1,11 +1,11 @@
-Generiere das Szenario für einen Krimi, zum Beispiel einen Mord oder einen Diebstahl. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
+Generiere das Szenario für einen Krimi, zum Beispiel einen Mord oder einen Diebstahl. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden. 
 
 Schauplatz und Stil des Krimis: {template}
 
 Füge die folgenden sachlichen Informationen hinzu. Dies ist für den Spielleiter, daher müssen alle Informationen korrekt sein. Der Spielleiter entscheidet, welche Informationen er den Spielern preisgibt und wann.
 
 - Ein Name für dieses Szenario
-- Eine kurze Zusammenfassung für den Detektiv. Hier dürfen keine Geheimnisse verraten werden.
+- Eine kurze Zusammenfassung des Verbrechens. Hier dürfen keine Geheimnisse verraten werden.
 - Ein Schauplatz. Zum Beispiel ein altes englisches Herrenhaus, ein Zug, ein Schiff oder eine Hochzeitsgesellschaft.
 - Ein Verbrechen. Beschreibe, was das Verbrechen war.
 - Eine Gruppe von 5-6 Charakteren. Dazu gehören das Opfer des Verbrechens und alle Personen, die am Tatort waren und als Verdächtige in Frage kommen. Mindestens eine Person sollte an dem Verbrechen schuldig sein. Gib für jede Figur ihren Namen, ihr Aussehen, ihre Persönlichkeit und ihre Beziehungen zueinander an. Es sollte nicht offensichtlich sein, welche Person schuldig ist. Mehrere der Personen sollten verdächtig erscheinen und ein Motiv haben, das Verbrechen begangen zu haben. Es ist auch in Ordnung, wenn mehrere der Verdächtigen an dem Verbrechen mitgewirkt haben.

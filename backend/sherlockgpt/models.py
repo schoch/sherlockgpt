@@ -5,6 +5,7 @@ class Scenario(db.Model):
     name = db.Column(db.String(100), nullable=False)
     setting = db.Column(db.Text, nullable=False)
     crime = db.Column(db.Text, nullable=False)
+    intro = db.Column(db.Text, nullable=False)
     secret_truth = db.Column(db.Text, nullable=False)
     guilty_persons = db.Column(db.Text, nullable=False)
     location_info = db.Column(db.Text, nullable=False)

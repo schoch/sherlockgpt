@@ -28,7 +28,7 @@
     button.disabled = true;
 
     try {
-        const response = await fetch('/new_case', {
+        const response = await fetch('/new_scenario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,7 +41,7 @@
         }
 
         const data = await response.json();
-        displayScenario(data.case);
+        displayScenario(data.scenario);
     } catch (error) {
         console.error('Es gab ein Problem mit der Fetch-Operation:', error);
         document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';

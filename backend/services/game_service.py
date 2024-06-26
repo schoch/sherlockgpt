@@ -5,9 +5,10 @@ from backend.sherlockgpt.models import Scenario, Character
 # Save a given scenario to db
 def save_scenario(scenario_data):
     scenario = Scenario(
-        name=scenario_data["scenario_name"],
+        name=scenario_data["name"],
         setting=scenario_data["setting"],
         crime=scenario_data["crime"],
+        intro=scenario_data["intro"],
         secret_truth=json.dumps(scenario_data["secret_truth"]),
         guilty_persons=json.dumps(scenario_data["guilty_persons"]),
         location_info=scenario_data["location_info"],
@@ -42,9 +43,10 @@ def get_scenario(id):
     scenario = Scenario.query.filter_by(id=id).first()
     if scenario:
         scenario_data = {
-            'scenario_name': scenario.name,
+            'name': scenario.name,
             'setting': scenario.setting,
             'crime': scenario.crime,
+            'intro': scenario.intro,
             'secret_truth': json.loads(scenario.secret_truth),
             'guilty_persons': json.loads(scenario.guilty_persons),
             'location_info': scenario.location_info,

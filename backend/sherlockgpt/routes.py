@@ -1,24 +1,17 @@
 from flask import request, jsonify, send_from_directory, render_template, session
-from backend.services.openai_service import generate_case
-from backend.services.game_service import get_all_scenarios
+from backend.services.openai_service import generate_scenario
+from backend.services.game_service import get_all_scenarios,save_scenario,get_scenario
 from backend.services.tool_service import migrate
 from flask_session import Session
 
-# Example data for existing scenarios
-scenarios = [
-    {"id": 1, "name": "Scenario 1"},
-    {"id": 2, "name": "Scenario 2"},
-    {"id": 3, "name": "Scenario 3"}
-]
-
 def initialize_routes(app):
-    @app.route('/new_case', methods=['POST'])
-    def new_case():
+    @app.route('/new_scenario', methods=['POST'])
+    def new_scenario():
         data = request.get_json()
         keywords = data.get('keywords', '')
-        case = generate_case(keywords)
-        global_scenario = case
-        return jsonify({'case': case})
+        scenario = generate_scenario(keywords)
+        save_scenario(scenario)
+        return jsonify({'scenario': scenario})
     
     @app.route('/new_scenario')
     def serve_new_scenario():
@@ -26,23 +19,21 @@ def initialize_routes(app):
     
     @app.route('/')
     def serve_frontend():
+        #migrate()
         get_all_scenarios()
         return render_template('index.html', scenarios=get_all_scenarios())
     
     @app.route('/start_scenario/<int:id>')
     def start_scenario(id):
-        return f"Scenario {id} is starting..."
-    
-    @app.route('/interrogate')
-    def serve_interrogate_chat():
-        return send_from_directory(app.static_folder, 'interrogation.html')
-    
-    @app.route('/interrogate_chat', methods=['POST'])
-    def serve_interrogate():
-        data = request.get_json()
-        message = data.get('message', '')
-        #chat = interrogate_chat(message, global_chat, global_scenario)
-        #return jsonify({'chat': chat})
+        scenario = get_scenario(id)
+        if scenario:
+            return render_template('scenario.html', scenario=scenario)
+        return jsonify({"message": "Scenario not found"}), 404
+
+    @app.route('/interrogate/<character_id>', methods=['GET'])
+    def interrogate(character_id):
+        # Hier können Sie die Logik für die Verhörseite hinzufügen
+        return f"Interrogating character with ID {character_id}"
         
     
     @app.route('/styles.css')
