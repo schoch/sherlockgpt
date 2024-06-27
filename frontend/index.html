@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Startseite</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Game</h1>
-        <h2>Existing Scenarios</h2>
-        <ul class="scenario-list">
-            {% for scenario in scenarios %}
-                <li class="scenario-item">
-                    <span>{{ scenario.name }}</span>
-                    <a href="{{ url_for('start_scenario', id=scenario.id) }}">
-                        <button class="start-button">Start</button>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-        <a href="{{ url_for('serve_new_scenario') }}">
-            <button class="generate-button">Generate New Scenario</button>
-        </a>
+    <div class="main-container">
+        <div class="container">
+            <h1>Willkommen zum Spiel</h1>
+            <h2>Bestehende Szenarien</h2>
+            <ul class="scenario-list">
+                {% for scenario in scenarios %}
+                    <li class="scenario-item">
+                        <span>{{ scenario.name }}</span>
+                        <a href="{{ url_for('start_scenario', id=scenario.id) }}">
+                            <button class="start-button">Starten</button>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('serve_new_scenario') }}">
+                <button class="generate-button">Neues Szenario Generieren</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>

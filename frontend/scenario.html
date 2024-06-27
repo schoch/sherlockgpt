@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>{{ scenario.name }}</h1>
-        <p>{{ scenario.intro }}</p>
-        
-        <h2>Characters</h2>
-        <ul class="character-list">
-            {% for character in scenario.characters %}
-                <li class="character-item">
-                    <span>{{ character.name }}</span>
-                    <form action="{{ url_for('serve_interrogate', id=character.id) }}" method="get" class="interrogate-form">
-                        <button type="submit" class="interrogate-button">Interrogate</button>
-                    </form>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="main-container">
+        <div class="container">
+            <h1>{{ scenario.name }}</h1>
+            <p>{{ scenario.intro }}</p>
+            
+            <h2>Charaktere</h2>
+            <ul class="character-list">
+                {% for character in scenario.characters %}
+                    <li class="character-item">
+                        <span>{{ character.name }}</span>
+                        <form action="{{ url_for('serve_interrogate', id=character.id) }}" method="get" class="interrogate-form">
+                            <button type="submit" class="interrogate-button">Verhören</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </body>
 </html>

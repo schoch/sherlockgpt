@@ -5,22 +5,67 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
 }
 
-.container {
+.main-container {
+    display: flex;
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-h1, h2 {
+.container {
+    width: 100%;
+}
+
+h1,
+h2 {
     text-align: center;
     color: #333;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.scenario-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scenario-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scenario-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.start-button,
+.generate-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.start-button:hover,
+.generate-button:hover {
+    background-color: #0056b3;
 }
 
 p {
@@ -28,39 +73,76 @@ p {
     text-align: center;
 }
 
-.character-list, .scenario-list {
+.character-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
-.character-item, .scenario-item {
+.character-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
 }
 
-.character-item span, .scenario-item span {
+.character-item span {
     font-size: 16px;
     color: #333;
 }
 
-.interrogate-form, .start-button, .generate-button {
-    display: inline;
+.interrogate-form {
+    margin: 0;
 }
 
-.interrogate-button, .start-button, .generate-button {
-    padding: 5px 10px;
+.interrogate-button {
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.interrogate-button:hover, .start-button:hover, .generate-button:hover {
+.interrogate-button:hover {
     background-color: #0056b3;
+}
+
+.container {
+    width: 70%;
+    margin-right: 20px;
+}
+
+.character-list-container {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.character-list,
+.scenario-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.character-item,
+.scenario-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.character-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.character-item a:hover {
+    text-decoration: underline;
 }
 
 .chat-window {

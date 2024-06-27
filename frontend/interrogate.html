@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Charakter Verhör</h1>
-        <div id="chatWindow" class="chat-window"></div>
-        <form id="chatForm" class="chat-form">
-            <input type="text" id="userInput" placeholder="Ihre Frage..." required>
-            <button type="submit">Senden</button>
-        </form>
+    <div class="main-container">
+        <div class="container">
+            <h1>Verhör von {{ character.name }}</h1>
+            <div id="chatWindow" class="chat-window"></div>
+            <form id="chatForm" class="chat-form">
+                <input type="text" id="userInput" placeholder="Ihre Frage..." required>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
+        <div class="character-list-container">
+            <h2>Charaktere</h2>
+            <ul class="character-list">
+                {% for character in characters %}
+                    <li class="character-item">
+                        <a href="{{ url_for('serve_interrogate', id=character.id) }}">{{ character.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
     <script>

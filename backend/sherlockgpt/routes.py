@@ -34,7 +34,9 @@ def initialize_routes(app):
     @app.route('/interrogate/<int:id>', methods=['GET'])
     def serve_interrogate(id):
         session["character_id"] = id
-        return render_template('interrogate.html')
+        characters = get_scenario(session["scenario_id"])["characters"]
+        character = get_character(id)
+        return render_template('interrogate.html', characters=characters, character = character)
     
     @app.route('/interrogate', methods=['POST'])
     def interrogate():
