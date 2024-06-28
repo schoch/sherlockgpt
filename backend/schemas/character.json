@@ -15,6 +15,18 @@
             "type": "string",
             "description": "Verwicklung in das Verbrechen"
           },
+          "is_dead": {
+            "type": "boolean",
+            "description": "Ist die Person tot?"
+          },
+          "is_criminal": {
+            "type": "boolean",
+            "description": "Hat diese Person das Verbrechen begangen?"
+          },
+          "is_victim": {
+            "type": "boolean",
+            "description": "Ist die Person Opfer des Verbrechens?"
+          },
           "knowledge": {
             "type": "string",
             "description": "Wissen über das Verbrechen"
@@ -47,6 +59,9 @@
         "required": [
           "name",
           "involvement",
+          "is_dead",
+          "is_criminal",
+          "is_victim",
           "knowledge",
           "feelings",
           "alibi",

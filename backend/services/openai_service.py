@@ -18,8 +18,11 @@ def load_schema(schema_name):
         return json.load(file)
 
 def generate_scenario(keywords):
+    
+    # generate part 1 ----------
+    
     prompt = load_prompt('scenario.txt', keywords)
-    schema = load_schema('case.json')
+    schema = load_schema('scenario.json')
 
     response = openai.chat.completions.create(
     messages=[
@@ -38,9 +41,31 @@ def generate_scenario(keywords):
 
     scenario = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
 
-    game_scenario = scenario
+    # generate part 2 ----------
+    
+    prompt_extra = load_prompt('scenario_extra.txt', response.choices[0].message.tool_calls[0].function.arguments)
+    schema_extra = load_schema('scenario_extra.json')
 
-    characters = generate_character_details(response.choices[0].message.tool_calls[0].function.arguments)
+    response = openai.chat.completions.create(
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": prompt_extra}
+        ],
+    tools=[
+        {
+            "type": "function",
+            "function": schema_extra,
+        }
+    ],
+    tool_choice="required",
+    model="gpt-4o",
+    )
+
+    scenario_extra = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
+
+    scenario.update(scenario_extra)
+
+    characters = generate_character_details(json.dumps(scenario))
 
 
     # Füge die Charakterdetails zum Szenario hinzu
@@ -55,7 +80,7 @@ def generate_scenario(keywords):
     return scenario
 
 def generate_character_details(scenario):
-    prompt_intro = load_prompt('character_intro.txt', scenario)
+    prompt_intro = load_prompt('character.txt', scenario)
     schema = load_schema('character.json')
     characters = []
 

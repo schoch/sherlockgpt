@@ -25,9 +25,10 @@
                     </li>
                 {% endfor %}
             </ul>
+            <button id="backButton" class="back-button">Zurück zur Übersicht</button>
         </div>
     </div>
-
+    
     <script>
         document.getElementById('chatForm').addEventListener('submit', async function (event) {
             event.preventDefault();
@@ -61,6 +62,43 @@
             // Scrolle das Chat-Fenster nach unten
             chatWindow.scrollTop = chatWindow.scrollHeight;
         });
+
+        document.getElementById('backButton').addEventListener('click', function() {
+        window.location.href = '/'; // URL zur Übersicht
+    });
+
+    document.getElementById('chatForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const userInput = document.getElementById('userInput').value;
+        const chatWindow = document.getElementById('chatWindow');
+
+        // Zeige die Benutzerfrage im Chat-Fenster
+        chatWindow.innerHTML += `<div class="chat-message user-message">${userInput}</div>`;
+        document.getElementById('userInput').value = '';
+
+        try {
+            const response = await fetch('/interrogate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userInput })
+            });
+
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht ok');
+            }
+
+            const data = await response.json();
+            chatWindow.innerHTML += `<div class="chat-message character-message">${data.answer}</div>`;
+        } catch (error) {
+            console.error('Es gab ein Problem mit der Fetch-Operation:', error);
+            chatWindow.innerHTML += '<div class="chat-message error-message">Fehler beim Abrufen der Antwort. Bitte versuchen Sie es später erneut.</div>';
+        }
+
+        // Scrolle das Chat-Fenster nach unten
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    });
     </script>
 </body>
 </html>

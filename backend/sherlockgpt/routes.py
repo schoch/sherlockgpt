@@ -52,6 +52,10 @@ def initialize_routes(app):
 
         return jsonify({"answer" : answer})
         
+    @app.route('/admin/migrate')
+    def admin_migrate():
+        migrate()
+        return "migation done"
     
     @app.route('/styles.css')
     def serve_css():

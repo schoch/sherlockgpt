@@ -3,10 +3,14 @@
   "description": "Generate a fresh case",
   "parameters": {
     "type": "object",
-    "properties": {
+    "properties": {     
       "name": {
         "type": "string",
         "description": "Name des Szenarios"
+      },
+      "style": {
+        "type": "string",
+        "description": "Vorgegebener Style, auf dessen Basis dieses Setting generiert wurde"
       },
       "setting": {
         "type": "string",
@@ -79,17 +83,9 @@
         },
         "required": ["criminals", "details"]
       },
-      "guilty_persons": {
-        "type": "array",
-        "description": "Liste der schuldigen Personen",
-        "items": {
-          "type": "string",
-          "description": "Name einer schuldigen Person"
-        }
-      },
-      "location_info": {
+      "victim": {
         "type": "string",
-        "description": "Beschreibung der wichtigsten Orte"
+        "description": "Name des Opfers dieses Verbrechens"
       },
       "plot_twists": {
         "type": "array",
@@ -98,23 +94,18 @@
           "type": "string",
           "description": "Beschreibung einer Handlungstwist"
         }
-      },
-      "crime_scene_description": {
-        "type": "string",
-        "description": "Detaillierte Beschreibung des Tatorts"
       }
     },
     "required": [
       "name",
+      "style",
       "setting",
       "crime",
       "intro",
       "characters",
       "secret_truth",
-      "guilty_persons",
-      "location_info",
-      "plot_twists",
-      "crime_scene_description"
+      "victim",
+      "plot_twists"
     ]
   }
 }

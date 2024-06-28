@@ -1,0 +1,31 @@
+{
+  "name": "get_case",
+  "description": "Generate a fresh case",
+  "parameters": {
+    "type": "object",
+    "properties": {     
+      "newspaper_headline": {
+        "type": "string",
+        "description": "Überschrift eines Zeitungsartikels über dieses Verbrechen"
+      },
+      "newspaper_text": {
+        "type": "string",
+        "description": "Text eines Zeitungsartikels über dieses Verbrechen"
+      },
+      "location_info": {
+        "type": "string",
+        "description": "Beschreibung der wichtigsten Orte"
+      },
+      "crime_scene_description": {
+        "type": "string",
+        "description": "Detaillierte Beschreibung des Tatorts"
+      }
+    },
+    "required": [
+      "newspaper_headline",
+      "newspaper_text",
+      "location_info", 
+      "crime_scene_description"
+    ]
+  }
+}

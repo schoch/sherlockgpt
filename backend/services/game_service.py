@@ -6,11 +6,14 @@ from backend.sherlockgpt.models import Scenario, Character
 def save_scenario(scenario_data):
     scenario = Scenario(
         name=scenario_data["name"],
+        style=scenario_data["style"],
         setting=scenario_data["setting"],
         crime=scenario_data["crime"],
+        newspaper_headline=scenario_data["newspaper_headline"],
+        newspaper_text=scenario_data["newspaper_text"],
         intro=scenario_data["intro"],
         secret_truth=json.dumps(scenario_data["secret_truth"]),
-        guilty_persons=json.dumps(scenario_data["guilty_persons"]),
+        victim=scenario_data["victim"],
         location_info=scenario_data["location_info"],
         plot_twists=json.dumps(scenario_data["plot_twists"]),
         crime_scene_description=scenario_data["crime_scene_description"]
@@ -26,6 +29,9 @@ def save_scenario(scenario_data):
             personality=character['personality'],
             relationships=json.dumps(character['relationships']),
             involvement=character['involvement'],
+            is_dead=character['is_dead'],
+            is_criminal=character['is_criminal'],
+            is_victim=character['is_victim'],
             knowledge=character['knowledge'],
             feelings=character['feelings'],
             alibi=character['alibi'],
@@ -49,7 +55,6 @@ def get_scenario(id):
             'crime': scenario.crime,
             'intro': scenario.intro,
             'secret_truth': json.loads(scenario.secret_truth),
-            'guilty_persons': json.loads(scenario.guilty_persons),
             'location_info': scenario.location_info,
             'plot_twists': json.loads(scenario.plot_twists),
             'crime_scene_description': scenario.crime_scene_description

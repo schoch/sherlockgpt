@@ -1,0 +1,12 @@
+Hier ist das Szenario für einen Kriminalfall. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
+
+Folgendes Szenario gibt es als JSON:
+
+{template}
+
+Füge die folgenden sachlichen Informationen hinzu. Dies ist für den Spielleiter, daher müssen alle Informationen korrekt sein. Der Spielleiter entscheidet, welche Informationen er den Spielern preisgibt und wann.
+
+- Ein Zeitungsartikel über dieses Verbrechen
+- Tatortbeschreibung. Eine detaillierte sachliche Beschreibung des Tatorts. Wie sieht er für den Detektiv aus? Gibt es irgendwelche versteckten Hinweise, die gefunden werden können? Wo wurde die Leiche gefunden?
+- Informationen zum Ort. Beschreibe die wichtigsten Orte, die für das Rätsel relevant sind. Wenn es sich zum Beispiel um ein Herrenhaus handelt, beschreibe den Grundriss des Herrenhauses und welche Räume es gibt, sowie etwas über die Umgebung des Herrenhauses.
+
