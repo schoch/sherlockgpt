@@ -111,10 +111,8 @@ def save_scenario(filename, scenario):
     with open('backend/scenarios/'+filename, 'w') as file:
         json.dump(scenario, file, indent=4)
 
-def interrogate_chat(message, chat, scenario, character):
+def game_chat(message, chat, prompt):
     if(len(chat) == 0):
-        prompt = load_prompt('interrogate.txt', json.dumps(scenario))
-        prompt = prompt.replace("{characterName}", character['name'])
         chat.append({"role": "system", "content": prompt})
 
     chat.append({"role": "user", "content": message})
@@ -126,4 +124,22 @@ def interrogate_chat(message, chat, scenario, character):
     answer = response.choices[0].message.content
     chat.append({"role": "system", "content": answer})
 
-    return chat
+    return chat    
+
+def interrogate_chat(message, chat, scenario, character):
+    prompt = load_prompt('interrogate.txt', json.dumps(scenario))
+    prompt = prompt.replace("{characterName}", character['name'])
+    return game_chat(message, chat, prompt)
+
+def investigate_victim_chat(message, chat, scenario, character):
+    prompt = load_prompt('investigate_victim.txt', json.dumps(scenario))
+    prompt = prompt.replace("{characterName}", character['name'])
+    return game_chat(message, chat, prompt)
+
+def investigate_location_chat(message, chat, scenario, location):
+    prompt = load_prompt('investigate_location.txt', json.dumps(scenario))
+    prompt = prompt.replace("{location}", location)
+    return game_chat(message, chat, prompt)
+
+ 
+
