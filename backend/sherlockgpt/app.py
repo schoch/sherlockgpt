@@ -14,6 +14,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Session configuration
 app.config['SESSION_TYPE']  = 'sqlalchemy'
 app.config['SESSION_SQLALCHEMY'] =  db
+app.config['SESSION_PERMANENT'] =  False
+
+
 
 db.init_app(app)
 
