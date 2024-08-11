@@ -96,6 +96,7 @@ def get_character(id):
                 'personality': character.personality,
                 'relationships': json.loads(character.relationships),
                 'involvement': character.involvement,
+                'is_dead': character.is_dead,
                 'knowledge': character.knowledge,
                 'feelings': character.feelings,
                 'alibi': character.alibi,

@@ -82,13 +82,13 @@ def initialize_routes(app):
     def serve_investigate_crime_scene():
         session["chat_type"] = ChatType.INVESTIGATION_CRIME_SCENE
         characters = get_scenario(session["scenario_id"])["characters"]
-        return render_template('interrogate.html', characters=characters, location = "Tatort")
+        return render_template('interrogate.html', characters=characters, character =None, location = "Tatort")
     
     @app.route('/investigate/location', methods=['GET'])
     def serve_investigate_location():
         session["chat_type"] = ChatType.INVESTIGATION_LOCATION
         characters = get_scenario(session["scenario_id"])["characters"]
-        return render_template('interrogate.html', characters=characters, location = "Umgebung")
+        return render_template('interrogate.html', characters=characters, character =None, location = "Umgebung")
     
     @app.route('/investigate/victim/<int:id>', methods=['GET'])
     def serve_investigate_victim(id):
