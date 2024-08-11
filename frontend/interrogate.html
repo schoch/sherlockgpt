@@ -9,7 +9,15 @@
 <body>
     <div class="main-container">
         <div class="container">
-            <h1>Verhör von {{ character.name }}</h1>
+            {% if character %}
+                {% if character.is_dead %}
+                    <h1>Untersuchung von {{ character.name }} (Opfer)</h1>
+                {% else %}
+                    <h1>Verhör von {{ character.name }}</h1>
+                {% endif %}
+            {% else %}
+                <h1>Untersuchung von {{ location }}</h1>
+            {% endif %}
             <div id="chatWindow" class="chat-window"></div>
             <form id="chatForm" class="chat-form">
                 <input type="text" id="userInput" placeholder="Ihre Frage..." required>
@@ -17,20 +25,27 @@
             </form>
         </div>
         <div class="character-list-container">
-            <h2>Charaktere</h2>
+            <h2>Personen verhören</h2>
             <ul class="character-list">
                 {% for character in characters %}
                     <li class="character-item">
-                        {% if character.is_dead %}
-                            {{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}
-                        {% else %}
+                        {% if not character.is_dead %}
                             <a href="{{ url_for('serve_interrogate', id=character.id) }}">{{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}</a>
                         {% endif %}
                     </li>
                 {% endfor %}
             </ul>
-            <h2>Orte</h2>
+
+            <h2>Untersuchen</h2>
             <ul class="character-list">
+                {% for character in characters %}
+                {% if character.is_dead %}
+                    <li class="character-item">
+                        <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">{{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}</a>    
+                    </li>
+                    {% endif %}
+                {% endfor %}
+
                     <li class="character-item">
                         <a href="{{ url_for('serve_investigate_crime_scene') }}">Tatort</a>
                     </li>
@@ -79,7 +94,7 @@
             document.getElementById('userInput').value = '';
 
             try {
-                const response = await fetch('/interrogate', {
+                const response = await fetch('/chat', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
+gpt_model = "gpt-4o"
 
 def load_prompt(template_name, keywords):
     with open(f'backend/prompts/{template_name}', 'r') as file:
@@ -36,7 +37,7 @@ def generate_scenario(keywords):
         }
     ],
     tool_choice="required",
-    model="gpt-4o",
+    model=gpt_model,
     )
 
     scenario = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
@@ -46,6 +47,7 @@ def generate_scenario(keywords):
     prompt_extra = load_prompt('scenario_extra.txt', response.choices[0].message.tool_calls[0].function.arguments)
     schema_extra = load_schema('scenario_extra.json')
 
+    
     response = openai.chat.completions.create(
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
@@ -58,7 +60,7 @@ def generate_scenario(keywords):
         }
     ],
     tool_choice="required",
-    model="gpt-4o",
+    model=gpt_model,
     )
 
     scenario_extra = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
@@ -99,7 +101,7 @@ def generate_character_details(scenario):
             }
         ],
         tool_choice="required",
-        model="gpt-4o",
+        model=gpt_model,
         ) 
         chat_messages.append({"role": "system", "content": response.choices[0].message.tool_calls[0].function.arguments})
         characters.append(json.loads(response.choices[0].message.tool_calls[0].function.arguments)["character"])
@@ -118,7 +120,7 @@ def game_chat(message, chat, prompt):
     chat.append({"role": "user", "content": message})
     response = openai.chat.completions.create(
     messages=chat,
-    model="gpt-4o",
+    model=gpt_model,
     )
 
     answer = response.choices[0].message.content
@@ -126,19 +128,9 @@ def game_chat(message, chat, prompt):
 
     return chat    
 
-def interrogate_chat(message, chat, scenario, character):
+def interrogate_chat(message, chat, scenario, character, crime_scene, location, victim):
     prompt = load_prompt('interrogate.txt', json.dumps(scenario))
     prompt = prompt.replace("{characterName}", character['name'])
-    return game_chat(message, chat, prompt)
-
-def investigate_victim_chat(message, chat, scenario, character):
-    prompt = load_prompt('investigate_victim.txt', json.dumps(scenario))
-    prompt = prompt.replace("{characterName}", character['name'])
-    return game_chat(message, chat, prompt)
-
-def investigate_location_chat(message, chat, scenario, location):
-    prompt = load_prompt('investigate_location.txt', json.dumps(scenario))
-    prompt = prompt.replace("{location}", location)
     return game_chat(message, chat, prompt)
 
  
