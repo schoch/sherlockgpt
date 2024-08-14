@@ -12,16 +12,30 @@
             <h1>{{ scenario.name }}</h1>
             <p>{{ scenario.intro }}</p>
             
-            <h2>Charaktere</h2>
+            <h2>Verdächtige Personen verhören</h2>
             <ul class="character-list">
-                {% for character in scenario.characters %}
+                {% for character in characters %}
                     <li class="character-item">
-                        <span>{{ character.name }}</span>
-                        <form action="{{ url_for('serve_interrogate', id=character.id) }}" method="get" class="interrogate-form">
-                            <button type="submit" class="interrogate-button">Verhören</button>
-                        </form>
+                        {% if not character.is_dead %}
+                            <a href="{{ url_for('serve_interrogate', id=character.id) }}">{{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}</a>
+                        {% endif %}
                     </li>
                 {% endfor %}
+            </ul>
+
+            <h2>Untersuchen</h2>
+            <ul class="character-list">
+                {% for character in characters %}
+                {% if character.is_dead %}
+                    <li class="character-item">
+                        <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">{{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}</a>    
+                    </li>
+                    {% endif %}
+                {% endfor %}
+
+                    <li class="character-item">
+                        <a href="{{ url_for('serve_investigate_crime_scene') }}">Tatort</a>
+                    </li>
             </ul>
         </div>
     </div>

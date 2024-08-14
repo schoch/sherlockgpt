@@ -128,9 +128,16 @@ def game_chat(message, chat, prompt):
 
     return chat    
 
-def interrogate_chat(message, chat, scenario, character, crime_scene, location, victim):
-    prompt = load_prompt('interrogate.txt', json.dumps(scenario))
+def interrogate_chat(message, chat, scenario, character, crime_scene, victim):
+    if crime_scene:
+            prompt = load_prompt('investigate_crime_scene.txt', json.dumps(scenario))
+    elif victim:
+            prompt = load_prompt('investigate_victim.txt', json.dumps(scenario))
+    else:
+        prompt = load_prompt('interrogate.txt', json.dumps(scenario))
+
     prompt = prompt.replace("{characterName}", character['name'])
+
     return game_chat(message, chat, prompt)
 
  

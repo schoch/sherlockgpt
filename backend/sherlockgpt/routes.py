@@ -6,7 +6,7 @@ from flask_session import Session
 from backend.services.tool_service import clean_chat
 from enum import Enum
     
-ChatType = Enum('Chat_Type', ['INTERROGATION', 'INVESTIGATION_CRIME_SCENE', 'INVESTIGATION_LOCATION', 'INVESTIGATION_VICTIM'])
+ChatType = Enum('Chat_Type', ['INTERROGATION', 'INVESTIGATION_CRIME_SCENE', 'INVESTIGATION_VICTIM'])
 
 
 def initialize_routes(app):
@@ -40,7 +40,9 @@ def initialize_routes(app):
         session["scenario_id"] = id
         scenario = get_scenario(id)
         if scenario:
-            return render_template('scenario.html', scenario=scenario)
+            characters = get_scenario(session["scenario_id"])["characters"]
+
+            return render_template('scenario.html', characters=characters, scenario=scenario)
         return jsonify({"message": "Scenario not found"}), 404
 
     # ---- Start Chat sessions to interrogate  ----------------------
@@ -57,12 +59,11 @@ def initialize_routes(app):
     def chat():
         data = request.get_json()
         message = data.get('message', '')
-        chat_type = session["chat_type"]
-        crime_scene, location, victim = False
+        chat_type = ChatType(session["chat_type"])
+        crime_scene = False
+        victim = False
         if chat_type == ChatType.INVESTIGATION_CRIME_SCENE:
             crime_scene = True
-        elif chat_type == ChatType.INVESTIGATION_LOCATION:
-            location = True
         elif chat_type == ChatType.INVESTIGATION_VICTIM:
             victim = True
         
@@ -70,8 +71,11 @@ def initialize_routes(app):
         character = get_character(session["character_id"])
         chat = session.get("character_chat_"+str(session["character_id"]),[])
 
-        chat = interrogate_chat(message, chat, scenario, character, crime_scene, location, victim)
-        session["character_chat_"+str(session["character_id"])] = chat
+        chat = interrogate_chat(message, chat, scenario, character, crime_scene, victim)
+        if chat_type == ChatType.INVESTIGATION_CRIME_SCENE:
+            session["crime_scene_chat"] = chat
+        else:
+            session["character_chat_"+str(session["character_id"])] = chat
         answer = chat[len(chat)-1]["content"]
 
         return jsonify({"answer" : answer})
@@ -84,12 +88,6 @@ def initialize_routes(app):
         characters = get_scenario(session["scenario_id"])["characters"]
         return render_template('interrogate.html', characters=characters, character =None, location = "Tatort")
     
-    @app.route('/investigate/location', methods=['GET'])
-    def serve_investigate_location():
-        session["chat_type"] = ChatType.INVESTIGATION_LOCATION
-        characters = get_scenario(session["scenario_id"])["characters"]
-        return render_template('interrogate.html', characters=characters, character =None, location = "Umgebung")
-    
     @app.route('/investigate/victim/<int:id>', methods=['GET'])
     def serve_investigate_victim(id):
         session["chat_type"] = ChatType.INVESTIGATION_VICTIM
@@ -101,7 +99,12 @@ def initialize_routes(app):
     
     @app.route('/get_chat_history', methods=['GET'])
     def chat_history():
-        chat = session.get("character_chat_"+str(session["character_id"]),[])
+        chat_type = ChatType(session["chat_type"])
+
+        if chat_type == ChatType.INVESTIGATION_CRIME_SCENE:
+            chat = session.get("crime_scene_chat",[])
+        else:
+            chat = session.get("character_chat_"+str(session["character_id"]),[])
 
         return jsonify({"chat" : clean_chat(chat)})
         

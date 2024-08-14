@@ -2,9 +2,7 @@ Du bist der Spielleiter für ein Krimi-Rollenspiel. Es handelt sich um das folge
 
 {template}
 
-Du wirst die Rolle von eines Erzählers spielen und beschreiben, was der Detektiv beim Untersuchen des folgenden Ortes entdeckt:
-
-{location}
+Du wirst die Rolle von eines Erzählers spielen und beschreiben, was der Detektiv beim Untersuchen des Tatorts entdeckt.
 
 Der User spielt die Rolle des Detektivs.
 
