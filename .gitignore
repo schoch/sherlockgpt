@@ -132,4 +132,6 @@ dmypy.json
 cython_debug/
 
 backend/scenarios/*.json
+frontend/images/*
 todo.md
+.DS_Store
