@@ -1,8 +1,10 @@
 import openai
+from openai import OpenAI
 import os
 import json
+import urllib.request 
 
-# Lade den API-Schlüssel aus der .env Datei
+# Load the API-key from the .env file
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -18,10 +20,8 @@ def load_schema(schema_name):
     with open(f'backend/schemas/{schema_name}', 'r') as file:
         return json.load(file)
 
-def generate_scenario(keywords):
-    
+def generate_scenario(keywords):    
     # generate part 1 ----------
-    
     prompt = load_prompt('scenario.txt', keywords)
     schema = load_schema('scenario.json')
 
@@ -141,4 +141,50 @@ def interrogate_chat(message, chat, scenario, character, crime_scene, victim):
     return game_chat(message, chat, prompt)
 
  
+def generate_scenario_cover_image(scenario):
+    client = OpenAI()
+    prompt = load_prompt('scenario_image.txt', json.dumps(scenario))
 
+    # 1st step: generate the required dalle-3 prompt
+    response = openai.chat.completions.create(
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt}
+            ],
+        model=gpt_model,
+    )
+
+    image_prompt = response.choices[0].message.content
+    print(image_prompt)
+
+    response = client.images.generate(
+        model="dall-e-3",
+        prompt=image_prompt,
+        size="1024x1024",
+        quality="standard",
+        n=1,
+    )
+
+    image_url = response.data[0].url
+    print(image_url)
+
+    urllib.request.urlretrieve(image_url, "frontend/images/"+str(scenario['id'])+".png") 
+
+def generate_character_image(character, scenario):
+
+    client = OpenAI()
+    prompt = load_prompt('character_image.txt', json.dumps(scenario))
+    prompt = prompt.replace("{characterName}", character['name'])
+
+    response = client.images.generate(
+        model="dall-e-3",
+        prompt=prompt,
+        size="1024x1024",
+        quality="standard",
+        n=1,
+    )
+
+    image_url = response.data[0].url
+    print(image_url)
+
+    urllib.request.urlretrieve(image_url, "frontend/images/"+scenario.id+"-"+character.id) 

@@ -1,0 +1,9 @@
+Hier ist das Szenario für einen Kriminalfall. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
+
+Erstelle mir einen Dalle-3 Prompt, um dafür ein Coverbild zu generieren.
+
+Gib mir nur den Prompt zurück.
+
+Folgendes Szenario gibt es als JSON:
+
+{template}

@@ -1,0 +1,7 @@
+Hier ist das Szenario für einen Kriminalfall. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
+
+Folgendes Szenario gibt es als JSON:
+
+{template}
+
+Erstelle mir ein Portraitbild für den Charakter {characterName}. Das Bild soll im Stil des Szenarios sein.

@@ -1,5 +1,5 @@
 from flask import request, jsonify, send_from_directory, render_template, session
-from backend.services.openai_service import generate_scenario, interrogate_chat
+from backend.services.openai_service import generate_scenario, interrogate_chat, generate_character_image, generate_scenario_cover_image
 from backend.services.game_service import get_all_scenarios,save_scenario,get_scenario,get_character
 from backend.services.admin_service import migrate
 from flask_session import Session
@@ -112,4 +112,17 @@ def initialize_routes(app):
     def admin_migrate():
         migrate()
         return "migation done"
+    
+    @app.route('/admin/character/image')
+    def admin_character_image():
+        scenario = get_scenario(session["scenario_id"])
+        character = get_character(session["character_id"])
+        generate_character_image(character, scenario)
+        return "migation done"
+    
+    @app.route('/admin/scenario/image')
+    def admin_scenario_image():
+        scenario = get_scenario(session["scenario_id"])
+        generate_scenario_cover_image(scenario)
+        return "cover image generated"
     
