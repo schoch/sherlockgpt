@@ -21,6 +21,7 @@ def load_schema(schema_name):
         return json.load(file)
 
 def generate_scenario(keywords):    
+    print("Generate scenario: "+keywords)
     # generate part 1 ----------
     prompt = load_prompt('scenario.txt', keywords)
     schema = load_schema('scenario.json')

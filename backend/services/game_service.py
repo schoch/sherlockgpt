@@ -19,7 +19,9 @@ def save_scenario(scenario_data):
         crime_scene_description=scenario_data["crime_scene_description"]
     )
     db.session.add(scenario)
+    db.session.flush()
     db.session.commit()
+    return scenario.id
 
     for character in scenario_data['characters']:
         character_data = Character(

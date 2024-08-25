@@ -1,7 +1,7 @@
 from backend.sherlockgpt.database import db
 
 class Scenario(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100), nullable=False)
     style = db.Column(db.String(100), nullable=False)
     setting = db.Column(db.Text, nullable=False)

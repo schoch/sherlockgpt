@@ -26,12 +26,12 @@ def initialize_routes(app):
         data = request.get_json()
         keywords = data.get('keywords', '')
         scenario = generate_scenario(keywords)
-        save_scenario(scenario)
-        
-        generate_scenario_cover_image(scenario)
-        generate_all_character_images(scenario)
-        generate_crime_scene_image(scenario)
-        return jsonify({'scenario': scenario})
+        id = save_scenario(scenario)
+        new_scenario = get_scenario(id)
+        generate_scenario_cover_image(new_scenario)
+        generate_all_character_images(new_scenario)
+        generate_crime_scene_image(new_scenario)
+        return jsonify({'scenario': new_scenario})
     
     @app.route('/new_scenario')
     def serve_new_scenario():
@@ -158,3 +158,11 @@ def initialize_routes(app):
         scenario = get_scenario(session["scenario_id"])
         generate_crime_scene_image(scenario)
         return "crime scene image generated"
+    
+    @app.route('/admin/images')
+    def admin_all_image():
+        scenario = get_scenario(session["scenario_id"])
+        generate_scenario_cover_image(scenario)
+        generate_crime_scene_image(scenario)
+        generate_all_character_images(scenario)
+        return "all images generated"
