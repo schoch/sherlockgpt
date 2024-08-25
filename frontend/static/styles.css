@@ -224,3 +224,46 @@ p {
 .chat-form button:hover {
     background-color: #0056b3;
 }
+
+.scenario-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.scenario-item img {
+    width: 250px; /* Breite des Bildes */
+    height: auto; /* Automatische Höhenanpassung */
+    margin-right: 20px; /* Abstand zwischen Bild und Text */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+}
+
+.start-button {
+    margin-left: auto; /* Button am Ende der Zeile platzieren */
+}
+
+.character-image {
+    width: 250px;
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    object-fit: cover; /* Optional: Das Bild beschneiden, um es in den Container einzupassen */
+}
+.character-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen Bild und Text */
+    margin-bottom: 10px; /* Abstand zwischen den Charakter-Elementen */
+}
+.chat-form-resolution textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    resize: vertical; /* Ermöglicht das vertikale Vergrößern/Verkleinern des Textarea */
+    min-height: 100px; /* Mindesthöhe */
+    max-height: 200px; /* Maximalhöhe */
+    width: calc(100% - 140px); /* Breiter als das ursprüngliche input-Element */
+    font-family: inherit; /* Verwendet die gleiche Schriftart wie der Rest der Seite */
+    font-size: 16px; /* Gleiche Schriftgröße wie der ursprüngliche Input */
+}

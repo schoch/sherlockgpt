@@ -9,61 +9,21 @@
 <body>
     <div class="main-container">
         <div class="container">
-            {% if character %}
-                {% if character.is_dead %}
-                    <h1>Untersuchung von {{ character.name }} (Opfer)</h1>
-                {% else %}
-                    <h1>Verhör von {{ character.name }}</h1>
-                {% endif %}
-            {% else %}
-                <h1>Untersuchung von {{ location }}</h1>
-            {% endif %}
+            <h1>Den Fall lösen</h1>
+            <p>
+                Du glaubst also, dass du den Fall gelöst hast? Dann gib mal deine Theorie natürlich den Namen der oder des Täters an.
+            </p>
             <div id="chatWindow" class="chat-window"></div>
-            <form id="chatForm" class="chat-form">
-                <input type="text" id="userInput" placeholder="Ihre Frage..." required>
+            <form id="chatForm" class="chat-form-resolution">
+                <!-- input durch textarea ersetzt -->
+                <textarea id="userInput" placeholder="Deine Lösung..." rows="4" required></textarea>
                 <button type="submit">Senden</button>
             </form>
-        </div>
-        <div class="character-list-container">
-            <h2>Personen verhören</h2>
-            <ul class="character-list">
-                {% for character in characters %}
-                    <li class="character-item">
-                        {% if not character.is_dead %}
-                            <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
-                            <a href="{{ url_for('serve_interrogate', id=character.id) }}">{{ character.name }}</a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-
-            <h2>Untersuchen</h2>
-            <ul class="character-list">
-                {% for character in characters %}
-                {% if character.is_dead %}
-                    <li class="character-item">
-                        <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
-                        <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">{{ character.name }} (Opfer)</a>    
-                    </li>
-                    {% endif %}
-                {% endfor %}
-
-                <li class="character-item">
-                    <img src="/frontend/images/{{ scenario.id }}-crime-scene.png" alt="Tatort" class="character-image">
-                    <a href="{{ url_for('serve_investigate_crime_scene') }}">Tatort</a>
-                </li>
-
-                <li class="character-item">
-                    <img src="/frontend/images/police.png" alt="Fall lösen" class="character-image">
-                    <a href="{{ url_for('serve_resolution') }}">Fall lösen</a>
-                </li>
-            </ul>
-            <button id="backButton" class="back-button">Zurück zur Übersicht</button>
         </div>
     </div>
     
     <script>
-            document.addEventListener('DOMContentLoaded', async function () {
+        document.addEventListener('DOMContentLoaded', async function () {
             const chatWindow = document.getElementById('chatWindow');
 
             try {
@@ -122,9 +82,6 @@
             chatWindow.scrollTop = chatWindow.scrollHeight;
         });
 
-        document.getElementById('backButton').addEventListener('click', function() {
-        window.location.href = '/'; // URL zur Übersicht
-    });
     </script>
 </body>
 </html>

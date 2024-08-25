@@ -1,10 +1,9 @@
 Hier ist das Szenario für einen Kriminalfall. Dies wird als Grundlage für ein Rollenspiel verwendet, in dem der Spieler ein Detektiv ist, der versucht, den oder die Schuldige für das Verbrechen zu finden.
 
-Erstelle mir einen Dalle-3 Prompt, um ein Portraitbild für den Charakter {characterName} zu generieren. Das Bild soll im Stil des Szenarios sein.
+Erstelle mir einen Dalle-3 Prompt, um ein Bild vom Tatort zu generieren. Das Bild soll keine expliziten Details enthalten und nicht gegen die Nutzungsbedinnungen verstoßen.
 
 Gib mir nur den Prompt zurück.
 
 Folgendes Szenario gibt es als JSON:
 
 {template}
-

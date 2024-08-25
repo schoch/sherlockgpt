@@ -14,6 +14,7 @@
             <ul class="scenario-list">
                 {% for scenario in scenarios %}
                     <li class="scenario-item">
+                        <img src="/frontend/images/{{ scenario.id }}.png" alt="Cover von {{ scenario.name }}">
                         <span>{{ scenario.name }}</span>
                         <a href="{{ url_for('start_scenario', id=scenario.id) }}">
                             <button class="start-button">Starten</button>

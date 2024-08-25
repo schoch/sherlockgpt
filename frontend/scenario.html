@@ -17,7 +17,10 @@
                 {% for character in characters %}
                     <li class="character-item">
                         {% if not character.is_dead %}
-                            <a href="{{ url_for('serve_interrogate', id=character.id) }}">{{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}</a>
+                            <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
+                            <a href="{{ url_for('serve_interrogate', id=character.id) }}">
+                                <button class="start-button">{{ character.name }}</button>    
+                            </a>
                         {% endif %}
                     </li>
                 {% endfor %}
@@ -26,16 +29,21 @@
             <h2>Untersuchen</h2>
             <ul class="character-list">
                 {% for character in characters %}
-                {% if character.is_dead %}
-                    <li class="character-item">
-                        <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">{{ character.name }}{% if character.is_dead %} (Opfer) {% endif %}</a>    
-                    </li>
+                    {% if character.is_dead %}
+                        <li class="character-item">
+                            <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
+                            <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">
+                                <button class="start-button">{{ character.name }} (Opfer)</button>        
+                            </a>    
+                        </li>
                     {% endif %}
                 {% endfor %}
-
-                    <li class="character-item">
-                        <a href="{{ url_for('serve_investigate_crime_scene') }}">Tatort</a>
-                    </li>
+                <li class="character-item">
+                    <img src="/frontend/images/{{ scenario.id }}-crime-scene.png" alt="Tatort" class="character-image">
+                    <a href="{{ url_for('serve_investigate_crime_scene') }}">
+                        <button class="start-button">Tatort</button>  
+                        </a>
+                </li>
             </ul>
         </div>
     </div>

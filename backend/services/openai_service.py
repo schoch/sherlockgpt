@@ -128,11 +128,13 @@ def game_chat(message, chat, prompt):
 
     return chat    
 
-def interrogate_chat(message, chat, scenario, character, crime_scene, victim):
+def interrogate_chat(message, chat, scenario, character, crime_scene, victim, resolution):
     if crime_scene:
             prompt = load_prompt('investigate_crime_scene.txt', json.dumps(scenario))
     elif victim:
             prompt = load_prompt('investigate_victim.txt', json.dumps(scenario))
+    elif resolution:
+            prompt = load_prompt('resolution.txt', json.dumps(scenario))
     else:
         prompt = load_prompt('interrogate.txt', json.dumps(scenario))
 
@@ -140,12 +142,7 @@ def interrogate_chat(message, chat, scenario, character, crime_scene, victim):
 
     return game_chat(message, chat, prompt)
 
- 
-def generate_scenario_cover_image(scenario):
-    client = OpenAI()
-    prompt = load_prompt('scenario_image.txt', json.dumps(scenario))
-
-    # 1st step: generate the required dalle-3 prompt
+def simple_text_query(prompt):
     response = openai.chat.completions.create(
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
@@ -154,29 +151,10 @@ def generate_scenario_cover_image(scenario):
         model=gpt_model,
     )
 
-    image_prompt = response.choices[0].message.content
-    print(image_prompt)
+    return response.choices[0].message.content
 
-    response = client.images.generate(
-        model="dall-e-3",
-        prompt=image_prompt,
-        size="1024x1024",
-        quality="standard",
-        n=1,
-    )
-
-    image_url = response.data[0].url
-    print(image_url)
-
-    urllib.request.urlretrieve(image_url, "frontend/images/"+str(scenario['id'])+".png") 
-
-def generate_character_image(character, scenario):
-
-    client = OpenAI()
-    prompt = load_prompt('character_image.txt', json.dumps(scenario))
-    prompt = prompt.replace("{characterName}", character['name'])
-
-    response = client.images.generate(
+def image_query(prompt):
+    response = openai.images.generate(
         model="dall-e-3",
         prompt=prompt,
         size="1024x1024",
@@ -184,7 +162,49 @@ def generate_character_image(character, scenario):
         n=1,
     )
 
-    image_url = response.data[0].url
+    return response.data[0].url
+
+def generate_scenario_cover_image(scenario):
+    prompt = load_prompt('scenario_image.txt', json.dumps(scenario))
+
+    # 1st step: generate the required dalle-3 prompt
+    image_prompt = simple_text_query(prompt)
+    print(image_prompt)
+
+    # 2nd step: generate image
+    image_url = image_query(image_prompt)
     print(image_url)
 
-    urllib.request.urlretrieve(image_url, "frontend/images/"+scenario.id+"-"+character.id) 
+    urllib.request.urlretrieve(image_url, "frontend/images/"+str(scenario['id'])+".png") 
+
+def generate_character_image(character, scenario):
+    prompt = load_prompt('character_image.txt', json.dumps(scenario))
+    prompt = prompt.replace("{characterName}", character['name'])
+
+    # 1st step: generate the required dalle-3 prompt
+    image_prompt = simple_text_query(prompt)
+    print(image_prompt)
+
+    # 2nd step: generate image
+    image_url = image_query(image_prompt)
+    print(image_url)
+
+    urllib.request.urlretrieve(image_url, "frontend/images/"+str(scenario['id'])+"-"+str(character['id'])+".png") 
+
+def generate_crime_scene_image(scenario):
+    prompt = load_prompt('crime_scene_image.txt', json.dumps(scenario))
+
+    # 1st step: generate the required dalle-3 prompt
+    image_prompt = simple_text_query(prompt)
+    print(image_prompt)
+
+    # 2nd step: generate image
+    image_url = image_query(image_prompt)
+    print(image_url)
+
+    urllib.request.urlretrieve(image_url, "frontend/images/"+str(scenario['id'])+"-crime-scene.png") 
+
+def generate_all_character_images(scenario):
+    for character in scenario['characters']:
+        print(character['name'])
+        generate_character_image(character,scenario)
