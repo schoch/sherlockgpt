@@ -11,18 +11,19 @@
         <div class="container">
             <h1>{{ scenario.name }}</h1>
             <p>{{ scenario.intro }}</p>
-            
             <h2>Verdächtige Personen verhören</h2>
             <ul class="character-list">
                 {% for character in characters %}
+                {% if not character.is_dead %}
                     <li class="character-item">
-                        {% if not character.is_dead %}
+                       
                             <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
                             <a href="{{ url_for('serve_interrogate', id=character.id) }}">
                                 <button class="start-button">{{ character.name }}</button>    
                             </a>
-                        {% endif %}
+                       
                     </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
 

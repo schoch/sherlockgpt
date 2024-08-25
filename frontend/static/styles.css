@@ -20,115 +20,6 @@ body {
 }
 
 .container {
-    width: 100%;
-}
-
-h1,
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-}
-
-.scenario-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.scenario-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.scenario-item span {
-    font-size: 16px;
-    color: #333;
-}
-
-.start-button,
-.generate-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.start-button:hover,
-.generate-button:hover {
-    background-color: #0056b3;
-}
-
-p {
-    color: #666;
-    text-align: center;
-}
-
-.character-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.character-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.character-item span {
-    font-size: 16px;
-    color: #333;
-}
-
-.interrogate-form {
-    margin: 0;
-}
-
-.back-button {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-}
-
-.back-button:hover {
-    background-color: #0056b3;
-}
-
-.interrogate-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.interrogate-button:hover {
-    background-color: #0056b3;
-}
-
-.container {
     width: 70%;
     margin-right: 20px;
 }
@@ -141,17 +32,37 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.character-list,
-.scenario-list {
-    list-style-type: none;
-    padding: 0;
+h1, h2, p {
+    text-align: center;
+    color: #333;
 }
 
-.character-item,
-.scenario-item {
+ul, .scenario-list, .character-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scenario-item, .character-item {
     padding: 10px;
     border-bottom: 1px solid #ddd;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.scenario-item img, .character-image {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scenario-item span, .character-item span {
+    font-size: 16px;
+    color: #333;
 }
 
 .character-item a {
@@ -162,6 +73,29 @@ p {
 
 .character-item a:hover {
     text-decoration: underline;
+}
+
+button, .back-button, .start-button, .generate-button, .interrogate-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover, .back-button:hover, .start-button:hover, .generate-button:hover, .interrogate-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .chat-window {
@@ -204,66 +138,19 @@ p {
     justify-content: space-between;
 }
 
-.chat-form input[type="text"] {
+.chat-form input[type="text"], .chat-form-resolution textarea {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-right: 10px;
+    font-family: inherit;
+    font-size: 16px;
 }
 
-.chat-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.chat-form button:hover {
-    background-color: #0056b3;
-}
-
-.scenario-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.scenario-item img {
-    width: 250px; /* Breite des Bildes */
-    height: auto; /* Automatische Höhenanpassung */
-    margin-right: 20px; /* Abstand zwischen Bild und Text */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
-}
-
-.start-button {
-    margin-left: auto; /* Button am Ende der Zeile platzieren */
-}
-
-.character-image {
-    width: 250px;
-    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
-    object-fit: cover; /* Optional: Das Bild beschneiden, um es in den Container einzupassen */
-}
-.character-item {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Abstand zwischen Bild und Text */
-    margin-bottom: 10px; /* Abstand zwischen den Charakter-Elementen */
-}
 .chat-form-resolution textarea {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-right: 10px;
-    resize: vertical; /* Ermöglicht das vertikale Vergrößern/Verkleinern des Textarea */
-    min-height: 100px; /* Mindesthöhe */
-    max-height: 200px; /* Maximalhöhe */
-    width: calc(100% - 140px); /* Breiter als das ursprüngliche input-Element */
-    font-family: inherit; /* Verwendet die gleiche Schriftart wie der Rest der Seite */
-    font-size: 16px; /* Gleiche Schriftgröße wie der ursprüngliche Input */
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    width: calc(100% - 140px);
 }
