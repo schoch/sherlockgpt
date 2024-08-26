@@ -21,8 +21,8 @@ def save_scenario(scenario_data):
     db.session.add(scenario)
     db.session.flush()
     db.session.commit()
-    return scenario.id
 
+    # save the characters to db
     for character in scenario_data['characters']:
         character_data = Character(
             scenario_id=scenario.id,
@@ -43,8 +43,10 @@ def save_scenario(scenario_data):
             relevant_info=character['relevant_info']
         )
         db.session.add(character_data)
+
     db.session.commit()
     db.session.flush()
+    return scenario.id
 
 # Load a scenario by its id
 def get_scenario(id):
