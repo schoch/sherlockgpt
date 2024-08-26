@@ -133,5 +133,6 @@ cython_debug/
 
 backend/scenarios/*.json
 frontend/images/*
+!frontend/images/police.png
 todo.md
 .DS_Store
