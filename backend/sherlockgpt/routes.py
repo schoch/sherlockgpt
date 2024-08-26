@@ -108,6 +108,7 @@ def initialize_routes(app):
     @app.route('/investigate/victim/<int:id>', methods=['GET'])
     def serve_investigate_victim(id):
         session["chat_type"] = ChatType.INVESTIGATION_VICTIM
+        session["character_id"] = id
         characters = get_scenario(session["scenario_id"])["characters"]
         character = get_character(id)
         scenario = get_scenario(session["scenario_id"])
