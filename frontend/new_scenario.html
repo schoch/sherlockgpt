@@ -19,7 +19,7 @@
     </div>
 
     <script>
-        document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
+    document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
     event.preventDefault();
     const keywords = document.getElementById('keywords').value;
     const button = document.getElementById('generateButton');
@@ -52,7 +52,7 @@
 function displayScenario(scenario) {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = formatDataIteratively(scenario);
-    addInterrogateButton();
+    addInterrogateButton(scenario.id);
 }
 
 function formatDataIteratively(data) {
@@ -99,15 +99,15 @@ function formatKey(key) {
     return key;
 }
 
-function addInterrogateButton() {
+function addInterrogateButton(id) {
     const container = document.getElementById('additionalButtonContainer');
     container.innerHTML = ''; 
 
     const interrogateButton = document.createElement('button');
-    interrogateButton.textContent = 'Zur Vernehmung';
+    interrogateButton.textContent = 'Zum Szenario';
     interrogateButton.id = 'interrogateButton';
     interrogateButton.addEventListener('click', function() {
-        window.location.href = '/interrogate';
+        window.location.href = '/start_scenario/'+id.toString();
     });
 
     container.appendChild(interrogateButton);
