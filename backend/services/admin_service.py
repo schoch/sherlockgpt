@@ -6,6 +6,7 @@ from backend.sherlockgpt.models import Scenario, Character
 import os
 import glob
 
+# load all stored scenario json files into db
 def migrate():
     directory_path = 'backend/scenarios/'
     for filename in glob.glob(os.path.join(directory_path, '*.json')):

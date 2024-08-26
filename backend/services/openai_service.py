@@ -71,7 +71,7 @@ def generate_scenario(keywords):
     characters = generate_character_details(json.dumps(scenario))
 
 
-    # Füge die Charakterdetails zum Szenario hinzu
+    # Add character details to the scenario
     for character in characters:
         for scenario_character in scenario['characters']:
             if character['name'] == scenario_character['name']:

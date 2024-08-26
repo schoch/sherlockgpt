@@ -13,7 +13,7 @@
             <label for="keywords">Stichworte:</label>
             <input type="text" id="keywords" name="keywords" required>
             <button type="submit" id="generateButton">Szenario generieren</button>
-            <div id="additionalButtonContainer"></div> <!-- Platzhalter für den neuen Button -->
+            <div id="additionalButtonContainer"></div> 
         </form>
         <div id="result" class="scenario"></div>
     </div>
@@ -24,7 +24,6 @@
     const keywords = document.getElementById('keywords').value;
     const button = document.getElementById('generateButton');
     
-    // Button deaktivieren
     button.disabled = true;
 
     try {
@@ -46,7 +45,6 @@
         console.error('Es gab ein Problem mit der Fetch-Operation:', error);
         document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
     } finally {
-        // Button wieder aktivieren
         button.disabled = false;
     }
 });
@@ -54,8 +52,6 @@
 function displayScenario(scenario) {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = formatDataIteratively(scenario);
-    
-    // Neuen Button hinzufügen
     addInterrogateButton();
 }
 
@@ -97,7 +93,6 @@ function formatDataIteratively(data) {
 }
 
 function formatKey(key) {
-    // Formatieren Sie den Schlüssel für eine bessere Lesbarkeit, nur wenn es ein String ist
     if (typeof key === 'string') {
         return key.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
     }
@@ -106,7 +101,7 @@ function formatKey(key) {
 
 function addInterrogateButton() {
     const container = document.getElementById('additionalButtonContainer');
-    container.innerHTML = ''; // Vorherigen Inhalt löschen, falls vorhanden
+    container.innerHTML = ''; 
 
     const interrogateButton = document.createElement('button');
     interrogateButton.textContent = 'Zur Vernehmung';
