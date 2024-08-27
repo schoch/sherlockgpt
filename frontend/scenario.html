@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ scenario.name }}</title>
+    <title>Nachrichtenseite</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
     <div class="main-container">
         <div class="container">
-            <h1>{{ scenario.name }}</h1>
-            <p>{{ scenario.intro }}</p>
-            
+            <div class="headline-container">
+                <h1>{{ scenario.name }}</h1>
+                <p>{{ scenario.intro }}</p>
+            </div>
+            <div class="newspaper-container">
+                <div class="headline-container">
+                    <h1>{{ scenario.newspaper_headline }}</h1>
+                    <p>{{ scenario.newspaper_text }}</p>
+                </div>
+            </div>
+
+
             <h2>Verdächtige Personen verhören</h2>
             <ul class="character-list">
                 {% for character in characters %}
-                    <li class="character-item">
-                        {% if not character.is_dead %}
-                            <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
-                            <a href="{{ url_for('serve_interrogate', id=character.id) }}">
-                                <button class="start-button">{{ character.name }}</button>    
-                            </a>
-                        {% endif %}
-                    </li>
+                {% if not character.is_dead %}
+                <li class="character-item">
+
+                    <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}"
+                        class="character-image">
+                    <a href="{{ url_for('serve_interrogate', id=character.id) }}">
+                        <button class="start-button">{{ character.name }}</button>
+                    </a>
+
+                </li>
+                {% endif %}
                 {% endfor %}
             </ul>
 
             <h2>Untersuchen</h2>
             <ul class="character-list">
                 {% for character in characters %}
-                    {% if character.is_dead %}
-                        <li class="character-item">
-                            <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}" class="character-image">
-                            <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">
-                                <button class="start-button">{{ character.name }} (Opfer)</button>        
-                            </a>    
-                        </li>
-                    {% endif %}
+                {% if character.is_dead %}
+                <li class="character-item">
+                    <img src="/frontend/images/{{ scenario.id }}-{{ character.id }}.png" alt="{{ character.name }}"
+                        class="character-image">
+                    <a href="{{ url_for('serve_investigate_victim', id=character.id) }}">
+                        <button class="start-button">{{ character.name }} (Opfer)</button>
+                    </a>
+                </li>
+                {% endif %}
                 {% endfor %}
                 <li class="character-item">
                     <img src="/frontend/images/{{ scenario.id }}-crime-scene.png" alt="Tatort" class="character-image">
                     <a href="{{ url_for('serve_investigate_crime_scene') }}">
-                        <button class="start-button">Tatort</button>  
-                        </a>
+                        <button class="start-button">Tatort</button>
+                    </a>
                 </li>
             </ul>
-        </div>
-    </div>
-</body>
-</html>

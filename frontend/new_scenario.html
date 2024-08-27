@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krimi-Szenario Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Krimi-Szenario Generator</h1>
@@ -13,105 +15,106 @@
             <label for="keywords">Stichworte:</label>
             <input type="text" id="keywords" name="keywords" required>
             <button type="submit" id="generateButton">Szenario generieren</button>
-            <div id="additionalButtonContainer"></div> 
+            <div id="additionalButtonContainer"></div>
         </form>
         <div id="result" class="scenario"></div>
     </div>
 
     <script>
-    document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
-    event.preventDefault();
-    const keywords = document.getElementById('keywords').value;
-    const button = document.getElementById('generateButton');
-    
-    button.disabled = true;
+        document.getElementById('scenarioForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const keywords = document.getElementById('keywords').value;
+            const button = document.getElementById('generateButton');
 
-    try {
-        const response = await fetch('/new_scenario', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ keywords: keywords })
+            button.disabled = true;
+
+            try {
+                const response = await fetch('/new_scenario', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ keywords: keywords })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Netzwerkantwort war nicht ok');
+                }
+
+                const data = await response.json();
+                displayScenario(data.scenario);
+            } catch (error) {
+                console.error('Es gab ein Problem mit der Fetch-Operation:', error);
+                document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
+            } finally {
+                button.disabled = false;
+            }
         });
 
-        if (!response.ok) {
-            throw new Error('Netzwerkantwort war nicht ok');
+        function displayScenario(scenario) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = formatDataIteratively(scenario);
+            addInterrogateButton(scenario.id);
         }
 
-        const data = await response.json();
-        displayScenario(data.scenario);
-    } catch (error) {
-        console.error('Es gab ein Problem mit der Fetch-Operation:', error);
-        document.getElementById('result').innerHTML = '<p>Fehler beim Generieren des Szenarios. Bitte versuchen Sie es später erneut.</p>';
-    } finally {
-        button.disabled = false;
-    }
-});
+        function formatDataIteratively(data) {
+            let html = '';
+            const stack = [{ data, level: 0, key: null }];
 
-function displayScenario(scenario) {
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = formatDataIteratively(scenario);
-    addInterrogateButton(scenario.id);
-}
+            while (stack.length > 0) {
+                const { data, level, key } = stack.pop();
 
-function formatDataIteratively(data) {
-    let html = '';
-    const stack = [{ data, level: 0, key: null }];
-    
-    while (stack.length > 0) {
-        const { data, level, key } = stack.pop();
-        
-        if (key !== null) {
-            html += `<div style="margin-left: ${level * 20}px;"><strong>${formatKey(key)}:</strong> `;
-        }
+                if (key !== null) {
+                    html += `<div style="margin-left: ${level * 20}px;"><strong>${formatKey(key)}:</strong> `;
+                }
 
-        if (Array.isArray(data)) {
-            html += '<ul>';
-            data.forEach((item, index) => {
-                stack.push({ data: item, level: level + 1, key: index });
-            });
-            html += '</ul>';
-        } else if (typeof data === 'object' && data !== null) {
-            html += '<div>';
-            for (const key in data) {
-                if (data.hasOwnProperty(key)) {
-                    stack.push({ data: data[key], level: level + 1, key });
+                if (Array.isArray(data)) {
+                    html += '<ul>';
+                    data.forEach((item, index) => {
+                        stack.push({ data: item, level: level + 1, key: index });
+                    });
+                    html += '</ul>';
+                } else if (typeof data === 'object' && data !== null) {
+                    html += '<div>';
+                    for (const key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            stack.push({ data: data[key], level: level + 1, key });
+                        }
+                    }
+                    html += '</div>';
+                } else {
+                    html += data;
+                }
+
+                if (key !== null) {
+                    html += '</div>';
                 }
             }
-            html += '</div>';
-        } else {
-            html += data;
+
+            return html;
         }
 
-        if (key !== null) {
-            html += '</div>';
+        function formatKey(key) {
+            if (typeof key === 'string') {
+                return key.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+            }
+            return key;
         }
-    }
 
-    return html;
-}
+        function addInterrogateButton(id) {
+            const container = document.getElementById('additionalButtonContainer');
+            container.innerHTML = '';
 
-function formatKey(key) {
-    if (typeof key === 'string') {
-        return key.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
-    }
-    return key;
-}
+            const interrogateButton = document.createElement('button');
+            interrogateButton.textContent = 'Zum Szenario';
+            interrogateButton.id = 'interrogateButton';
+            interrogateButton.addEventListener('click', function () {
+                window.location.href = '/start_scenario/' + id.toString();
+            });
 
-function addInterrogateButton(id) {
-    const container = document.getElementById('additionalButtonContainer');
-    container.innerHTML = ''; 
-
-    const interrogateButton = document.createElement('button');
-    interrogateButton.textContent = 'Zum Szenario';
-    interrogateButton.id = 'interrogateButton';
-    interrogateButton.addEventListener('click', function() {
-        window.location.href = '/start_scenario/'+id.toString();
-    });
-
-    container.appendChild(interrogateButton);
-}
+            container.appendChild(interrogateButton);
+        }
     </script>
 </body>
+
 </html>

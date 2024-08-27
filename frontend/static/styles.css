@@ -232,40 +232,58 @@ p {
 }
 
 .scenario-item img {
-    width: 250px; /* Breite des Bildes */
-    height: auto; /* Automatische Höhenanpassung */
-    margin-right: 20px; /* Abstand zwischen Bild und Text */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+    width: 250px;
+    /* Breite des Bildes */
+    height: auto;
+    /* Automatische Höhenanpassung */
+    margin-right: 20px;
+    /* Abstand zwischen Bild und Text */
+    border-radius: 8px;
+    /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Leichter Schatten */
 }
 
 .start-button {
-    margin-left: auto; /* Button am Ende der Zeile platzieren */
+    margin-left: auto;
+    /* Button am Ende der Zeile platzieren */
 }
 
 .character-image {
     width: 250px;
-    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
-    object-fit: cover; /* Optional: Das Bild beschneiden, um es in den Container einzupassen */
+    height: auto;
+    /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    object-fit: cover;
+    /* Optional: Das Bild beschneiden, um es in den Container einzupassen */
 }
+
 .character-item {
     display: flex;
     align-items: center;
-    gap: 10px; /* Abstand zwischen Bild und Text */
-    margin-bottom: 10px; /* Abstand zwischen den Charakter-Elementen */
+    gap: 10px;
+    /* Abstand zwischen Bild und Text */
+    margin-bottom: 10px;
+    /* Abstand zwischen den Charakter-Elementen */
 }
+
 .chat-form-resolution textarea {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-right: 10px;
-    resize: vertical; /* Ermöglicht das vertikale Vergrößern/Verkleinern des Textarea */
-    min-height: 100px; /* Mindesthöhe */
-    max-height: 200px; /* Maximalhöhe */
-    width: calc(100% - 140px); /* Breiter als das ursprüngliche input-Element */
-    font-family: inherit; /* Verwendet die gleiche Schriftart wie der Rest der Seite */
-    font-size: 16px; /* Gleiche Schriftgröße wie der ursprüngliche Input */
+    resize: vertical;
+    /* Ermöglicht das vertikale Vergrößern/Verkleinern des Textarea */
+    min-height: 100px;
+    /* Mindesthöhe */
+    max-height: 200px;
+    /* Maximalhöhe */
+    width: calc(100% - 140px);
+    /* Breiter als das ursprüngliche input-Element */
+    font-family: inherit;
+    /* Verwendet die gleiche Schriftart wie der Rest der Seite */
+    font-size: 16px;
+    /* Gleiche Schriftgröße wie der ursprüngliche Input */
 }
 
 .scenario-list {
@@ -328,4 +346,76 @@ p {
 
 .generate-button:hover {
     background-color: #0056b3;
+}
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.character-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.character-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+
+.start-button:hover {
+    background-color: #007bff;
+}
+
+.newspaper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url('/frontend/images/newspaper.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headline-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.headline-container h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+.headline-container p {
+    font-size: 1.2em;
+    margin: 0;
 }
