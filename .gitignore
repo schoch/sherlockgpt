@@ -131,9 +131,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-backend/scenarios/*.json
-frontend/images/*
-!frontend/images/police.png
-!frontend/images/newspaper.jpg
-todo.md
 .DS_Store
