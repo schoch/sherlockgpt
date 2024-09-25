@@ -204,7 +204,8 @@ p {
     justify-content: space-between;
 }
 
-.chat-form input[type="text"] {
+.chat-form input[type="text"],
+.chat-form-resolution input[type="text"] {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
@@ -212,7 +213,8 @@ p {
     margin-right: 10px;
 }
 
-.chat-form button {
+.chat-form button,
+.chat-form-resolution button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -221,7 +223,8 @@ p {
     cursor: pointer;
 }
 
-.chat-form button:hover {
+.chat-form button:hover,
+.chat-form-resolution button {
     background-color: #0056b3;
 }
 
