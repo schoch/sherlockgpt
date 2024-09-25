@@ -85,14 +85,12 @@
 
                 const data = await response.json();
 
-                // Leere das Chat-Fenster und zeige den gesamten Chatverlauf an
                 chatWindow.innerHTML = '';
                 data.chat.forEach(message => {
                     const messageClass = message.sender === 'user' ? 'user-message' : 'character-message';
                     chatWindow.innerHTML += `<div class="chat-message ${messageClass}">${message.text}</div>`;
                 });
 
-                // Scrolle das Chat-Fenster nach unten
                 chatWindow.scrollTop = chatWindow.scrollHeight;
             } catch (error) {
                 console.error('Es gab ein Problem mit der Fetch-Operation:', error);
@@ -105,7 +103,6 @@
             const userInput = document.getElementById('userInput').value;
             const chatWindow = document.getElementById('chatWindow');
 
-            // Zeige die Benutzerfrage im Chat-Fenster
             chatWindow.innerHTML += `<div class="chat-message user-message">${userInput}</div>`;
             document.getElementById('userInput').value = '';
 
@@ -129,7 +126,6 @@
                 chatWindow.innerHTML += '<div class="chat-message error-message">Fehler beim Abrufen der Antwort. Bitte versuchen Sie es später erneut.</div>';
             }
 
-            // Scrolle das Chat-Fenster nach unten
             chatWindow.scrollTop = chatWindow.scrollHeight;
         });
     </script>
