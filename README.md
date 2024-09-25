@@ -43,3 +43,9 @@ python backend/app.py
 ```
 http://127.0.0.1:5000
 ```
+
+# Notes
+
+- All game data is stored in a SQLite database: `sherlockgpt/instance/scenarios.db`. There is a sample database with game data that corresponds to the provided images and JSON files. It is named `scenarios.db.example`. Simply rename it to `scenarios.db` and place it in `sherlockgpt/instance/` to get started.
+- There are some helper methods to rebuild the database, etc. Look for the `/admin` endpoints in `routes.py`.
+- Don't forget: this is just a little experiment and not a full game. 😉
