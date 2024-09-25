@@ -1,0 +1,178 @@
+{
+    "name": "Mord unter Retrogamern",
+    "style": "Krimi",
+    "setting": "Gaming Ausstellung f\u00fcr Retro-Spiele in einem alten Kino",
+    "crime": "Mord an einem bekannten Sammler durch eine t\u00f6dliche Dosis von Digitalis, verabreicht \u00fcber ein Getr\u00e4nk.",
+    "intro": "Auf der j\u00e4hrlichen Gaming-Ausstellung f\u00fcr Retro-Spiele in einem alten Kino wird ein bekannter Sammler tot aufgefunden. Es liegt nun am Spieler, die Verd\u00e4chtigen zu befragen und die Wahrheit \u00fcber das Verbrechen herauszufinden.",
+    "characters": [
+        {
+            "name": "Richard 'Rick' Callahan",
+            "appearance": "Ein Mann in den fr\u00fchen 40ern, tr\u00e4gt eine Retro-Spielkonsole als T-Shirt-Motiv, athletische Statur, braunes Haar.",
+            "personality": "Begeistert, laut, hat aber eine aggressive Ader.",
+            "relationships": [
+                {
+                    "character_name": "Evelyn Parker",
+                    "relationship": "Wettbewerber und Erzrivale auf Auktionen."
+                },
+                {
+                    "character_name": "Lucas Freeman",
+                    "relationship": "Langj\u00e4hrige Freunde, teilen die Leidenschaft f\u00fcr Retro-Gaming."
+                }
+            ],
+            "involvement": "Opfer des Verbrechens",
+            "is_dead": true,
+            "is_criminal": false,
+            "is_victim": true,
+            "knowledge": "Richard wusste nicht, dass er ein Ziel war und ahnte nichts von dem Mordplan.",
+            "feelings": "Richard f\u00fchlte sich vermutlich ganz normal und freute sich auf die Ausstellung und die M\u00f6glichkeit, seltene St\u00fccke zu erwerben.",
+            "alibi": "Richard war zum Zeitpunkt des Verbrechens im Hauptvorf\u00fchrraum, wo er tot aufgefunden wurde.",
+            "activities": "Richard war auf der Gaming-Ausstellung und bewegte sich von Stand zu Stand, um sich die ausgestellten Retro-Spiele und Konsolen anzusehen. Er f\u00fchrte Gespr\u00e4che mit anderen Sammlern und Teilnehmern, darunter auch Evelyn Parker und Lucas Freeman.",
+            "topics": "Richard kann nicht mehr sprechen, weil er tot ist. Er wollte vielleicht \u00fcber seine Sammlung und seine neuesten Errungenschaften sprechen.",
+            "motives": "Richard hatte keine pers\u00f6nlichen Beweggr\u00fcnde f\u00fcr das Verbrechen, da er das Opfer war.",
+            "relevant_info": "Richard wurde durch eine t\u00f6dliche Dosis Digitalis in seinem Getr\u00e4nk vergiftet, das er im Hauptvorf\u00fchrraum konsumierte. Er wurde auf einem der vorderen Sitze mit einem Becher in der Hand tot aufgefunden."
+        },
+        {
+            "name": "Evelyn 'Evie' Parker",
+            "appearance": "Eine Frau in den sp\u00e4ten 30ern, elegante Kleidung, kurze blonde Haare, tr\u00e4gt immer eine Designer-Tasche.",
+            "personality": "Berechnend, ehrgeizig, aber mit einem charmanten Auftreten.",
+            "relationships": [
+                {
+                    "character_name": "Richard Callahan",
+                    "relationship": "Erzrivale und Gegner bei Auktionen."
+                },
+                {
+                    "character_name": "Natalia Ortiz",
+                    "relationship": "Gespannte Beziehung, da beide sich um denselben seltenen Artikel stritten."
+                }
+            ],
+            "involvement": "Evelyn Parker plante den Mord, um Rick als Konkurrenz auszuschalten und einen wertvollen Artikel zu erhalten.",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Evelyn wei\u00df genau, wie der Mord durchgef\u00fchrt wurde und dass Lucas ihr dabei geholfen hat.",
+            "feelings": "Evelyn f\u00fchlt sich angespannt und nerv\u00f6s, versucht jedoch, ruhig und charmant zu wirken.",
+            "alibi": "Evelyn behauptet, sie sei zur Tatzeit im Ausstellungsraum gewesen und habe sich die seltenen Artikel angeschaut.",
+            "activities": "Evelyn verbrachte einige Zeit im Caf\u00e9-Bereich und im Ausstellungsraum. Sie hatte mehrere Gespr\u00e4che mit Rick und Lucas.",
+            "topics": "Evelyn m\u00f6chte \u00fcber die Ausstellung und die seltenen Artikel sprechen. Sie wird l\u00fcgen, wenn es um ihre Beteiligung am Mord geht, und versuchen, die Schuld auf andere zu schieben.",
+            "motives": "Evelyn wollte Rick aus dem Weg r\u00e4umen, um einen seltenen Artikel zu erhalten, den er auf der Messe ersteigern wollte.",
+            "relevant_info": "Evelyn trug Designer-Schuhe, die m\u00f6glicherweise die Abdr\u00fccke hinterlassen haben, die in der N\u00e4he des Tatorts gefunden wurden."
+        },
+        {
+            "name": "Lucas Freeman",
+            "appearance": "Ein Mann in den fr\u00fchen 30ern, casual Kleidung, schwarze Haare, etwas \u00fcbergewichtig.",
+            "personality": "Freundlich, oft nerv\u00f6s, detailverliebt.",
+            "relationships": [
+                {
+                    "character_name": "Richard Callahan",
+                    "relationship": "Langj\u00e4hrige Freunde, teilen die Leidenschaft f\u00fcr Retro-Gaming."
+                },
+                {
+                    "character_name": "Evelyn Parker",
+                    "relationship": "Bewundert Evelyns Wissen und Ehrgeiz."
+                }
+            ],
+            "involvement": "Lucas half Evelyn dabei, das Digitalis in Richards Getr\u00e4nk zu mischen, wurde von Evelyn dazu \u00fcberredet und tat es halb widerwillig.",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Lucas wei\u00df genau, wie der Mordplan ablief und dass Evelyn ihn dazu \u00fcberredet hat, das Gift zu verabreichen.",
+            "feelings": "Lucas f\u00fchlt sich schuldig und nerv\u00f6s, hat Angst, entdeckt zu werden.",
+            "alibi": "Lucas behauptet, er sei zur Tatzeit im Caf\u00e9-Bereich gewesen, wo er mit einigen anderen Teilnehmern gesprochen hat.",
+            "activities": "Lucas war auf der Ausstellung unterwegs, hat sich mit verschiedenen Sammlern unterhalten und sich die Exponate angesehen. Er hatte auch l\u00e4ngere Gespr\u00e4che mit Rick und Evelyn.",
+            "topics": "Lucas m\u00f6chte \u00fcber die Ausstellung und die Retro-Spiele sprechen. Er wird versuchen, seine Beteiligung am Mord zu verbergen, k\u00f6nnte aber unter Druck zusammenbrechen und gestehen.",
+            "motives": "Lucas wurde von Evelyn dazu \u00fcberredet, ihr zu helfen, und sie versprach ihm, seine Schulden zu begleichen.",
+            "relevant_info": "Lucas k\u00f6nnte unter Druck zusammenbrechen und gestehen, wenn er nerv\u00f6s gemacht wird oder sein schlechtes Gewissen ihn \u00fcberw\u00e4ltigt."
+        },
+        {
+            "name": "Natalia Ortiz",
+            "appearance": "Eine Frau in den mittleren 40ern, tr\u00e4gt eine farbenfrohe Bluse, lange braune Haare, Brille.",
+            "personality": "Analytisch, kann aber schnell gereizt werden, wenn sie unter Druck steht.",
+            "relationships": [
+                {
+                    "character_name": "Evelyn Parker",
+                    "relationship": "Gespannte Beziehung wegen Konkurrenz um seltenen Artikel."
+                },
+                {
+                    "character_name": "George 'Georgie' Smith",
+                    "relationship": "Vertraute Freundschaft, arbeiten oft zusammen bei Veranstaltungen."
+                }
+            ],
+            "involvement": "Keine direkte Beteiligung am Verbrechen, fand jedoch den leblosen K\u00f6rper von Rick.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Natalia wei\u00df, dass Rick tot aufgefunden wurde und dass Digitalis die Todesursache war. Sie hat den K\u00f6rper gefunden.",
+            "feelings": "Natalia ist schockiert und beunruhigt aufgrund der Entdeckung des leblosen K\u00f6rpers ihres Rivalen.",
+            "alibi": "Natalia behauptet, sie sei zur Tatzeit im Ausstellungsraum gewesen, um sich auf die Auktion vorzubereiten.",
+            "activities": "Natalia verbrachte einige Zeit damit, sich Exponate anzusehen und bereitete sich auf die Auktion vor. Sie sprach auch mit mehreren Sammlern, darunter Evelyn Parker und Georgie Smith.",
+            "topics": "Natalia m\u00f6chte \u00fcber die Ausstellung und die Auktion sprechen. Sie wird versuchen, ihre Rivalit\u00e4t mit Evelyn herunterzuspielen.",
+            "motives": "Natalia steht in Konkurrenz zu Evelyn, aber sie hatte keinen direkten Grund, Rick zu schaden.",
+            "relevant_info": "Natalia hat keine direkte Verbindung zum Verbrechen, kennt jedoch einige Details, da sie den K\u00f6rper gefunden hat."
+        },
+        {
+            "name": "George 'Georgie' Smith",
+            "appearance": "Ein Mann in den sp\u00e4ten 50ern, grau meliertes Haar, Brille, formelle Kleidung.",
+            "personality": "Ruhig, weise, ein wenig geheimnisvoll.",
+            "relationships": [
+                {
+                    "character_name": "Natalia Ortiz",
+                    "relationship": "Vertraute Freundschaft, arbeiten oft zusammen bei Veranstaltungen."
+                },
+                {
+                    "character_name": "Lucas Freeman",
+                    "relationship": "Lehrertyp, Mentor f\u00fcr Lucas und andere j\u00fcngere Sammler."
+                }
+            ],
+            "involvement": "Georgie ist nicht direkt an dem Verbrechen beteiligt, h\u00e4lt jedoch wichtige Informationen zur\u00fcck.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Georgie wei\u00df \u00fcber die spannungsgeladene Beziehung zwischen Evelyn, Lucas und Richard Bescheid und hat m\u00f6glicherweise Informationen \u00fcber Evelyns und Lucas' Beteiligung.",
+            "feelings": "Georgie f\u00fchlt sich unwohl und besorgt dar\u00fcber, dass jemand aus seinem Bekanntenkreis in ein Verbrechen verwickelt ist.",
+            "alibi": "Georgie sagt, dass er zur Tatzeit im Caf\u00e9-Bereich des Kinos war und dort mit anderen Teilnehmern geredet hat.",
+            "activities": "Georgie hat einige Zeit damit verbracht, sich die Ausstellung anzusehen und sich mit Natalia und anderen Sammlern zu unterhalten. Er war auch im Caf\u00e9-Bereich.",
+            "topics": "Georgie wird \u00fcber die Ausstellung und Retro-Spiele sprechen. Er wird versuchen, wichtige Informationen \u00fcber die Tat zu verbergen, um niemanden direkt zu belasten.",
+            "motives": "Georgie hat keine direkten Motive f\u00fcr das Verbrechen, m\u00f6chte jedoch seine Freunde vor Konsequenzen sch\u00fctzen.",
+            "relevant_info": "Georgie ist Mentor von Lucas und k\u00f6nnte versuchen, ihn zu sch\u00fctzen, indem er Informationen zur\u00fcckh\u00e4lt."
+        },
+        {
+            "name": "Clara Jensen",
+            "appearance": "Eine Frau in den sp\u00e4ten 20ern, rote Haare im Bob-Schnitt, tr\u00e4gt ein T-Shirt von einem ber\u00fchmten Retro-Spiel.",
+            "personality": "Enthusiastisch, voller Energie, manchmal etwas naiv.",
+            "relationships": [
+                {
+                    "character_name": "Richard Callahan",
+                    "relationship": "Fan und Bewunderin, oft in seiner Gegenwart."
+                }
+            ],
+            "involvement": "Keine direkte Beteiligung am Verbrechen, ist ein Fan und Bewunderin des Opfers.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Clara wei\u00df, dass Rick gestorben ist und dass er durch Digitalis vergiftet wurde.",
+            "feelings": "Clara ist schockiert und traurig \u00fcber Ricks Tod, da sie ihn sehr bewundert hat.",
+            "alibi": "Clara sagt, dass sie zur Tatzeit im Caf\u00e9-Bereich war und dort etwas trank.",
+            "activities": "Clara verbrachte die Zeit vor dem Verbrechen damit, sich die Ausstellung anzusehen und mit verschiedenen Sammlern, einschlie\u00dflich Rick, zu sprechen.",
+            "topics": "Clara spricht gerne \u00fcber Retro-Spiele und ihre Bewunderung f\u00fcr Rick. Sie k\u00f6nnte Details \u00fcber Evelyns Verd\u00e4chtigkeit preisgeben, wenn sie emotional wird.",
+            "motives": "Clara hat keine pers\u00f6nlichen Beweggr\u00fcnde f\u00fcr das Verbrechen. Sie war nur ein Bewundererin von Rick.",
+            "relevant_info": "Clara k\u00f6nnte indirekt wichtige Informationen haben, die auf Evelyns Beteiligung hinweisen. Wenn sie emotional zusammenbricht, k\u00f6nnte sie Hinweise preisgeben."
+        }
+    ],
+    "secret_truth": {
+        "criminals": [
+            "Evelyn 'Evie' Parker",
+            "Lucas Freeman"
+        ],
+        "details": "Evelyn Parker plante den Mord an Richard Callahan, um ihn als Konkurrenz auszuschalten und den wertvollen seltenen Artikel zu bekommen, den er auf der Messe ersteigern wollte. Sie \u00fcberzeugte Lucas Freeman, ihr zu helfen, indem sie ihm versprach, seine Schulden zu begleichen und sich im Gegenzug f\u00fcr seine Hilfe zu revanchieren. Lucas stimmte halb widerwillig zu und mischte das Digitalis in Richards Getr\u00e4nk. Kurz darauf starb Richard an einer \u00dcberdosis, was wie ein Herzinfarkt aussah. Natalia fand sp\u00e4ter seinen leblosen K\u00f6rper im Kinosaal."
+    },
+    "victim": "Richard 'Rick' Callahan",
+    "plot_twists": [
+        "Wenn Clara von Evelyns Beteiligung erf\u00e4hrt, wird sie emotional zusammenbrechen und wichtige Hinweise preisgeben.",
+        "Wenn Lucas unter Druck gesetzt wird, k\u00f6nnte er seine Beteiligung an dem Mord gestehen, nachdem er sich schuldig f\u00fchlt.",
+        "Wenn Natalia herausfindet, dass Georgie Information zur\u00fcckh\u00e4lt, wird sie ihn zur Rede stellen."
+    ],
+    "newspaper_headline": "Mord auf der Retro-Gaming Ausstellung",
+    "newspaper_text": "Ein Schock ersch\u00fctterte die j\u00e4hrliche Gaming-Ausstellung f\u00fcr Retro-Spiele im alten Kino, als der bekannte Sammler Richard 'Rick' Callahan tot aufgefunden wurde. Erste Berichte deuten darauf hin, dass Callahan durch eine t\u00f6dliche Dosis Digitalis vergiftet wurde, die ihm \u00fcber ein Getr\u00e4nk verabreicht wurde. Die Polizei hat bisher keine Verd\u00e4chtigen bekannt gegeben, aber die Ermittlungen sind in vollem Gange. Die Gaming-Community ist in Trauer und fordert eine schnelle Aufkl\u00e4rung des Verbrechens.",
+    "location_info": "Die Gaming Ausstellung findet in einem historischen alten Kino statt. Das Kino besteht aus einem gro\u00dfen Vorf\u00fchrraum, mehreren kleinen Nebenr\u00e4umen und G\u00e4ngen, die mit Retro-Spielautomaten und Konsolen ausgestattet sind. Es gibt auch einen Ausstellungsraum, in dem seltene Spiele und Konsolen pr\u00e4sentiert werden, sowie einen kleinen Caf\u00e9-Bereich.",
+    "crime_scene_description": "Der Tatort befindet sich im Hauptvorf\u00fchrraum des Kinos. Richard Callahan wurde auf einem der vorderen Sitze tot aufgefunden, mit einem Getr\u00e4nkebecher in der Hand, der neben ihm auf dem Boden lag. Bei einer n\u00e4heren Untersuchung kann man Spuren von Digitalis in dem Getr\u00e4nk finden. Ein detaillierter Blick auf den Raum zeigt, dass auf dem Boden winzige Glassplitter verstreut sind, die von einer zerbrochenen Lupe stammen k\u00f6nnten. Auf einem nahe gelegenen Sitzplatz wurden au\u00dferdem einige Abdr\u00fccke eines Designer-Schuhs entdeckt."
+}

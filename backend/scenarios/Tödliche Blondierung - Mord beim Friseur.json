@@ -1,0 +1,201 @@
+{
+    "name": "T\u00f6dliche Blondierung - Mord beim Friseur",
+    "style": "Krimi",
+    "setting": "Friseursalon",
+    "crime": "Mord",
+    "intro": "Im charmanten Friseursalon 'Schnitt & Schick' ereignete sich ein schreckliches Verbrechen. Eines Abends, als das Gesch\u00e4ft f\u00fcr den Tag geschlossen wurde, fand man die Besitzerin, Emily Krause, tot auf dem Boden des Salons. Was zun\u00e4chst wie ein tragischer Unfall aufgrund einer allergischen Reaktion auf Haarf\u00e4rbemittel aussah, entpuppt sich schnell als kaltbl\u00fctiger Mord. Es liegt nun an dir, dem talentierten Detektiv, der Wahrheit auf die Spur zu kommen und den M\u00f6rder zu entlarven.",
+    "characters": [
+        {
+            "name": "Emily Krause",
+            "appearance": "Mittleren Alters, blonde schulterlange Haare, immer modisch gekleidet.",
+            "personality": "Herzlich und freundlich, besonders stolz auf ihren Salon.",
+            "relationships": [
+                {
+                    "character_name": "Max M\u00fcller",
+                    "relationship": "Gesch\u00e4ftspartner und langj\u00e4hriger Freund."
+                },
+                {
+                    "character_name": "Lena Schmitt",
+                    "relationship": "Lehrling im Salon, schaut zu Emily auf."
+                },
+                {
+                    "character_name": "Claudia Hoffmann",
+                    "relationship": "Stammkundin und enge Freundin."
+                },
+                {
+                    "character_name": "Tim Becker",
+                    "relationship": "Lieferant und heimlicher Verehrer."
+                },
+                {
+                    "character_name": "Julia Wagner",
+                    "relationship": "Konkurrentin und Eigent\u00fcmerin eines nahegelegenen Salons."
+                }
+            ],
+            "involvement": "Emily Krause ist das Mordopfer im Fall 'T\u00f6dliche Blondierung'. Sie wurde durch ein ausgetauschtes Haarf\u00e4rbemittel, das eine t\u00f6dliche allergische Reaktion ausl\u00f6ste, get\u00f6tet.",
+            "is_dead": true,
+            "is_criminal": false,
+            "is_victim": true,
+            "knowledge": "Emily wusste nicht, dass das Haarf\u00e4rbemittel ausgetauscht wurde. Sie war sich ihrer Allergie gegen bestimmte Inhaltsstoffe bewusst, aber vertraute auf die Sicherheitsma\u00dfnahmen in ihrem Salon.",
+            "feelings": "Da Emily tot ist, hat sie keine Gef\u00fchle mehr zum Verbrechen. Zu Lebzeiten war sie jedoch stets stolz auf ihren Salon und hatte gelegentlich Sorgen wegen ihrer Konkurrenz.",
+            "alibi": "Emily hat kein Alibi, da sie zum Zeitpunkt des Verbrechens das Opfer war und tot aufgefunden wurde.",
+            "activities": "Emily hatte den Salon nach Gesch\u00e4ftsschluss sauber gemacht und die Abrechnung des Tages durchgef\u00fchrt. Danach bereitete sie sich darauf vor, das Haarf\u00e4rbemittel zu verwenden, das ihr zum Verh\u00e4ngnis wurde.",
+            "topics": "Emily kann nicht mehr sprechen, aber wichtige Aspekte ihrer letzten Tage und Aktivit\u00e4ten k\u00f6nnen durch die Untersuchung des Salons und Befragung der anderen Charaktere ans Licht kommen.",
+            "motives": "Emily hatte keine direkten Motive, da sie das Opfer ist. Ihr Stolz auf den Salon und ihre Beziehungen k\u00f6nnten jedoch relevante Hinweise liefern.",
+            "relevant_info": "Emily war die Besitzerin des Salons und kannte alle Produkte und Sicherheitsrichtlinien sehr gut. Ihr Tagesablauf und ihre Aktivit\u00e4ten sind wichtig f\u00fcr die Ermittlungen."
+        },
+        {
+            "name": "Max M\u00fcller",
+            "appearance": "Ende 40, kurze braune Haare, tr\u00e4gt oft elegante Anz\u00fcge.",
+            "personality": "Ruhig, besonnen, sehr gesch\u00e4ftsorientiert.",
+            "relationships": [
+                {
+                    "character_name": "Emily Krause",
+                    "relationship": "Gesch\u00e4ftspartnerin und langj\u00e4hrige Freundin."
+                },
+                {
+                    "character_name": "Julia Wagner",
+                    "relationship": "Kurze Aff\u00e4re, jetzt distanzierter Kontakt."
+                },
+                {
+                    "character_name": "Lena Schmitt",
+                    "relationship": "Beobachtet sie genau, unsicher \u00fcber ihre F\u00e4higkeiten."
+                }
+            ],
+            "involvement": "Max M\u00fcller ist der Gesch\u00e4ftspartner und langj\u00e4hrige Freund von Emily Krause. Er hat ein starkes gesch\u00e4ftliches Interesse am Salon.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Max wei\u00df, dass Emily eine Allergie gegen bestimmte Haarf\u00e4rbemittel hat, aber er ist sich des kriminellen Austauschs des F\u00e4rbemittels nicht bewusst. Er kennt auch die Konkurrenz zwischen Emily und Julia Wagner.",
+            "feelings": "Max ist schockiert und traurig \u00fcber Emilys Tod. Gleichzeitig sorgt er sich um den Ruf und die Zukunft des Salons.",
+            "alibi": "Max behauptet, dass er zur Tatzeit in einem Gesch\u00e4ftsmeeting war, was von einigen seiner Gesch\u00e4ftspartner best\u00e4tigt werden kann.",
+            "activities": "In den Stunden vor dem Verbrechen war Max im Salon, um einige gesch\u00e4ftliche Angelegenheiten zu besprechen und verlie\u00df dann den Salon, um zu seinem Meeting zu gehen.",
+            "topics": "Max wird haupts\u00e4chlich \u00fcber gesch\u00e4ftliche Themen und seine Beziehung zu Emily sprechen wollen. Er wird jedoch versuchen, seine fr\u00fchere Aff\u00e4re mit Julia Wagner zu verbergen, da er nicht m\u00f6chte, dass diese Information ans Licht kommt.",
+            "motives": "Max m\u00f6chte den Ruf und den Erfolg des Salons erhalten. Er k\u00f6nnte jedoch auch versuchen, die Schuld auf jemand anderen zu schieben, um m\u00f6gliche negative Auswirkungen auf das Gesch\u00e4ft zu minimieren.",
+            "relevant_info": "Max hatte eine kurze Aff\u00e4re mit Julia Wagner, die er jetzt verheimlicht. Dies k\u00f6nnte bedeuten, dass er Informationen \u00fcber Julia hat, die f\u00fcr die Ermittlungen n\u00fctzlich sein k\u00f6nnten."
+        },
+        {
+            "name": "Lena Schmitt",
+            "appearance": "Anfang 20, langes braunes Haar, sportlicher Look.",
+            "personality": "Enthusiastisch, aber manchmal unsicher und sch\u00fcchtern.",
+            "relationships": [
+                {
+                    "character_name": "Emily Krause",
+                    "relationship": "Mentorin, sieht zu ihr auf."
+                },
+                {
+                    "character_name": "Max M\u00fcller",
+                    "relationship": "Unsicher in seiner Gegenwart, da er sie oft kritisiert."
+                },
+                {
+                    "character_name": "Claudia Hoffmann",
+                    "relationship": "Wie eine m\u00fctterliche Figur, gibt ihr oft Ratschl\u00e4ge."
+                }
+            ],
+            "involvement": "Lena Schmitt ist Lehrling im Salon 'Schnitt & Schick' und schaut zu Emily Krause auf. Sie ist nicht direkt in das Verbrechen verwickelt, k\u00f6nnte jedoch als Verd\u00e4chtige angesehen werden.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Lena wei\u00df von Emilys Allergie gegen\u00fcber bestimmten Haarf\u00e4rbemitteln und war sich der Konkurrenz mit Julia Wagner bewusst. Sie hat jedoch keine konkreten Informationen dar\u00fcber, wer das Verbrechen begangen haben k\u00f6nnte.",
+            "feelings": "Lena ist tief ersch\u00fcttert und traurig \u00fcber Emilys Tod, da sie Emily als Mentorin und Vorbild sieht. Sie hat auch Angst, dass sie verd\u00e4chtigt werden k\u00f6nnte.",
+            "alibi": "Lena gibt an, dass sie zum Zeitpunkt des Verbrechens zu Hause war und versucht hat, sich auf ihre Abschlusspr\u00fcfung vorzubereiten. Ihr Mitbewohner kann best\u00e4tigen, dass sie zu Hause war.",
+            "activities": "In den Stunden vor dem Verbrechen hat Lena im Salon gearbeitet und verschiedene Aufgaben erledigt. Sie hat den Salon etwa eine Stunde vor Gesch\u00e4ftsschluss verlassen und ist nach Hause gegangen, um zu lernen.",
+            "topics": "Lena wird \u00fcber ihre Bewunderung f\u00fcr Emily und ihre Zukunftspl\u00e4ne im Friseurhandwerk sprechen wollen. Sie wird jedoch versuchen, ihre Unsicherheit in Gegenwart von Max M\u00fcller zu verbergen, da sie nicht m\u00f6chte, dass andere von den Spannungen zwischen ihnen erfahren.",
+            "motives": "Lena hat keine klaren Motive, Emily zu schaden. Sie bewundert Emily und sieht sie als Vorbild. Ihre einzigen Beweggr\u00fcnde sind ihre Karriere und der Wunsch, erfolgreich zu sein.",
+            "relevant_info": "Lena hat eine enge Beziehung zu Claudia Hoffmann, die oft als m\u00fctterliche Figur agiert. Diese Beziehung k\u00f6nnte interessante Details zur Dynamik im Salon ans Licht bringen."
+        },
+        {
+            "name": "Claudia Hoffmann",
+            "appearance": "Anfang 50, gepflegtes Erscheinungsbild, tr\u00e4gt immer teure Kleidung.",
+            "personality": "Dominant, selbstbewusst, liebt es, die Kontrolle zu haben.",
+            "relationships": [
+                {
+                    "character_name": "Emily Krause",
+                    "relationship": "Beste Freundinnen seit Jahren."
+                },
+                {
+                    "character_name": "Lena Schmitt",
+                    "relationship": "Verh\u00e4lt sich besch\u00fctzend ihr gegen\u00fcber."
+                }
+            ],
+            "involvement": "Claudia Hoffmann ist Stammkundin und enge Freundin von Emily Krause. Sie ist nicht direkt in das Verbrechen verwickelt, k\u00f6nnte jedoch als Verd\u00e4chtige betrachtet werden, wenn alte Geheimnisse ans Licht kommen.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Claudia wei\u00df von Emilys Allergie und den Spannungen mit Julia Wagner, aber sie kennt die Details des Austauschs des Haarf\u00e4rbemittels nicht. Sie k\u00f6nnte jedoch Informationen haben, die f\u00fcr die Ermittlungen wichtig sind.",
+            "feelings": "Claudia ist am Boden zerst\u00f6rt und traurig \u00fcber den Tod ihrer langj\u00e4hrigen Freundin. Gleichzeitig k\u00f6nnte sie w\u00fctend sein, dass jemand in Emilys Umfeld ihr so etwas angetan hat.",
+            "alibi": "Claudia gibt an, dass sie zum Zeitpunkt des Verbrechens zu Hause war und einen TV-Abend mit ihrem Ehemann hatte, was er best\u00e4tigen kann.",
+            "activities": "In den Stunden vor dem Verbrechen hat Claudia den Salon besucht, um einen Friseurtermin wahrzunehmen, und sich dabei l\u00e4nger als gew\u00f6hnlich mit Emily unterhalten. Danach ging sie nach Hause.",
+            "topics": "Claudia wird bereitwillig \u00fcber ihre Freundschaft mit Emily und ihre Ansichten \u00fcber die anderen Salonmitarbeiter sprechen. Sie wird jedoch vermeiden wollen, alte Geheimnisse preiszugeben, die sie und Emily teilten, um nicht in Verdacht zu geraten.",
+            "motives": "Claudia hat keine offensichtlichen Motive. Ihr einziges Interesse war die Freundschaft mit Emily und die regelm\u00e4\u00dfigen Besuche im Salon. Sie k\u00f6nnte jedoch Sorge haben, dass alte Geheimnisse, die sie und Emily teilen, ans Licht kommen und ihr Schaden zuf\u00fcgen k\u00f6nnten.",
+            "relevant_info": "Claudia k\u00f6nnte wichtige Informationen \u00fcber Emilys pers\u00f6nliche Beziehungen und Spannungen im Salon haben, die sie jedoch nur ungern preisgeben wird."
+        },
+        {
+            "name": "Tim Becker",
+            "appearance": "Mitte 30, muskul\u00f6s, legt Wert auf sein \u00c4u\u00dferes.",
+            "personality": "Charmant, aber manchmal zu aufdringlich, hat ein aufbrausendes Temperament.",
+            "relationships": [
+                {
+                    "character_name": "Emily Krause",
+                    "relationship": "Heimlich in sie verliebt."
+                },
+                {
+                    "character_name": "Lena Schmitt",
+                    "relationship": "Sieht in ihr eine j\u00fcngere Version von Emily."
+                }
+            ],
+            "involvement": "Tim Becker ist der Lieferant f\u00fcr den Friseursalon und heimlich in Emily Krause verliebt. Er fand Emily als Erster nach ihrem Tod und rief die anderen.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Tim wei\u00df von Emilys Allergie und dass Julia mit Emily konkurrierte. Obwohl er Julia dabei sah, wie sie das F\u00e4rbemittel austauschte, traute er sich nicht, etwas zu sagen.",
+            "feelings": "Tim ist am Boden zerst\u00f6rt \u00fcber Emilys Tod und w\u00fctend auf sich selbst, weil er nichts gesagt hat, als er Julia beim Austauschen des F\u00e4rbemittels sah.",
+            "alibi": "Tim war zur Tatzeit in der N\u00e4he des Salons und arbeitete an einer Lieferung in der N\u00e4he.",
+            "activities": "In den Stunden vor dem Verbrechen lieferte Tim Produkte in verschiedenen Gesch\u00e4ften der Gegend aus. Kurz vor dem Verbrechen beendete er seine Runde und war in der N\u00e4he des Salons.",
+            "topics": "Tim wird \u00fcber seine Ersch\u00fctterung durch Emilys Tod und seine aufrichtige Bewunderung f\u00fcr sie sprechen wollen. Er wird jedoch versuchen, seine Beobachtungen \u00fcber Julia zu verbergen, aus Angst vor Konsequenzen.",
+            "motives": "Tims einziges Motiv k\u00f6nnte sein, dass er Emily helfen wollte. Seine Gef\u00fchle f\u00fcr sie k\u00f6nnten ihn dazu bringen, bei der Enth\u00fcllung der Wahrheit zwischen Julia und den anderen hin- und hergerissen zu sein.",
+            "relevant_info": "Tim k\u00f6nnte der Schl\u00fcssel zur Aufkl\u00e4rung sein, da er Julia beim Austauschen des F\u00e4rbemittels sah, aber aus Angst nichts sagte."
+        },
+        {
+            "name": "Julia Wagner",
+            "appearance": "Ende 30, eleganter Look, immer perfekt frisiert.",
+            "personality": "Ehrgeizig, wettbewerbsorientiert, hinterh\u00e4ltig.",
+            "relationships": [
+                {
+                    "character_name": "Emily Krause",
+                    "relationship": "Konkurrentin, die sie unbedingt \u00fcbertreffen will."
+                },
+                {
+                    "character_name": "Max M\u00fcller",
+                    "relationship": "Kurze Aff\u00e4re, sieht in ihm eine Schw\u00e4che."
+                }
+            ],
+            "involvement": "Julia Wagner ist die T\u00e4terin des Verbrechens. Sie nutzte Emilys Allergie gegen ein bestimmtes Haarf\u00e4rbemittel aus, indem sie das F\u00e4rbemittel heimlich austauschte, was zu Emilys t\u00f6dlicher Reaktion f\u00fchrte.",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Julia wei\u00df genau, was passiert ist, da sie das F\u00e4rbemittel selbst ausgetauscht hat. Sie hat das Verbrechen akribisch geplant und sichergestellt, dass sie ein Alibi hatte.",
+            "feelings": "Julia empfindet Unterst\u00fctzung f\u00fcr ihre eigenen Ambitionen und verh\u00e4lt sich betont gelassen. Sie hat das Gef\u00fchl, dass der Mord notwendig war, um sich als Konkurrentin durchzusetzen.",
+            "alibi": "Julia gibt an, dass sie zum Zeitpunkt des Verbrechens bei einem anderen Friseur einen Termin hatte, was ihr Alibi untermauert.",
+            "activities": "In den Stunden vor dem Verbrechen besuchte Julia Emilys Salon heimlich und tauschte das Haarf\u00e4rbemittel aus. Danach ging sie zu ihrem Friseurtermin, um sich ein stichfestes Alibi zu verschaffen.",
+            "topics": "Julia wird betont \u00fcber ihre eigene Sorge um Emilys Tod und die allgemeine Konkurrenzsituation sprechen. Sie wird jedoch alle Details \u00fcber den Austausch des F\u00e4rbemittels und ihr Motiv verschweigen und notfalls l\u00fcgen.",
+            "motives": "Julias Motiv ist Eifersucht und Konkurrenzdruck, da Emilys Salon erfolgreicher war als ihrer. Ihre Ambitionen und der Wunsch, Emily aus dem Weg zu r\u00e4umen, trieben sie zu dieser Tat.",
+            "relevant_info": "Julia hatte eine Aff\u00e4re mit Max M\u00fcller, die beendet ist. Diese Beziehung k\u00f6nnte f\u00fcr die Ermittlung bedeutsam sein, ebenso wie ihre Bewegungen am Tag des Verbrechens."
+        }
+    ],
+    "secret_truth": {
+        "criminals": [
+            "Julia Wagner"
+        ],
+        "details": "Julia Wagner nutzte Emilys Allergie gegen ein spezielles Haarf\u00e4rbemittel aus. Sie hatte unbemerkt das F\u00e4rbemittel w\u00e4hrend eines abendlichen Besuchs ausgetauscht. Am Tag des Verbrechens hatte Emily dieses F\u00e4rbemittel benutzt und erlitt eine t\u00f6dliche allergische Reaktion. Julia wurde von Eifersucht und Konkurrenzdruck angetrieben, da Emilys Salon erfolgreicher war. Sie hatte das Verbrechen akribisch geplant, indem sie sicherstellte, dass sie ein Alibi hatte, in dem sie am Nachmittag einen Termin bei einem anderen Friseur wahrnahm. Tim Becker entdeckte Emily zuerst und verst\u00e4ndigte die anderen, doch da er in sie verliebt war und Julia nicht mochte, hegt er einen heimlichen Verdacht gegen Julia und k\u00f6nnte n\u00fctzliche Informationen preisgeben."
+    },
+    "victim": "Emily Krause",
+    "plot_twists": [
+        "Wenn Tim Becker unter Druck gesetzt wird, k\u00f6nnte er zugeben, dass er Julia gesehen hat, wie sie das F\u00e4rbemittel ausgewechselt hat, aber aus Angst um Emily nichts gesagt hat.",
+        "Sollte Max M\u00fcller herausfinden, dass Julia dahinter steckt, k\u00f6nnte er versuchen, die Schuld auf Lena Schmitt zu schieben, um seinen Ruf zu retten und den Salon zu retten.",
+        "Claudia Hoffmann k\u00f6nnte ein altes Geheimnis zwischen ihr und Emily preisgeben, das weiteren Verdacht auf sich ziehen k\u00f6nnte."
+    ],
+    "newspaper_headline": "T\u00f6dliche Blondierung f\u00fchrt zum Tod - Mord im beliebten Friseursalon",
+    "newspaper_text": "Trag\u00f6die im Friseursalon 'Schnitt & Schick'. Die Besitzerin, Emily Krause, wurde tot aufgefunden. Was zun\u00e4chst wie ein Unfall aussah, entpuppt sich nun als Mord. Der Verdacht f\u00e4llt auf mehrere Personen aus dem direkten Umfeld der Verstorbenen. Die Polizei ermittelt fieberhaft.",
+    "location_info": "Der Friseursalon 'Schnitt & Schick' liegt in einer belebten Einkaufsstra\u00dfe. In der N\u00e4he befindet sich ein Caf\u00e9, ein Blumenladen und ein weiteres Friseurgesch\u00e4ft, das Julia Wagner geh\u00f6rt. Das Innere des Salons ist modern eingerichtet, mit gro\u00dfen Spiegeln, bequemen St\u00fchlen und einer Rezeption. Hinten befindet sich ein Lagerraum f\u00fcr Haarprodukte.",
+    "crime_scene_description": "Der Tatort ist der Innenraum des Friseursalons. Emily Krause wurde hinter der Rezeption liegend gefunden, umgeben von einer Reihe von umgefallenen Haarprodukten. Bei genauer Untersuchung kann man ein offenes Fl\u00e4schchen Haarf\u00e4rbemittel entdecken, das ausgetauscht wurde. Ein winziger Schl\u00fcssel unter dem Teppich weist darauf hin, dass jemand Zugang zum Lagerraum hatte."
+}

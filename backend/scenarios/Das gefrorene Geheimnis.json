@@ -1,0 +1,180 @@
+{
+    "name": "Das gefrorene Geheimnis",
+    "style": "Mysteri\u00f6ser Todesfall",
+    "setting": "Polar-Forschungsstation",
+    "crime": "Mord",
+    "intro": "In einer isolierten Polar-Forschungsstation wird ein Forscher tot aufgefunden. Die kleine Gruppe der Bewohner steht unter Schock und Misstrauen w\u00e4chst. Es liegt an Ihnen, die Wahrheit ans Licht zu bringen.",
+    "characters": [
+        {
+            "name": "Dr. Anna M\u00fcller",
+            "appearance": "Mittelgro\u00df, schlank, kurze braune Haare, tr\u00e4gt oft eine dicke Brille",
+            "personality": "Streng, zielstrebig, etwas k\u00fchl im Umgang",
+            "relationships": [
+                {
+                    "character_name": "Dr. Peter Hagen",
+                    "relationship": "Ehemalige Mentorin, respektiert ihn sehr"
+                },
+                {
+                    "character_name": "Prof. Karl Wiesner",
+                    "relationship": "Abneigung gegeneinander, da sie oft unterschiedliche Ansichten haben"
+                },
+                {
+                    "character_name": "Dr. Laura Sommer",
+                    "relationship": "Beste Freundinnen, kennen sich seit dem Studium"
+                }
+            ],
+            "involvement": "Keine direkte Verwicklung ins Verbrechen, jedoch k\u00f6nnte sie wichtige Informationen besitzen.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Sie wei\u00df, dass es Spannungen zwischen Dr. Peter Hagen und Prof. Karl Wiesner gab. Sie hat auch bemerkt, dass Dr. Laura Sommer in letzter Zeit merkw\u00fcrdig verhalten hat.",
+            "feelings": "Dr. M\u00fcller ist schockiert und ver\u00e4ngstigt angesichts des Mordes. Sie f\u00fchlt sich unwohl und misstraut ihren Kollegen, will jedoch helfen, den Fall zu l\u00f6sen.",
+            "alibi": "Dr. M\u00fcller gibt an, zur Tatzeit (23:00 Uhr) in ihrem Labor gewesen zu sein, wo sie an einem Bericht gearbeitet hat. Sie behauptet, bis sp\u00e4t in die Nacht gearbeitet zu haben.",
+            "activities": "In den Stunden vor dem Verbrechen war Dr. M\u00fcller in ihrem Labor und arbeitete an einem wissenschaftlichen Bericht. Sie hat ihren Arbeitsplatz gegen 19:00 Uhr kurz zum Abendessen im Gemeinschaftsraum verlassen und ist dann um 20:00 Uhr zur\u00fcckgekehrt.",
+            "topics": "Dr. M\u00fcller m\u00f6chte \u00fcber ihre Forschungsarbeiten sprechen und ihre Unschuldsbeteuerungen wiederholen. Sie k\u00f6nnte l\u00fcgen oder Informationen \u00fcber die Spannungen zwischen Hagen und Wiesner und das Verhalten von Laura verbergen, um ihre Freundschaft mit Laura zu sch\u00fctzen.",
+            "motives": "Dr. M\u00fcller hat keine offensichtlichen Motive, Prof. Wiesner zu t\u00f6ten. Ihr Hauptanliegen ist die Fortsetzung ihrer Forschung und das Aufrechterhalten von Ruhe und Ordnung in der Station.",
+            "relevant_info": "Dr. M\u00fcller hat bemerkt, dass einige Kollegen ungew\u00f6hnlich nerv\u00f6s und angespannt gewesen sind. Sie hat auch ein merkw\u00fcrdiges Gespr\u00e4ch zwischen Hagen und Laura kurz vor dem Mord mitbekommen, konnte aber nicht alles h\u00f6ren."
+        },
+        {
+            "name": "Dr. Peter Hagen",
+            "appearance": "Gro\u00df, athletisch, dunkelblondes Haar, stets gepflegt",
+            "personality": "Charmant, ehrgeizig, kann aber auch arrogant wirken",
+            "relationships": [
+                {
+                    "character_name": "Dr. Anna M\u00fcller",
+                    "relationship": "Ehemalige Mentorin, respektiert sie sehr"
+                },
+                {
+                    "character_name": "Prof. Karl Wiesner",
+                    "relationship": "Kollegen, aber es gibt eine leichte Rivalit\u00e4t"
+                },
+                {
+                    "character_name": "Dr. Laura Sommer",
+                    "relationship": "Hatte eine kurze Aff\u00e4re mit ihr, was geheim gehalten wurde"
+                }
+            ],
+            "involvement": "Er ist einer der Hauptt\u00e4ter und war aktiv an der Planung und Durchf\u00fchrung des Mordes beteiligt.",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Er wei\u00df alles \u00fcber den Mord, da er ihn zusammen mit Dr. Laura Sommer begangen hat.",
+            "feelings": "Angesichts des Verbrechens f\u00fchlt sich Dr. Hagen nerv\u00f6s und angespannt, aber auch entschlossen, nicht erwischt zu werden.",
+            "alibi": "Dr. Peter Hagen gibt an, zum Tatzeitpunkt (23:00 Uhr) in seinem Quartier gewesen zu sein und an einigen Forschungsnotizen gearbeitet zu haben. Er behauptet, alleine gewesen zu sein.",
+            "activities": "In den Stunden vor dem Verbrechen hat Dr. Hagen an einigen Projekten im Labor gearbeitet. Gegen 21:00 Uhr traf er sich kurz mit Laura Sommer, um die Details ihres Plans zu besprechen. Er kehrte dann scheinbar in sein Quartier zur\u00fcck, um an Forschungsnotizen zu arbeiten.",
+            "topics": "Dr. Hagen m\u00f6chte \u00fcber seine Wissenschaftsprojekte sprechen und beteuert, dass er nichts mit dem Verbrechen zu tun hat. Er wird l\u00fcgen und behaupten, dass er keine Konflikte mit Prof. Wiesner hatte und dass seine Beziehung zu Laura Sommer rein professionell sei.",
+            "motives": "Dr. Hagen sah Prof. Wiesner als Hindernis f\u00fcr seine Karriere und wollte ihn aus dem Weg r\u00e4umen. Zus\u00e4tzlich hatte er eine Aff\u00e4re mit Laura Sommer, die ebenfalls Motiv hatte, Wiesner zu t\u00f6ten.",
+            "relevant_info": "Dr. Hagen scheint sehr bedacht darauf zu sein, seine Spuren zu verwischen und vermeidet Diskussionen \u00fcber seine Beziehung zu Laura Sommer. Er wirkt nerv\u00f6s, wenn das Thema aufkommt."
+        },
+        {
+            "name": "Prof. Karl Wiesner",
+            "appearance": "\u00c4lterer Herr, graue Haare, tr\u00e4gt immer einen Kittel",
+            "personality": "Weise, aber manchmal stur und konservativ",
+            "relationships": [
+                {
+                    "character_name": "Dr. Anna M\u00fcller",
+                    "relationship": "Abneigung gegeneinander, da sie oft unterschiedliche Ansichten haben"
+                },
+                {
+                    "character_name": "Dr. Peter Hagen",
+                    "relationship": "Leichte Rivalit\u00e4t, aber respektieren einander"
+                },
+                {
+                    "character_name": "Dr. Laura Sommer",
+                    "relationship": "Sch\u00e4tzt ihre jugendliche Energie und Kreativit\u00e4t"
+                }
+            ],
+            "involvement": "Er ist das Opfer des Verbrechens.",
+            "is_dead": true,
+            "is_criminal": false,
+            "is_victim": true,
+            "knowledge": "Als Opfer wei\u00df er nat\u00fcrlich nicht, wer ihn attackiert hat, aber er war sich der Spannungen mit Peter Hagen bewusst und kannte auch die Feindseligkeit von Laura Sommer ihm gegen\u00fcber.",
+            "feelings": "Prof. Wiesner f\u00fchlte sich in den letzten Tagen vor seinem Tod gestresst und bedroht, da die Spannungen mit Hagen und Sommer zugenommen hatten.",
+            "alibi": "Kein Alibi, da er das Opfer ist.",
+            "activities": "Prof. Wiesner verbrachte den Tag vor seinem Tod mit der Arbeit im Labor. Er hatte gegen 20:00 Uhr eine Diskussion mit Dr. Hagen \u00fcber ein Forschungsprojekt. Danach zog er sich in sein Quartier zur\u00fcck, um einige Notizen durchzugehen. Sp\u00e4ter wurde er von Hagen und Sommer in den Maschinenraum gelockt und dort ermordet.",
+            "topics": "Als Opfer kann Prof. Wiesner nicht direkt befragt werden. Informationen \u00fcber m\u00f6gliche Motive gegen ihn oder Interaktionen mit anderen k\u00f6nnten aus seinen Notizen oder Aussagen anderer Charaktere gewonnen werden.",
+            "motives": "Prof. Wiesner hatte keine Motive, aber einige Spannungen aufgrund beruflicher Rivalit\u00e4ten und pers\u00f6nliche Animosit\u00e4ten, vor allem mit Dr. Laura Sommer, die ihn f\u00fcr den Tod ihres Vaters verantwortlich machte.",
+            "relevant_info": "Prof. Wiesner hatte in den letzten Tagen vermehrt Eintr\u00e4ge in sein pers\u00f6nliches Tagebuch gemacht, wo er seine Bedenken und Beobachtungen notierte. Dies k\u00f6nnte Hinweise auf die T\u00e4ter liefern."
+        },
+        {
+            "name": "Dr. Laura Sommer",
+            "appearance": "Mittlere Gr\u00f6\u00dfe, sportlich, lange blonde Haare, oft in einem Pferdeschwanz gebunden",
+            "personality": "Lebhaft, kreativ, manchmal un\u00fcberlegt",
+            "relationships": [
+                {
+                    "character_name": "Dr. Anna M\u00fcller",
+                    "relationship": "Beste Freundinnen, kennen sich seit dem Studium"
+                },
+                {
+                    "character_name": "Dr. Peter Hagen",
+                    "relationship": "Hatte eine kurze Aff\u00e4re mit ihm, was geheim gehalten wurde"
+                },
+                {
+                    "character_name": "Prof. Karl Wiesner",
+                    "relationship": "Sch\u00e4tzt seine Weisheit und Erfahrung"
+                }
+            ],
+            "involvement": "Sie ist eine der Hauptt\u00e4terinnen und war aktiv an der Planung und Durchf\u00fchrung des Mordes beteiligt.",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Dr. Laura Sommer wei\u00df alles \u00fcber den Mord, da sie ihn zusammen mit Dr. Peter Hagen begangen hat.",
+            "feelings": "Sie f\u00fchlt sich nerv\u00f6s und belastet durch das Verbrechen, m\u00f6chte jedoch nicht erwischt werden. Au\u00dferdem kann sie gelegentlich von Reue geplagt sein.",
+            "alibi": "Dr. Laura Sommer gibt an, zur Tatzeit (23:00 Uhr) in ihrem Quartier gewesen zu sein, wo sie ihre Notizen \u00fcberpr\u00fcft hat. Sie behauptet, alleine gewesen zu sein.",
+            "activities": "In den Stunden vor dem Verbrechen hat Laura im Labor an einigen Projekten gearbeitet. Sie traf sich gegen 21:00 Uhr kurz mit Hagen, um die letzten Details ihres Plans zu besprechen. Danach kehrte sie anscheinend in ihr Quartier zur\u00fcck und arbeitete weiter an Projekten.",
+            "topics": "Dr. Laura Sommer m\u00f6chte \u00fcber ihre wissenschaftlichen Projekte sprechen und wird versuchen, ihre Beteiligung am Verbrechen zu verschleiern. Sie wird l\u00fcgen, indem sie behauptet, ihre Beziehung zu Dr. Hagen sei rein professionell.",
+            "motives": "Laura wollte Rache an Prof. Wiesner, da sie ihn f\u00fcr den Tod ihres Vaters verantwortlich macht. Zus\u00e4tzlich hatte sie eine Aff\u00e4re mit Dr. Peter Hagen, der ebenfalls ein Motiv hatte.",
+            "relevant_info": "Laura k\u00f6nnte ungewollt Hinweise geben, wenn sie emotional unter Druck gesetzt wird. Zus\u00e4tzlich k\u00f6nnte sie die Aff\u00e4re mit Hagen preisgeben, um ihre eigene Haut zu retten."
+        },
+        {
+            "name": "Tom Richter",
+            "appearance": "Mittleres Alter, kr\u00e4ftig, r\u00f6tliche Haare und Bart, tr\u00e4gt wetterfeste Kleidung",
+            "personality": "Bodenst\u00e4ndig, freundlich, handwerklich begabt",
+            "relationships": [
+                {
+                    "character_name": "Dr. Anna M\u00fcller",
+                    "relationship": "Kollegen, hat eine heimliche Schw\u00e4rmerei f\u00fcr sie"
+                },
+                {
+                    "character_name": "Dr. Peter Hagen",
+                    "relationship": "Respektiert seine F\u00e4higkeiten, aber neidisch auf seine akademischen Erfolge"
+                },
+                {
+                    "character_name": "Prof. Karl Wiesner",
+                    "relationship": "Freunde, tauschen oft Geschichten und Ratschl\u00e4ge aus"
+                },
+                {
+                    "character_name": "Dr. Laura Sommer",
+                    "relationship": "Mag ihre lebhafte Pers\u00f6nlichkeit, hilft ihr oft bei handwerklichen Problemen"
+                }
+            ],
+            "involvement": "Keine direkte Verwicklung ins Verbrechen, k\u00f6nnte aber aufgrund seiner Aktivit\u00e4ten und Entdeckungen als Verd\u00e4chtiger gelten.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Er hat bemerkt, dass einige Kollegen, insbesondere Dr. Laura Sommer und Dr. Peter Hagen, sich in letzter Zeit verd\u00e4chtig verhalten haben. Au\u00dferdem hat er ein verstecktes Beweismittel im Maschinenraum gefunden.",
+            "feelings": "Tom ist schockiert und besorgt \u00fcber den Mord und will alles tun, um zu helfen. Er f\u00fchlt sich jedoch auch ver\u00e4ngstigt, dass er selbst verd\u00e4chtigt werden k\u00f6nnte.",
+            "alibi": "Tom gibt an, zur Tatzeit in seinem Quartier gewesen zu sein und an einem Reparaturbericht gearbeitet zu haben. Er behauptet, alleine gewesen zu sein.",
+            "activities": "Tom arbeitete in den Stunden vor dem Verbrechen in verschiedenen Teilen der Station an Reparaturen. Er war gegen 20:00 Uhr im Gemeinschaftsraum und unterhielt sich kurz mit Dr. Anna M\u00fcller. Danach zog er sich in sein Quartier zur\u00fcck.",
+            "topics": "Tom m\u00f6chte \u00fcber seine Arbeit und seine Beobachtungen sprechen. Er wird jedoch versuchen, sein pers\u00f6nliches Interesse an Dr. Anna M\u00fcller zu verbergen, da dies ihn in ein ung\u00fcnstiges Licht r\u00fccken k\u00f6nnte.",
+            "motives": "Tom hat keine offensichtlichen Motive f\u00fcr den Mord. Sein Hauptanliegen ist es, die Station funktionsf\u00e4hig zu halten und in der N\u00e4he von Dr. Anna M\u00fcller zu sein.",
+            "relevant_info": "Tom hat ein verstecktes Beweismittel im Maschinenraum gefunden, das er entdeckt hat, als er dort eine Routine\u00fcberpr\u00fcfung durchf\u00fchrte. Dies k\u00f6nnte ihn selbst unter Verdacht bringen."
+        }
+    ],
+    "secret_truth": {
+        "criminals": [
+            "Dr. Peter Hagen",
+            "Dr. Laura Sommer"
+        ],
+        "details": "Dr. Peter Hagen und Dr. Laura Sommer planten gemeinsam den Mord an Dr. Karl Wiesner. Hagen sah Wiesner als Hindernis f\u00fcr seine Karriere, w\u00e4hrend Laura pers\u00f6nliche Rache wollte, da sie Wiesner f\u00fcr den Tod ihres Vaters verantwortlich machte. Sie lockten ihn eines Nachts in den Maschinenraum der Station, wo Hagen ihn bewusstlos schlug und Laura die Sauerstoffzufuhr kappte. Die scheinbare Todesursache war ein Unfall im Maschinenraum, aber bei genauer Investigation stellt man fest, dass es Mord war. Das Verbrechen geschah um 23:00 Uhr und das Opfer wurde am n\u00e4chsten Morgen um 07:00 Uhr gefunden."
+    },
+    "victim": "Prof. Karl Wiesner",
+    "plot_twists": [
+        "Wenn Dr. Laura Sommer unter Druck gesetzt wird, k\u00f6nnte sie die Aff\u00e4re mit Dr. Peter Hagen preisgeben, was neue Motive aufdeckt.",
+        "Tom Richter findet ein verstecktes Beweisst\u00fcck im Maschinenraum und wird dadurch selbst als Verd\u00e4chtiger hingestellt.",
+        "Dr. Anna M\u00fcller entdeckt versteckte Korrespondenz, die auf ein geheimes Forschungsvorhaben hinweist, das die Motive der T\u00e4ter beeinflusst haben k\u00f6nnte."
+    ],
+    "newspaper_headline": "Mord in der Polar-Forschungsstation",
+    "newspaper_text": "In einer isolierten Polar-Forschungsstation wurde der angesehene Forscher Prof. Karl Wiesner tot aufgefunden. Die Umst\u00e4nde seines Todes sind r\u00e4tselhaft, und die Bewohner der Station stehen unter Schock. Die Ermittlungen laufen, und ein gezieltes Vorgehen k\u00f6nnte die Wahrheit ans Licht bringen. Ger\u00fcchte \u00fcber Streitigkeiten und geheime Liebschaften machen die Runde, w\u00e4hrend sich die Frage stellt: Wer h\u00e4tte ein Motiv, um Wiesner zu t\u00f6ten?",
+    "location_info": "Die Forschungsstation besteht aus mehreren miteinander verbundenen Modulen. Dazu geh\u00f6ren Wohnquartiere, Labore, eine K\u00fcche, ein Gemeinschaftsraum und der Maschinenraum. Die Station ist umgeben von endlosem Eis und Schnee, und die extremen Wetterbedingungen machen Au\u00dfenaktivit\u00e4ten schwierig. Es gibt nur begrenzten Kontakt zur Au\u00dfenwelt.",
+    "crime_scene_description": "Der Tatort befindet sich im Maschinenraum der Station. Der Raum ist beengt und vollgestellt mit verschiedenen Maschinen und Ausr\u00fcstungsgegenst\u00e4nden. \u00dcberall sind Rohre und Kabel zu sehen. Prof. Karl Wiesners Leiche liegt neben einer gro\u00dfen Maschine, die f\u00fcr die Sauerstoffversorgung der Station zust\u00e4ndig ist. Bei genauem Hinsehen entdeckt man, dass einige der Kabel manipuliert wurden und es Hinweise auf einen Kampf gibt. Ein kleiner Blutfleck an einem der Maschinenr\u00e4der und ein abgerissener Knopf deuten darauf hin, dass das Opfer sich gewehrt haben k\u00f6nnte."
+}

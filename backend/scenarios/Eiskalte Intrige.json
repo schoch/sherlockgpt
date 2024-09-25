@@ -1,0 +1,151 @@
+{
+    "name": "Eiskalte Intrige",
+    "style": "Mystery",
+    "setting": "Polar-Forschungsstation",
+    "crime": "Mord",
+    "intro": "Inmitten des eiskalten und abgeschiedenen Polargebiets wird die Leiche eines Forschers in der Polar-Forschungsstation gefunden. Als Detektiv musst du herausfinden, wer der M\u00f6rder ist und was seine Motive waren. Alle in der Station stellen potenzielle Verd\u00e4chtige dar, und es liegt an dir, die Wahrheit ans Licht zu bringen.",
+    "characters": [
+        {
+            "name": "Dr. Anja M\u00fcller",
+            "appearance": "Mittleren Alters, tr\u00e4gt eine dicke Brille und einen wei\u00dfen Laborkittel, hat blondes kurzes Haar.",
+            "personality": "H\u00f6flich, intelligent, aber oft in ihre Arbeit vertieft.",
+            "relationships": [
+                {
+                    "character_name": "Dr. Markus Weber",
+                    "relationship": "Arbeitskollegen, oft in hitzigen wissenschaftlichen Diskussionen"
+                },
+                {
+                    "character_name": "Lena Schmidt",
+                    "relationship": "Gute Freunde, teilen sich oft Aufgaben"
+                }
+            ],
+            "involvement": "Opfer des Verbrechens.",
+            "is_dead": true,
+            "is_criminal": false,
+            "is_victim": true,
+            "knowledge": "Dr. M\u00fcller hatte keine Vorahnung \u00fcber die t\u00f6dlichen Absichten von Paul Neumann und vermutete bis zuletzt nichts B\u00f6ses in ihrem Umfeld.",
+            "feelings": "War m\u00f6glicherweise verwirrt und in Angst in den letzten Momenten ihres Lebens, speziell wenn sie die Wirkung des Giftes sp\u00fcrte.",
+            "alibi": "Kein Alibi, da sie das Opfer ist.",
+            "activities": "Dr. M\u00fcller arbeitete bis in die sp\u00e4ten Abendstunden im Labor an einem wichtigen Forschungsprojekt. Sie hatte eine kurze Diskussion mit Dr. Markus Weber \u00fcber ihre neuesten Entdeckungen und schrieb Notizen in ihr Tagebuch. Sp\u00e4ter nahm sie ihre Lebensmittelration zu sich, die von Johanna Fischer verteilt wurde.",
+            "topics": "Dr. M\u00fcller w\u00fcrde wahrscheinlich \u00fcber ihre Forschungen und die neuesten Entdeckungen sprechen, w\u00e4re sie noch am Leben. Sie hatte keine Absicht zu l\u00fcgen oder etwas zu verbergen.",
+            "motives": "Dr. M\u00fcller hatte keine wirklichen Motive zu verbergen oder zu l\u00fcgen. Sie war engagiert bei ihrer Arbeit und wollte die Forschung voranbringen.",
+            "relevant_info": "Dr. M\u00fcller hinterlie\u00df ein Tagebuch, in dem sie ihre t\u00e4glichen Aktivit\u00e4ten und Gedanken festhielt. Dieses k\u00f6nnte Hinweise auf ihre Beziehung zu den anderen Forschern und m\u00f6gliche Streitigkeiten enthalten."
+        },
+        {
+            "name": "Dr. Markus Weber",
+            "appearance": "Ende vierzig, schlank, tr\u00e4gt einen dicken Bart und oft Outdoor-Kleidung.",
+            "personality": "Ambitioniert, aufbrausend und oft ungeduldig.",
+            "relationships": [
+                {
+                    "character_name": "Dr. Anja M\u00fcller",
+                    "relationship": "Arbeitskollegen, oft in hitzigen wissenschaftlichen Diskussionen"
+                },
+                {
+                    "character_name": "Paul Neumann",
+                    "relationship": "Verh\u00e4ltnis ist angespannt; Paul beschwert sich oft \u00fcber Markus' F\u00fchrungsstil"
+                }
+            ],
+            "involvement": "Keinerlei direkte Verwicklung, aber hatte hitzige Diskussionen mit dem Opfer.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Dr. Markus Weber hat bemerkt, dass Paul Neumann und Dr. Anja M\u00fcller Spannungen hatten. Er hat zudem das leere Fl\u00e4schchen im Abfalleimer gesehen, wusste aber nicht was es zu bedeuten hat.",
+            "feelings": "Dr. Markus Weber ist ersch\u00fcttert und ver\u00e4rgert \u00fcber den Verlust einer Kollegin, mit der er oft diskutiert hat, aber deren Intellekt er sch\u00e4tzte.",
+            "alibi": "Dr. Markus Weber war zur Zeit des Verbrechens in seinem B\u00fcro und schrieb an einem Forschungsbericht.",
+            "activities": "Er arbeitete die meiste Zeit des Abends an seinem Schreibtisch. Vor dem Verbrechen hatte er eine kurze, aber heftige Diskussion mit Dr. Anja M\u00fcller \u00fcber ihre letzten Forschungsergebnisse.",
+            "topics": "Er wird \u00fcber seine Arbeit und seine Diskussionen mit Dr. Anja M\u00fcller sprechen. Er wird jedoch versuchen, seine eigene Frustration und seine letzten hitzigen Worte mit dem Opfer herunterzuspielen.",
+            "motives": "Er hat keine offensichtlichen Motive zur L\u00fcge, au\u00dfer vielleicht, die ungeduldigen und angespannten Gespr\u00e4che mit dem Opfer herunterzuspielen, um nicht in Verdacht zu geraten.",
+            "relevant_info": "Markus k\u00f6nnte sehr n\u00fctzlich sein, um die Beziehungsdynamiken innerhalb der Forschungsstation zu beleuchten und Hinweise auf Spannungen zu geben. Er hat einen wachsamen Blick auf die gesamte Gruppe und k\u00f6nnte unbewusst wichtige Details beobachtet haben."
+        },
+        {
+            "name": "Paul Neumann",
+            "appearance": "Mitte drei\u00dfig, athletischer K\u00f6rperbau, immer gut gekleidet.",
+            "personality": "Ehrgeizig, bereit Risiken einzugehen, kann aber manipulativ sein.",
+            "relationships": [
+                {
+                    "character_name": "Lena Schmidt",
+                    "relationship": "Flirtende Spannungen, aber keine offizielle Beziehung"
+                },
+                {
+                    "character_name": "Johanna Fischer",
+                    "relationship": "Vertrauter, arbeiten oft an \u00fcberlebensstrategischen Projekten zusammen"
+                }
+            ],
+            "involvement": "Paul Neumann ist der T\u00e4ter; er vergiftete Dr. Anja M\u00fcllers Lebensmittelration.",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Er wei\u00df alles \u00fcber das Verbrechen, da er selbst der M\u00f6rder ist. Er wei\u00df genau, wie und warum Dr. M\u00fcller get\u00f6tet wurde.",
+            "feelings": "Paul versucht, ruhig und gelassen zu wirken, aber innerlich ist er nerv\u00f6s und paranoid, dass jemand seine Tat entdecken k\u00f6nnte.",
+            "alibi": "Er behauptet, zur Tatzeit in seinem Zimmer gewesen zu sein und an einem Bericht gearbeitet zu haben.",
+            "activities": "Paul war w\u00e4hrend des Abends in der Station und tat so, als w\u00fcrde er an einem Projekt arbeiten. Er traf sich kurz mit Johanna Fischer, um sicherzustellen, dass sie die Lebensmittelration an Dr. M\u00fcller weitergibt. Er verhielt sich ansonsten unauff\u00e4llig.",
+            "topics": "Paul wird sehr darauf bedacht sein, sich selbst als ahnungslosen Kollegen darzustellen. Er wird versuchen, von sich abzulenken, indem er auf die Spannungen zwischen Dr. M\u00fcller und Dr. Markus Weber hinweist. Er wird l\u00fcgen und behaupten, er h\u00e4tte keine Erkenntnisse \u00fcber die fehlenden Forschungsunterlagen.",
+            "motives": "Paul t\u00f6tete Dr. M\u00fcller aus Eifersucht und um an die gemeinsamen Forschungsmaterialien zu kommen. Seine Beweggr\u00fcnde sind Habgier und das Streben nach pers\u00f6nlichem Ruhm und Erfolg durch die Forschungsergebnisse.",
+            "relevant_info": "Paul hat heimlich die Forschungsunterlagen versteckt. Er ist manipulativ und wird versuchen, Verdacht auf andere zu lenken. Er k\u00f6nnte bei genauerer Untersuchung von Johanna Fischers Aussagen entlarvt werden."
+        },
+        {
+            "name": "Lena Schmidt",
+            "appearance": "Anfang drei\u00dfig, lange schwarze Haare, tr\u00e4gt oft bunte Strickjacken.",
+            "personality": "Freundlich, ausgeglichen, h\u00e4lt die Gruppe zusammen.",
+            "relationships": [
+                {
+                    "character_name": "Dr. Anja M\u00fcller",
+                    "relationship": "Gute Freunde, teilen sich oft Aufgaben"
+                },
+                {
+                    "character_name": "Paul Neumann",
+                    "relationship": "Flirtende Spannungen, aber keine offizielle Beziehung"
+                }
+            ],
+            "involvement": "Lena Schmidt fand die Leiche von Dr. Anja M\u00fcller zuerst und brachte sie in die Station.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Lena wei\u00df, dass Dr. M\u00fcller und Paul Neumann Spannungen hatten und dass Dr. M\u00fcller ihre Lebensmittelration kurz vor ihrem Tod konsumiert hat.",
+            "feelings": "Lena ist tief betroffen und traurig \u00fcber den Tod ihrer guten Freundin. Sie f\u00fchlt sich schuldig, weil sie das Gef\u00fchl hat, dass sie vielleicht etwas h\u00e4tte tun k\u00f6nnen, um Dr. M\u00fcller zu helfen.",
+            "alibi": "Lena gibt an, zur Tatzeit im Aufenthaltsraum gewesen zu sein und Notizen durchzugehen.",
+            "activities": "Lena war an diesem Abend in der Station und \u00fcberblickte einige organisatorische Aufgaben. Sie verbrachte einige Zeit damit, Dokumente durchzugehen und f\u00fchrte ein Gespr\u00e4ch mit Johanna Fischer \u00fcber die bevorstehenden Forschungsprojekte. Sp\u00e4ter ging sie in den Vorratsraum, um einige Materialien zu \u00fcberpr\u00fcfen.",
+            "topics": "Lena wird dar\u00fcber sprechen, wie nahe sie Dr. M\u00fcller stand und wird versuchen, die Spannungen zwischen Dr. M\u00fcller und Paul Neumann hervorzuheben. Sie k\u00f6nnte versuchen, ihre eigene Schuld und Unsicherheiten zu verbergen.",
+            "motives": "Lena hat keine Beweggr\u00fcnde, etwas zu verbergen, au\u00dfer vielleicht das Gef\u00fchl der eigenen Unzul\u00e4nglichkeit, nicht gesehen zu haben, dass etwas nicht stimmte.",
+            "relevant_info": "Lena k\u00f6nnte wertvolle Informationen \u00fcber die Dynamik zwischen den Kollegen und die allgemeine Atmosph\u00e4re in den Tagen vor dem Verbrechen liefern."
+        },
+        {
+            "name": "Johanna Fischer",
+            "appearance": "Mitte zwanzig, kurze braune Haare, tr\u00e4gt Outdoor-Kleidung.",
+            "personality": "Ruhig, strategisch und freundlich.",
+            "relationships": [
+                {
+                    "character_name": "Paul Neumann",
+                    "relationship": "Vertrauter, arbeiten oft an \u00fcberlebensstrategischen Projekten zusammen"
+                }
+            ],
+            "involvement": "Johanna Fischer half unwissentlich, indem sie die vergiftete Lebensmittelration an Dr. M\u00fcller weitergab.",
+            "is_dead": false,
+            "is_criminal": false,
+            "is_victim": false,
+            "knowledge": "Johanna erinnert sich, die Lebensmittelration an Dr. M\u00fcller weitergegeben zu haben, ohne zu wissen, dass sie vergiftet war. Sie bemerkte sp\u00e4ter Pauls nerv\u00f6ses Verhalten.",
+            "feelings": "Johanna f\u00fchlt sich schuldig, dass sie unwissentlich geholfen hat und ist zutiefst best\u00fcrzt \u00fcber den Tod von Dr. M\u00fcller.",
+            "alibi": "Johanna gibt an, zur Tatzeit ebenfalls in ihrer Kabine gewesen zu sein und die weiteren Tagesaktivit\u00e4ten zu planen.",
+            "activities": "Johanna bereitete die Lebensmittelration vor und verteilte sie. Sie sprach kurz mit Paul Neumann \u00fcber die n\u00e4chsten Schritte f\u00fcr ihr gemeinsames Projekt, war dann in ihrem Raum und plante ihre bevorstehenden Forschungsaufgaben.",
+            "topics": "Johanna wird offen \u00fcber ihre Aktivit\u00e4ten sprechen, insbesondere \u00fcber ihre Rolle bei der Verteilung der Lebensmittelration und die Zusammenarbeit mit Paul. Sie wird jedoch versuchen, ihre Schuldgef\u00fchle zu verbergen.",
+            "motives": "Johanna hat keinen klaren Grund zu l\u00fcgen, au\u00dfer ihre Schuldgef\u00fchle zu verbergen und ihre Freundschaft mit Paul zu sch\u00fctzen.",
+            "relevant_info": "Wenn sie unter Druck gesetzt wird, erinnert sich Johanna an merkw\u00fcrdiges Verhalten von Paul Neumann, das auf seine Beteiligung hinweisen k\u00f6nnte."
+        }
+    ],
+    "victim": "Dr. Anja M\u00fcller",
+    "secret_truth": {
+        "criminals": [
+            "Paul Neumann"
+        ],
+        "details": "Paul Neumann t\u00f6tete Dr. Anja M\u00fcller aus Eifersucht und um gemeinsame Forschungsmaterialien zu stehlen, die sie entdeckten. Er vergiftete ihre Lebensmittelration, was zu einem langsamen und scheinbar nat\u00fcrlichen Tod durch Unterk\u00fchlung f\u00fchrte. Sp\u00e4ter arrangierte er ihre Leiche im Freien, um es so aussehen zu lassen, als sei sie erfroren. Johanna Fischer half Paul unwissentlich, indem sie die Lebensmittelration gereicht hatte, ohne zu wissen, dass sie vergiftet war. Lena Schmidt fand die Leiche zuerst und brachte sie in die Station."
+    },
+    "plot_twists": [
+        "Wenn der Spieler das Labor gr\u00fcndlich untersucht, findet er Hinweise auf das gestohlene Forschungsmaterial in Pauls Eigentum.",
+        "Wenn der Spieler Johanna Fischer mit der Tatsache konfrontiert, dass sie die Lebensmittelration gereicht hat, wird sie sich an verd\u00e4chtiges Verhalten von Paul erinnern.",
+        "Wenn Lena Schmidt unter Druck gesetzt wird, gibt sie zu, dass sie Spannungen und Eifersucht zwischen Dr. Anja M\u00fcller und Paul Neumann bemerkt hat."
+    ],
+    "newspaper_headline": "Mysteri\u00f6ser Mord in der Polar-Forschungsstation",
+    "newspaper_text": "In einer abgeschiedenen Polar-Forschungsstation wurde die Leiche der angesehenen Wissenschaftlerin Dr. Anja M\u00fcller gefunden. Erste Hinweise deuten auf einen Mord hin. Die Polizei ermittelt und hat einen erfahrenen Detektiv entsandt, um die Wahrheit aufzudecken. Alle Mitglieder der Forschungsstation sind Verd\u00e4chtige, und die eisigen Bedingungen erschweren die Ermittlungen zus\u00e4tzlich. Was f\u00fchrte zu diesem tragischen Tod in einer der entlegensten Gegenden der Erde?",
+    "location_info": "Die Polar-Forschungsstation besteht aus mehreren miteinander verbundenen Modulen: einem Labor, einem Wohnbereich, einem Vorratsraum und einer Kommunikationszentrale. Vor der Wand befindet sich ein kleines Areal f\u00fcr die Lagerung von Forschungsproben und Ausr\u00fcstung. Rund um die Station erstreckt sich die unendliche Eisk\u00e4lte der Arktis.",
+    "crime_scene_description": "Die Leiche von Dr. M\u00fcller wurde im Freien, etwa 50 Meter von der Station entfernt, neben einem Forschungsschlitten gefunden. Sie tr\u00e4gt keine Winterbekleidung, was darauf hindeutet, dass sie die Station in Eile verlassen hat. Nahe der Leiche befinden sich Fu\u00dfspuren, die zur Station zur\u00fcckf\u00fchren. Im Wohnbereich der Station findet sich Dr. M\u00fcllers halbgepackte Rucksack, und bei genauerer Untersuchung kann man ein kleines, leeres Fl\u00e4schchen im Abfalleimer entdecken, was auf eine Vergiftung hindeuten k\u00f6nnte. Im Labor fehlen zudem einige wichtige Forschungsunterlagen."
+}

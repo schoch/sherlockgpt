@@ -1,0 +1,165 @@
+{
+    "name": "Mord im Orient Express",
+    "style": "klassische Detektivgeschichte",
+    "setting": "Schnellzug von Frankfurt nach Berlin",
+    "crime": "Mord an einem wohlhabenden Gesch\u00e4ftsmann im Schlafwagenabteil",
+    "intro": "Ein wohlhabender Gesch\u00e4ftsmann wurde in seinem Schlafwagenabteil im Schnellzug von Frankfurt nach Berlin tot aufgefunden. Der Zug befindet sich mitten auf seiner Reise, und niemand kann ihn verlassen. Jeder der Passagiere ist ein Verd\u00e4chtiger, und es liegt am Spieler als Detektiv, die Wahrheit ans Licht zu bringen.",
+    "characters": [
+        {
+            "name": "Hermann M\u00fcller",
+            "appearance": "Ein wohlhabender, \u00e4lterer Mann mit grauem Haar und einem ma\u00dfgeschneiderten Anzug.",
+            "personality": "Arrogant, autorit\u00e4r, gewohnt, seinen Willen durchzusetzen.",
+            "relationships": [
+                {
+                    "character_name": "Klara M\u00fcller",
+                    "relationship": "Ehefrau, die ihn sehr f\u00fcr sein Verm\u00f6gen verachtet."
+                },
+                {
+                    "character_name": "Karl Schmidt",
+                    "relationship": "Gesch\u00e4ftspartner, der sich benachteiligt f\u00fchlt."
+                },
+                {
+                    "character_name": "Anna Meier",
+                    "relationship": "Sekret\u00e4rin, die unter seiner Tyrannei leidet."
+                }
+            ],
+            "involvement": "Opfer des Verbrechens, wurde erstochen und mit Gift get\u00f6tet",
+            "is_dead": true,
+            "is_criminal": false,
+            "is_victim": true,
+            "knowledge": "Kannte m\u00f6glicherweise seine M\u00f6rder, da es keine Spuren eines gewaltsamen Eindringens gab",
+            "feelings": "\u00dcberrascht und ver\u00e4ngstigt, als er merkte, dass er angegriffen wurde",
+            "alibi": "Keine, da er das Opfer ist",
+            "activities": "Hatte sich in sein Schlafwagenabteil zur\u00fcckgezogen und bereitete sich auf die Nacht vor",
+            "topics": "Kann keine Aussagen mehr machen, da er tot ist",
+            "motives": "Keine, da er das Opfer ist",
+            "relevant_info": "War ein wohlhabender Gesch\u00e4ftsmann und wurde von mehreren Personen verachtet"
+        },
+        {
+            "name": "Klara M\u00fcller",
+            "appearance": "Eine elegant gekleidete Frau in ihren sp\u00e4ten Vierzigern mit k\u00fchlem Blick.",
+            "personality": "Berechnend, kalt, entschlossen.",
+            "relationships": [
+                {
+                    "character_name": "Hermann M\u00fcller",
+                    "relationship": "Ehemann, den sie verachtet."
+                },
+                {
+                    "character_name": "Friedrich Klein",
+                    "relationship": "Geliebter, plant eine neue Zukunft mit ihm."
+                }
+            ],
+            "involvement": "Mitplanerin und Mitt\u00e4terin des Mordes an ihrem Ehemann Hermann M\u00fcller",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Kennt den gesamten Mordplan und die Beteiligten. Ist sich aller Details bewusst.",
+            "feelings": "Berechnend, kalt, sieht den Mord als Mittel zum Zweck.",
+            "alibi": "Behauptet, sich zur Tatzeit im Speisewagen aufgehalten zu haben.",
+            "activities": "War vor dem Mord mit Friedrich Klein zusammen, um letzte Details zu besprechen. Konnte unbemerkt in ihr Abteil zur\u00fcckkehren, um Hermann M\u00fcller zu t\u00f6ten.",
+            "topics": "Will nicht \u00fcber ihre Beziehung zu Friedrich Klein sprechen und wird l\u00fcgen, um ihre Rolle im Mord zu verbergen. Wird versuchen, Verdachte auf andere zu lenken.",
+            "motives": "Wollte das Verm\u00f6gen ihres Ehemanns erben und ein neues Leben mit Friedrich Klein beginnen.",
+            "relevant_info": "Hat einen Geheimbrief in ihrer Handtasche, der den Mordplan detailliert beschreibt. Wenn dieser gefunden wird, wird der gesamte Plan aufgedeckt."
+        },
+        {
+            "name": "Karl Schmidt",
+            "appearance": "Ein nerv\u00f6ser Mann in seinen F\u00fcnfzigern mit sch\u00fctterem Haar und einer st\u00e4ndig rauchenden Zigarette.",
+            "personality": "Paranoid, frustriert, schnell reizbar.",
+            "relationships": [
+                {
+                    "character_name": "Hermann M\u00fcller",
+                    "relationship": "Gesch\u00e4ftspartner, der sich benachteiligt f\u00fchlt."
+                },
+                {
+                    "character_name": "Anna Meier",
+                    "relationship": "Hat eine geheime Aff\u00e4re mit ihr."
+                }
+            ],
+            "involvement": "Mitwisser und Mitt\u00e4ter des Mordes, hatte eine Aff\u00e4re mit Anna Meier und half den Mord zu vertuschen",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Wei\u00df \u00fcber den gesamten Mordplan Bescheid, einschlie\u00dflich der beteiligten Personen und der Art und Weise, wie der Mord begangen wurde",
+            "feelings": "Nerv\u00f6s und paranoid, hat Angst entdeckt zu werden",
+            "alibi": "Behauptet, die ganze Zeit in seinem Abteil gewesen zu sein und kann von Anna Meier best\u00e4tigt werden",
+            "activities": "Hielt sich vor dem Mord im Abteil auf, traf sich f\u00fcr kurze Zeit mit Klara M\u00fcller und Friedrich Klein, um letzte Details zu besprechen",
+            "topics": "Wird versuchen, \u00fcber seine gesch\u00e4ftlichen Probleme mit Hermann M\u00fcller zu sprechen, und versucht die Aff\u00e4re mit Anna Meier, sowie seine Rolle im Mord zu verbergen",
+            "motives": "F\u00fchlte sich von Hermann M\u00fcller in ihren gemeinsamen Gesch\u00e4ften benachteiligt und hatte eine Aff\u00e4re mit Anna Meier. Wollte ihn loswerden, um seine Gesch\u00e4ftsanteile und die Beziehung zu Anna zu sichern",
+            "relevant_info": "Hat eine Zigarette, die bei der Tatzeit im Abteil geraucht wurde; ihre Asche k\u00f6nnte als Beweismittel dienen"
+        },
+        {
+            "name": "Anna Meier",
+            "appearance": "Eine junge, attraktive Frau mit schulterlangem braunen Haar und eleganter Kleidung.",
+            "personality": "Zerbrechlich, \u00fcberfordert, emotional.",
+            "relationships": [
+                {
+                    "character_name": "Hermann M\u00fcller",
+                    "relationship": "Chef, der sie tyrannisiert."
+                },
+                {
+                    "character_name": "Karl Schmidt",
+                    "relationship": "Hat eine geheime Aff\u00e4re mit ihm."
+                },
+                {
+                    "character_name": "Friedrich Klein",
+                    "relationship": "Misstraut ihm, verd\u00e4chtigt ihn einen Plan zu schmieden."
+                }
+            ],
+            "involvement": "War nicht direkt an der Durchf\u00fchrung des Mordes beteiligt, aber wusste von dem Plan und wurde als Alibi f\u00fcr Karl Schmidt benutzt",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Wei\u00df von den Details des Mordplans und dass Hermann M\u00fcller vergiftet wurde",
+            "feelings": "F\u00fchlt sich \u00fcberfordert und \u00e4ngstlich, dass ihre Aff\u00e4re mit Karl Schmidt und ihre Kenntnis vom Mordplan aufgedeckt werden k\u00f6nnten",
+            "alibi": "Karl Schmidt hat daf\u00fcr gesorgt, dass sie die ganze Zeit w\u00e4hrend der Tat in seinem Abteil war",
+            "activities": "Hielt sich vor dem Mord \u00fcberwiegend in ihrem Abteil auf, verbrachte aber einige Zeit mit Karl Schmidt, um ihre Alibis abzustimmen",
+            "topics": "Will nicht \u00fcber ihre Aff\u00e4re mit Karl Schmidt sprechen und wird l\u00fcgen, um ihre Kenntnis \u00fcber den Mordplan zu verbergen. Wird versuchen, ihre emotionale Belastung durch die Arbeit mit Hermann M\u00fcller zu betonen",
+            "motives": "War von Hermann M\u00fcllers tyrannischem Verhalten ersch\u00f6pft und hatte eine Aff\u00e4re mit Karl Schmidt. Sie hatte pers\u00f6nliche Gr\u00fcnde, Hermann M\u00fcller loswerden zu wollen, auch wenn sie nicht direkt beteiligt war",
+            "relevant_info": "K\u00f6nnte nerv\u00f6s und sprunghaft reagieren, wenn sie nach ihrer Beziehung zu Karl Schmidt oder ihren Kenntnissen \u00fcber den Mord gefragt wird"
+        },
+        {
+            "name": "Friedrich Klein",
+            "appearance": "Ein gut aussehender Mann in seinen Vierzigern mit einem charmanten L\u00e4cheln und teurer Kleidung.",
+            "personality": "Charmant, manipulativ, skrupellos.",
+            "relationships": [
+                {
+                    "character_name": "Klara M\u00fcller",
+                    "relationship": "Geliebter, plant eine neue Zukunft mit ihr."
+                },
+                {
+                    "character_name": "Anna Meier",
+                    "relationship": "Versucht, sie f\u00fcr seine Zwecke zu gewinnen."
+                }
+            ],
+            "involvement": "Hauptt\u00e4ter, f\u00fchrte den Mord an Hermann M\u00fcller durch, indem er ihn erstach",
+            "is_dead": false,
+            "is_criminal": true,
+            "is_victim": false,
+            "knowledge": "Wei\u00df alles \u00fcber den Mordplan und wie dieser ausgef\u00fchrt wurde, inklusive der Rolle der verschiedenen Beteiligten",
+            "feelings": "Gef\u00fchlskalt und entschlossen, sieht den Mord als notwendigen Schritt f\u00fcr seine Zukunftspl\u00e4ne mit Klara M\u00fcller",
+            "alibi": "Behauptet, er habe sich zur Tatzeit in seinem Abteil aufgehalten, was von niemandem best\u00e4tigt werden kann",
+            "activities": "War vor und w\u00e4hrend des Mordes mit Klara M\u00fcller zusammen, um letzte Details zu besprechen und den Mord durchzuf\u00fchren",
+            "topics": "Will \u00fcber seine Gesch\u00e4ftsinteressen sprechen und wird versuchen, seine Beziehung zu Klara M\u00fcller und seine Beteiligung am Mord zu verschleiern",
+            "motives": "Plant eine neue Zukunft mit Klara M\u00fcller und wollte Hermann M\u00fcller aus dem Weg r\u00e4umen, um an dessen Verm\u00f6gen zu gelangen",
+            "relevant_info": "K\u00f6nnte gewaltt\u00e4tig werden, wenn er zu stark bedr\u00e4ngt wird"
+        }
+    ],
+    "secret_truth": {
+        "criminals": [
+            "Klara M\u00fcller",
+            "Friedrich Klein",
+            "Karl Schmidt"
+        ],
+        "details": "Klara M\u00fcller und Friedrich Klein planten bereits seit Monaten, Hermann M\u00fcller zu ermorden, um an sein Verm\u00f6gen zu gelangen. Karl Schmidt wurde in den Plan eingeweiht, da er selbst unter Hermann M\u00fcllers Gesch\u00e4ftsgebaren litt und eine Aff\u00e4re mit Anna Meier hatte. Am Abend des Mordes lockte Klara ihren Ehemann mit einem falschen Vorwand in ihr Abteil, wo Friedrich ihn mit einer nadelspitzen Klinge erstach. Karl Schmidt sorgte daf\u00fcr, dass Anna Meier ein Alibi hatte, indem er sie die ganze Zeit in seinem Abteil festhielt. Das Verbrechen wurde im Schlafwagenabteil von Hermann M\u00fcller in der N\u00e4he von Frankfurt begangen. Das Opfer wurde mit einem t\u00f6dlichen Gift, das auf der Klinge war, ermordet. Die scheinbare Todesursache war ein Herzinfarkt, was von den T\u00e4tern sorgf\u00e4ltig inszeniert wurde."
+    },
+    "victim": "Hermann M\u00fcller",
+    "plot_twists": [
+        "Wenn der Spieler Friedrich Klein zu sehr bedr\u00e4ngt, wird er versuchen, den Spieler zu t\u00f6ten.",
+        "Wenn die Aff\u00e4re zwischen Karl Schmidt und Anna Meier aufgedeckt wird, werden sie versuchen zu fliehen.",
+        "Klara M\u00fcller hat einen Geheimbrief in ihrer Handtasche, der den Mordplan detailliert beschreibt. Wird dieser gefunden, fliegt der ganze Plan auf."
+    ],
+    "newspaper_headline": "Mord im Schnellzug: Wohlhabender Gesch\u00e4ftsmann tot aufgefunden",
+    "newspaper_text": "Im Schnellzug von Frankfurt nach Berlin ereignete sich ein brutaler Mord. Hermann M\u00fcller, ein wohlhabender Gesch\u00e4ftsmann, wurde tot in seinem Schlafwagenabteil aufgefunden. Der Mord geschah w\u00e4hrend der Zugfahrt, und die Polizei hat bereits eine Untersuchung eingeleitet. Jeder der Passagiere steht unter Verdacht, da niemand den Zug verlassen konnte. Die Frage, die nun alle besch\u00e4ftigt, ist: Wer hat das Motiv und die Gelegenheit, diesen grausamen Mord zu begehen?",
+    "location_info": "Der Schnellzug von Frankfurt nach Berlin bietet mehrere Abteile: den Speisewagen, mehrere Schlafwagenabteile, und einen Salonwagen. Der Zug befindet sich in Bewegung und wird mehrmals t\u00e4glich von den Passagieren genutzt. Der Schlafwagen, in dem das Verbrechen stattfand, liegt in der Mitte des Zugs und hat acht einzelne Abteile. Jedes Abteil hat ein Bett, einen kleinen Schreibtisch und ein Fenster mit Vorh\u00e4ngen. Die T\u00fcren sind nur von innen verriegelbar.",
+    "crime_scene_description": "Das Schlafwagenabteil, in dem Hermann M\u00fcller ermordet wurde, ist eng und \u00fcberschaubar. Beim Betreten des Abteils sieht man auf der linken Seite das Bett, auf dem die Leiche liegt. Er tr\u00e4gt noch immer seinen ma\u00dfgeschneiderten Anzug, und ein kleiner Blutfleck ist auf seinem Hemd zu erkennen. Auf dem Boden liegt eine zerbrochene Vase, und ein verschobener Teppich deutet auf einen Kampf hin. Auf dem Schreibtisch findet sich eine halbvolle Tasse Tee, und in der Ecke liegt unauff\u00e4llig ein kleiner silberner Dolch. In den Vorh\u00e4ngen steckt ein abgerissener Knopf, der nicht zur Kleidung des Opfers passt. Es gibt keine offensichtlichen Spuren eines Eindringens."
+}
