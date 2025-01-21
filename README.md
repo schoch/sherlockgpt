@@ -7,44 +7,42 @@ It was (mostly) live-coded on Twitch by Wolfgang Schoch: https://www.twitch.tv/h
 
 Have fun exploring the code.
 
-# Detective Game Backend
+## Detective Game Backend
 
 This project is an example of a backend for a detective game using Flask and the OpenAI API.
 
-## Installation
+### Installation
 
-1. Create and activate a virtual environment:
+#### Create and activate a virtual environment:
 
 ```sh
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Install the dependencies:
+#### Install the dependencies:
 
 ```sh
 pip install -r requirements.txt
 ```
 
-3. Create a .env file in the root directory and add your OpenAI API key:
-
-```
-OPENAI_API_KEY=your_openai_api_key
-```
-
-4. Start the application:
+#### Create a .env file in the root directory and add your OpenAI API key
 
 ```sh
-python backend/app.py
+touch .env && echo "OPENAI_API_KEY=your_openai_api_key" > .env
 ```
 
-5. Open the game in your browser:
+#### Start the application:
 
+```sh
+python backend/sherlockgpt/app.py
 ```
+
+#### Open the game in your browser
+
 http://127.0.0.1:5000
-```
 
-# Notes
+## Notes
 
 - All game data is stored in a SQLite database: `sherlockgpt/instance/scenarios.db`. There is a sample database with game data that corresponds to the provided images and JSON files. It is named `scenarios.db.example`. Simply rename it to `scenarios.db` and place it in `sherlockgpt/instance/` to get started.
 - There are some helper methods to rebuild the database, etc. Look for the `/admin` endpoints in `routes.py`.
